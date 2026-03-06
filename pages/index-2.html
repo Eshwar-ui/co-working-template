@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="keywords" content="coworking space, startup hub, flexible office, meeting rooms, private office, hot desk">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoWork Hub - Startup Community | Home 2</title>
+  <meta name="description" content="Join a vibrant startup community at CoWork Hub. Collaborate, innovate, and grow together.">
+  <meta property="og:title" content="CoWork Hub - Startup Community"><meta property="og:type" content="website">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"CoWork Hub"}</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:'#3F4E3F','primary-dark':'#2C362C',secondary:'#D4A373',accent:'#B3541E',earth:{light:'#FDFCF0',dark:'#1A1C1A',card:'#242924'}},fontFamily:{sans:['Inter','sans-serif']}}}}</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+</head>
+<body class="font-sans text-gray-700 bg-earth-light dark:bg-earth-dark dark:text-gray-300 antialiased">
+<div class="preloader"><div class="preloader__spinner"></div></div>
+
+<!-- Navbar -->
+<nav id="navbar" class="fixed top-0 left-0 w-full h-20 bg-white/95 dark:bg-earth-dark/95 backdrop-blur-xl border-b border-gray-100 dark:border-white/10 z-50 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2 text-xl font-extrabold text-gray-900"><span class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-white text-lg"><i class="fas fa-building"></i></span>CoWork Hub</a>
+    <ul class="hidden lg:flex items-center gap-1">
+      <li class="nav-item relative group"><a href="#" class="flex items-center gap-1 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition">Home <i class="fas fa-chevron-down text-[10px] ml-1"></i></a>
+        <div class="nav-dropdown absolute top-full left-0 min-w-[200px] bg-white border border-gray-100 rounded-xl shadow-xl p-2 z-50 dark:bg-earth-card dark:border-white/10">
+          <a href="index.html" class="block px-4 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-primary/5 rounded-lg">Home 1</a>
+          <a href="index-2.html" class="block px-4 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-primary/5 rounded-lg">Home 2</a>
+        </div>
+      </li>
+      <li><a href="about.html" class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300">About</a></li>
+      <li><a href="services.html" class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300">Services</a></li>
+      <li><a href="blog.html" class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300">Blog</a></li>
+      <li><a href="contact.html" class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300">Contact</a></li>
+      <li class="nav-item relative group"><a href="#" class="flex items-center gap-1 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg transition dark:text-gray-300">Dashboards <i class="fas fa-chevron-down text-[10px] ml-1"></i></a>
+        <div class="nav-dropdown absolute top-full left-0 min-w-[200px] bg-white border border-gray-100 dark:bg-earth-card dark:border-white/10 rounded-xl shadow-xl p-2 z-50">
+          <a href="dashboard-user.html" class="block px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg dark:text-gray-300">User Dashboard</a>
+          <a href="dashboard-admin.html" class="block px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg dark:text-gray-300">Admin Dashboard</a>
+        </div>
+      </li>
+    </ul>
+    <div class="hidden lg:flex items-center gap-3">
+      <button id="rtlToggle" class="px-3 py-1.5 text-[10px] font-bold border border-gray-200 text-gray-500 dark:text-gray-300 rounded-lg hover:border-primary hover:text-primary transition uppercase tracking-wider">RTL</button>
+      <button id="darkToggle" class="w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 text-gray-500 dark:text-gray-300 hover:text-primary hover:border-primary transition"><i class="fas fa-moon"></i></button>
+      <a href="login.html" class="px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-full hover:bg-primary-dark transition-all">Member Login</a>
+    </div>
+    <button id="menuToggle" class="lg:hidden flex flex-col gap-1.5 p-2"><span class="w-6 h-0.5 bg-gray-700 rounded"></span><span class="w-6 h-0.5 bg-gray-700 rounded"></span><span class="w-6 h-0.5 bg-gray-700 rounded"></span></button>
+  </div>
+  <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-2">
+    <a href="index.html" class="block px-4 py-2.5 text-sm font-medium text-gray-600 rounded-lg">Home 1</a>
+    <a href="index-2.html" class="block px-4 py-2.5 text-sm font-medium text-primary bg-primary/5 rounded-lg">Home 2</a>
+    <a href="spaces.html" class="block px-4 py-2.5 text-sm font-medium text-gray-600 rounded-lg">Spaces</a>
+    <a href="amenities.html" class="block px-4 py-2.5 text-sm font-medium text-gray-600 rounded-lg">Amenities</a>
+    <a href="membership.html" class="block px-4 py-2.5 text-sm font-medium text-gray-600 rounded-lg">Membership</a>
+    <div class="px-4 py-2.5 space-y-2">
+      <p class="text-[10px] font-bold text-gray-400 dark:text-gray-300 uppercase tracking-widest px-4">Dashboards</p>
+      <a href="dashboard/dashboard.html" class="block px-4 py-2 text-sm font-medium text-gray-600 rounded-lg">Member Dashboard</a>
+      <a href="admin/admin-dashboard.html" class="block px-4 py-2 text-sm font-medium text-gray-600 rounded-lg">Admin Dashboard</a>
+    </div>
+    <a href="blog.html" class="block px-4 py-2.5 text-sm font-medium text-gray-600 rounded-lg">Blog</a>
+    <a href="about.html" class="block px-4 py-2.5 text-sm font-medium text-gray-600 rounded-lg">About</a>
+    <a href="contact.html" class="block px-4 py-2.5 text-sm font-medium text-gray-600 rounded-lg">Contact</a>
+    <a href="dashboard/dashboard.html" class="block px-4 py-2.5 bg-primary text-white text-sm font-semibold rounded-full text-center mt-2">Member Login</a>
+  </div>
+</nav>
+
+<!-- Hero Section - Startup Dark Style -->
+<section class="relative min-h-screen flex items-center pt-20 bg-gradient-to-br from-earth-dark via-[#1A231A] to-earth-dark overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px]"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-secondary/20 rounded-full blur-[120px]"></div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 w-full relative z-10">
+    <div class="text-center max-w-4xl mx-auto gsap-fade-up">
+      <span class="inline-flex items-center gap-2 px-5 py-2 bg-white/10 text-white/90 text-sm font-semibold rounded-full mb-8 backdrop-blur-sm border border-white/10"><span class="w-2 h-2 bg-secondary rounded-full animate-pulse"></span> Now accepting new members</span>
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-8">Where <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Startups</span> Come to <span class="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">Life</span></h1>
+      <p class="text-lg md:text-xl text-gray-400 dark:text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">Join a thriving community of founders, developers, and creators. Collaborate, build, launch — all under one roof.</p>
+      <div class="flex flex-wrap justify-center gap-4 mb-16">
+        <a href="membership.html" class="px-8 py-4 bg-gradient-to-r from-primary to-primary-dark text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-primary/30 hover:-translate-y-1 transition-all">Join the Community <i class="fas fa-arrow-right ml-2"></i></a>
+        <a href="spaces.html" class="px-8 py-4 border-2 border-white/20 text-white font-bold rounded-xl hover:bg-white/10 transition-all">Take a Virtual Tour</a>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
+        <div class="text-center"><div class="text-3xl font-black text-white gsap-counter" data-count="120">120</div><div class="text-sm text-gray-500 dark:text-gray-300 mt-1">Startups Launched</div></div>
+        <div class="text-center"><div class="text-3xl font-black text-white gsap-counter" data-count="500" data-suffix="+">500+</div><div class="text-sm text-gray-500 dark:text-gray-300 mt-1">Members</div></div>
+        <div class="text-center"><div class="text-3xl font-black text-white gsap-counter" data-count="50">50</div><div class="text-sm text-gray-500 dark:text-gray-300 mt-1">Events/Month</div></div>
+        <div class="text-center"><div class="text-3xl font-black text-white"><span class="gsap-counter" data-count="25" data-prefix="$" data-suffix="M">$25M</span></div><div class="text-sm text-gray-500 dark:text-gray-300 mt-1">Funding Raised</div></div>
+      </div>
+    </div>
+  </div>
+  <!-- Gradient bottom fade -->
+  <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-earth-dark via-[#1A231A] to-transparent"></div>
+</section>
+
+<!-- Community Highlights -->
+<section class="py-20 bg-white dark:bg-earth-card">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-14 gsap-fade-up">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full mb-4 uppercase tracking-wide">Community</span>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">More Than Just a Workspace</h2>
+      <p class="text-gray-500 dark:text-gray-300">We're a launchpad for the next generation of businesses.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 gsap-stagger">
+      <div class="relative p-8 rounded-2xl border border-gray-100 dark:border-white/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group bg-gradient-to-br from-white to-primary/5 dark:from-earth-card dark:to-earth-dark">
+        <div class="w-14 h-14 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-2xl mb-5 group-hover:bg-primary group-hover:text-white transition-all"><i class="fas fa-people-group"></i></div>
+        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Founder Network</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">Connect with 500+ founders, share insights, and find co-founders for your next venture.</p>
+      </div>
+      <div class="relative p-8 rounded-2xl border border-gray-100 dark:border-white/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group bg-gradient-to-br from-white to-secondary/5 dark:from-earth-card dark:to-earth-dark">
+        <div class="w-14 h-14 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center text-2xl mb-5 group-hover:bg-secondary group-hover:text-white transition-all"><i class="fas fa-graduation-cap"></i></div>
+        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Mentorship Program</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">Learn from industry veterans and successful entrepreneurs through our structured mentorship tracks.</p>
+      </div>
+      <div class="relative p-8 rounded-2xl border border-gray-100 dark:border-white/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group bg-gradient-to-br from-white to-accent/5 dark:from-earth-card dark:to-earth-dark">
+        <div class="w-14 h-14 bg-accent/10 text-accent rounded-2xl flex items-center justify-center text-2xl mb-5 group-hover:bg-accent group-hover:text-white transition-all"><i class="fas fa-hand-holding-dollar"></i></div>
+        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Investor Access</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">Pitch to our network of VCs and angel investors at monthly demo days and exclusive events.</p>
+      </div>
+      <div class="relative p-8 rounded-2xl border border-gray-100 dark:border-white/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group bg-gradient-to-br from-white to-primary/5 dark:from-earth-card dark:to-earth-dark">
+        <div class="w-14 h-14 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-2xl mb-5 group-hover:bg-primary group-hover:text-white transition-all"><i class="fas fa-calendar-check"></i></div>
+        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Weekly Events</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">Tech talks, hackathons, workshops, and social mixers to keep your skills sharp and network growing.</p>
+      </div>
+      <div class="relative p-8 rounded-2xl border border-gray-100 dark:border-white/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group bg-gradient-to-br from-white to-secondary/5 dark:from-earth-card dark:to-earth-dark">
+        <div class="w-14 h-14 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center text-2xl mb-5 group-hover:bg-secondary group-hover:text-white transition-all"><i class="fas fa-laptop-code"></i></div>
+        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Tech Resources</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">Free cloud credits, dev tools, and software partnerships to accelerate your product development.</p>
+      </div>
+      <div class="relative p-8 rounded-2xl border border-gray-100 dark:border-white/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group bg-gradient-to-br from-white to-primary/5 dark:from-earth-card dark:to-earth-dark">
+        <div class="w-14 h-14 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-2xl mb-5 group-hover:bg-primary group-hover:text-white transition-all"><i class="fas fa-rocket"></i></div>
+        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Incubator Program</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">Apply for our 12-week incubator. Get office space, mentorship, and funding opportunities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Success Stories -->
+<section class="py-20 bg-gray-50 dark:bg-earth-dark">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-14 gsap-fade-up">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full mb-4 uppercase tracking-wide">Success Stories</span>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Built at CoWork Hub</h2>
+      <p class="text-gray-500 dark:text-gray-300">These startups launched and scaled from our community.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8 gsap-stagger">
+      <div class="bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-all">
+        <div class="w-12 h-12 bg-gradient-to-br from-primary to-primary-dark rounded-xl flex items-center justify-center text-white font-bold text-lg mb-5">N</div>
+        <h3 class="text-lg font-bold text-gray-900 mb-1">NexaPay</h3>
+        <p class="text-sm text-primary font-semibold mb-3">Fintech • Series A — $12M</p>
+        <p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">"CoWork Hub's investor events helped us secure our seed round. We went from 3 founders to a team of 40."</p>
+      </div>
+      <div class="bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-all">
+        <div class="w-12 h-12 bg-gradient-to-br from-primary to-primary-600 rounded-xl flex items-center justify-center text-white font-bold text-lg mb-5">G</div>
+        <h3 class="text-lg font-bold text-gray-900 mb-1">GreenLoop</h3>
+        <p class="text-sm text-secondary font-semibold mb-3">CleanTech • Seed — $3M</p>
+        <p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">"The mentorship program was game-changing. Our mentor helped us pivot from B2C to B2B in just 6 weeks."</p>
+      </div>
+      <div class="bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-all">
+        <div class="w-12 h-12 bg-gradient-to-br from-accent to-accent rounded-xl flex items-center justify-center text-white font-bold text-lg mb-5">A</div>
+        <h3 class="text-lg font-bold text-gray-900 mb-1">AuraHealth</h3>
+        <p class="text-sm text-accent font-semibold mb-3">HealthTech • Series B — $25M</p>
+        <p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">"Started as 2 co-founders at CoWork Hub. Now a team of 80 with offices in 3 cities. Forever grateful."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Upcoming Events Preview -->
+<section class="py-20 bg-white dark:bg-earth-card">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-12 gsap-fade-up">
+      <div>
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full mb-4 uppercase tracking-wide">Upcoming Events</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">Don't Miss Out</h2>
+      </div>
+      <a href="events.html" class="text-primary font-semibold hover:underline mt-4 md:mt-0">View All Events <i class="fas fa-arrow-right ml-1"></i></a>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 gsap-stagger">
+      <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+        <div class="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 relative flex items-center justify-center">
+          <img src="../assets/images/networking-event.webp" alt="Networking Event" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'" loading="lazy">
+          <div class="absolute top-4 left-4 bg-white rounded-lg px-3 py-2 text-center shadow-md"><span class="block text-xl font-extrabold text-primary leading-none">15</span><span class="text-[10px] font-bold text-gray-500 dark:text-gray-300 uppercase">Mar</span></div>
+        </div>
+        <div class="p-6">
+          <span class="inline-block px-3 py-1 bg-secondary text-white text-[10px] font-bold rounded-full mb-3 uppercase">Networking</span>
+          <h3 class="text-lg font-bold text-gray-900 mb-2"><a href="event-details.html" class="hover:text-primary transition">Founder Mixer — Spring Edition</a></h3>
+          <div class="space-y-1 text-xs text-gray-500 dark:text-gray-300">
+            <p class="flex items-center gap-2"><i class="fas fa-clock text-primary w-4"></i> 6:00 PM — 9:00 PM</p>
+            <p class="flex items-center gap-2"><i class="fas fa-location-dot text-primary w-4"></i> Rooftop Lounge, CoWork Hub</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+        <div class="h-48 bg-gradient-to-br from-primary/20 to-primary/20 relative flex items-center justify-center">
+          <img src="../assets/images/team-collaboration.webp" alt="Hackathon" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'" loading="lazy">
+          <div class="absolute top-4 left-4 bg-white rounded-lg px-3 py-2 text-center shadow-md"><span class="block text-xl font-extrabold text-primary leading-none">22</span><span class="text-[10px] font-bold text-gray-500 dark:text-gray-300 uppercase">Mar</span></div>
+        </div>
+        <div class="p-6">
+          <span class="inline-block px-3 py-1 bg-primary text-white text-[10px] font-bold rounded-full mb-3 uppercase">Hackathon</span>
+          <h3 class="text-lg font-bold text-gray-900 mb-2"><a href="event-details.html" class="hover:text-primary transition">48-Hour AI Hackathon</a></h3>
+          <div class="space-y-1 text-xs text-gray-500 dark:text-gray-300">
+            <p class="flex items-center gap-2"><i class="fas fa-clock text-primary w-4"></i> 48 Hours</p>
+            <p class="flex items-center gap-2"><i class="fas fa-location-dot text-primary w-4"></i> Main Hall, CoWork Hub</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+        <div class="h-48 bg-gradient-to-br from-accent/20 to-secondary/20 relative flex items-center justify-center">
+          <img src="../assets/images/startup-meeting.webp" alt="Demo Day" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'" loading="lazy">
+          <div class="absolute top-4 left-4 bg-white rounded-lg px-3 py-2 text-center shadow-md"><span class="block text-xl font-extrabold text-primary leading-none">30</span><span class="text-[10px] font-bold text-gray-500 dark:text-gray-300 uppercase">Mar</span></div>
+        </div>
+        <div class="p-6">
+          <span class="inline-block px-3 py-1 bg-accent text-white text-[10px] font-bold rounded-full mb-3 uppercase">Demo Day</span>
+          <h3 class="text-lg font-bold text-gray-900 mb-2"><a href="event-details.html" class="hover:text-primary transition">Incubator Batch #8 Demo Day</a></h3>
+          <div class="space-y-1 text-xs text-gray-500 dark:text-gray-300">
+            <p class="flex items-center gap-2"><i class="fas fa-clock text-primary w-4"></i> 2:00 PM — 6:00 PM</p>
+            <p class="flex items-center gap-2"><i class="fas fa-location-dot text-primary w-4"></i> Auditorium, CoWork Hub</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-gradient-to-r from-earth-dark via-[#1A231A] to-earth-dark relative overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none"><div class="absolute top-0 left-1/3 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div></div>
+  <div class="max-w-4xl mx-auto px-6 text-center relative z-10 gsap-fade-up">
+    <h2 class="text-3xl md:text-5xl font-black text-white mb-6">Ready to Build Something <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Amazing</span>?</h2>
+    <p class="text-lg text-gray-400 dark:text-gray-300 mb-10 max-w-xl mx-auto">Apply to join our community. Limited spots available for the next cohort.</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="membership.html" class="px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-primary/30 hover:-translate-y-1 transition-all">Apply Now <i class="fas fa-arrow-right ml-2"></i></a>
+      <a href="contact.html" class="px-8 py-4 border-2 border-white/20 text-white font-bold rounded-xl hover:bg-white/10 transition-all">Schedule a Visit</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-primary-dark text-gray-400 dark:text-gray-300 pt-20 pb-8">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-white/10">
+      <div>
+        <a href="index.html" class="flex items-center gap-2 text-xl font-extrabold text-white mb-4"><span class="w-9 h-9 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white text-sm"><i class="fas fa-building"></i></span> CoWork Hub</a>
+        <p class="text-sm leading-relaxed mb-5">Premium co-working spaces designed for startups, freelancers, and enterprises.</p>
+        <div class="flex gap-3">
+          <a href="#" class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-primary hover:text-white transition-all"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-primary hover:text-white transition-all"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-primary hover:text-white transition-all"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-primary hover:text-white transition-all"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+      <div><h4 class="text-white font-bold mb-5">Quick Links</h4><ul class="space-y-3 text-sm"><li><a href="about.html" class="hover:text-primary transition">About Us</a></li><li><a href="spaces.html" class="hover:text-primary transition">Workspaces</a></li><li><a href="pricing.html" class="hover:text-primary transition">Pricing</a></li><li><a href="events.html" class="hover:text-primary transition">Events</a></li><li><a href="blog.html" class="hover:text-primary transition">Blog</a></li></ul></div>
+      <div><h4 class="text-white font-bold mb-5">Support</h4><ul class="space-y-3 text-sm"><li><a href="contact.html" class="hover:text-primary transition">Contact Us</a></li><li><a href="#" class="hover:text-primary transition">Help Center</a></li><li><a href="#" class="hover:text-primary transition">Privacy Policy</a></li><li><a href="#" class="hover:text-primary transition">Terms of Service</a></li></ul></div>
+      <div><h4 class="text-white font-bold mb-5">Contact</h4><ul class="space-y-3 text-sm"><li class="flex items-start gap-3"><i class="fas fa-map-marker-alt mt-1 text-primary"></i><span>123 Innovation Drive<br>San Francisco, CA 94107</span></li><li class="flex items-center gap-3"><i class="fas fa-phone text-primary"></i>+1 (555) 123-4567</li><li class="flex items-center gap-3"><i class="fas fa-envelope text-primary"></i>hello@coworkhub.com</li></ul></div>
+    </div>
+    <div class="flex flex-col md:flex-row items-center justify-between pt-6 text-sm"><p>&copy; 2026 CoWork Hub. All rights reserved.</p><p class="flex items-center gap-1 mt-2 md:mt-0">Made with <i class="fas fa-heart text-red-500"></i> for innovators</p></div>
+  </div>
+</footer>
+
+<button id="backToTop" class="back-to-top fixed bottom-8 right-8 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center shadow-lg shadow-primary/30 hover:-translate-y-1 transition-all z-50"><i class="fas fa-chevron-up"></i></button>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
