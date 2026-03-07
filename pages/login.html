@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="description" content="CoWork Hub - Premium Workspace">
-  <meta property="og:title" content="CoWork Hub">
-  <meta property="og:description" content="Premium Co-Working Template.">
-  <meta property="og:type" content="website">
-  <meta name="keywords" content="coworking space, startup hub, flexible office, meeting rooms, private office, hot desk">
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - CoWork Hub</title>
+  <meta name="description" content="Log in to your CoWork Hub member account to manage bookings, view invoices, and workspace settings.">
+  <meta property="og:title" content="Login - CoWork Hub">
+  <meta property="og:description" content="Log in to your CoWork Hub member account to manage bookings, view invoices, and workspace settings.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Login - CoWork Hub">
+  <meta name="twitter:description" content="Log in to your CoWork Hub member account to manage bookings, view invoices, and workspace settings.">
+  <link rel="canonical" href="https://coworkhub.com/login.html">
+  
+  <meta name="keywords" content="coworking space, startup hub, flexible office, meeting rooms, private office, hot desk">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:'#3F4E3F','primary-dark':'#2C362C',secondary:'#D4A373',accent:'#B3541E',earth:{light:'#FDFCF0',dark:'#1A1C1A',card:'#242924'}},fontFamily:{sans:['Inter','sans-serif']}}}}</script>
@@ -27,21 +33,21 @@
         <p class="text-gray-500 dark:text-gray-300 text-sm">Please enter your details to sign in.</p>
       </div>
 
-      <form action="dashboard/dashboard.html" class="space-y-6">
+      <form action="dashboard/dashboard.html" data-validate class="space-y-6">
         <div>
           <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
-          <input type="email" class="w-full px-4 py-3 bg-gray-50 dark:bg-earth-dark border border-gray-200 dark:border-white/10 rounded-xl text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition dark:bg-earth-dark dark:border-white/10 dark:text-white " placeholder="name@company.com" required>
+          <input type="email" class="w-full px-4 py-3 bg-gray-50 dark:bg-earth-dark border border-gray-200 dark:border-white/10 rounded-xl text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition dark:text-white" placeholder="name@company.com" required>
         </div>
         <div>
           <div class="flex items-center justify-between mb-2">
             <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300">Password</label>
             <a href="#" class="text-xs font-semibold text-primary hover:underline">Forgot password?</a>
           </div>
-          <input type="password" class="w-full px-4 py-3 bg-gray-50 dark:bg-earth-dark border border-gray-200 dark:border-white/10 rounded-xl text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition dark:bg-earth-dark dark:border-white/10 dark:text-white " placeholder="••••••••" required>
+          <input type="password" class="w-full px-4 py-3 bg-gray-50 dark:bg-earth-dark border border-gray-200 dark:border-white/10 rounded-xl text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition dark:text-white" placeholder="••••••••" required>
         </div>
         
         <div class="flex items-center">
-          <input type="checkbox" id="remember" class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary/20 dark:bg-earth-dark dark:border-white/10 dark:text-white ">
+          <input type="checkbox" id="remember" class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary/20">
           <label for="remember" class="ml-2 text-xs text-gray-500 dark:text-gray-300">Remember me for 30 days</label>
         </div>
 
@@ -68,14 +74,3 @@
   <script src="../assets/js/main.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
