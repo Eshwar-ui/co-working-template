@@ -1,157 +1,454 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta name="keywords" content="coworking space, startup hub, flexible office, meeting rooms, private office, hot desk">
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amenities - CoWork Hub</title>
-  <meta name="description" content="Explore premium amenities at CoWork Hub including high-speed WiFi, meeting rooms, event spaces, coffee bars.">
-  <meta property="og:title" content="Amenities - CoWork Hub">
-  <meta property="og:description" content="Explore premium amenities at CoWork Hub including high-speed WiFi, meeting rooms, event spaces, coffee bars.">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Amenities - CoWork Hub">
-  <meta name="twitter:description" content="Explore premium amenities at CoWork Hub including high-speed WiFi, meeting rooms, event spaces, coffee bars.">
-  <link rel="canonical" href="https://coworkhub.com/amenities.html">
-  
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:'#3F4E3F','primary-dark':'#2C362C',secondary:'#D4A373',accent:'#B3541E',earth:{light:'#FDFCF0',dark:'#1A1C1A',card:'#242924'}},fontFamily:{sans:['Inter','sans-serif']}}}}</script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/dark-mode.css"><link rel="stylesheet" href="../assets/css/rtl.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-</head>
-<body class="font-sans text-gray-700 bg-earth-light dark:bg-earth-dark dark:text-gray-300 antialiased">
-<div class="preloader"><div class="preloader__spinner"></div></div>
+  <head>
+    <meta
+      name="keywords"
+      content="coworking space, startup hub, flexible office, meeting rooms, private office, hot desk"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amenities - CoWork Hub</title>
+    <meta
+      name="description"
+      content="Explore premium amenities at CoWork Hub including high-speed WiFi, meeting rooms, event spaces, coffee bars."
+    />
+    <meta property="og:title" content="Amenities - CoWork Hub" />
+    <meta
+      property="og:description"
+      content="Explore premium amenities at CoWork Hub including high-speed WiFi, meeting rooms, event spaces, coffee bars."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Amenities - CoWork Hub" />
+    <meta
+      name="twitter:description"
+      content="Explore premium amenities at CoWork Hub including high-speed WiFi, meeting rooms, event spaces, coffee bars."
+    />
+    <link rel="canonical" href="https://coworkhub.com/amenities.html" />
 
-<!-- Navbar -->
-<nav id="navbar" class="fixed top-0 left-0 w-full h-20 bg-white/95 backdrop-blur-xl border-b border-gray-100 z-50 transition-all">
-  <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
-    <a href="index.html" class="flex items-center gap-2 text-xl font-extrabold text-gray-900"><span class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-white text-lg"><i class="fas fa-building"></i></span>CoWork Hub</a>
-    <ul class="hidden lg:flex items-center gap-1">
-      <li class="nav-item relative group"><a href="#" class="flex items-center gap-1 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition">Home <i class="fas fa-chevron-down text-[10px] ml-1"></i></a>
-        <div class="nav-dropdown absolute top-full left-0 min-w-[200px] bg-white border border-gray-100 rounded-xl shadow-xl p-2 z-50 dark:bg-earth-card dark:border-white/10">
-          <a href="index.html" class="block px-4 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-primary/5 rounded-lg">Home 1</a>
-          <a href="index-2.html" class="block px-4 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-primary/5 rounded-lg">Home 2</a>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3F4E3F",
+              "primary-dark": "#2C362C",
+              secondary: "#D4A373",
+              accent: "#B3541E",
+              earth: { light: "#FDFCF0", dark: "#1A1C1A", card: "#242924" },
+            },
+            fontFamily: { sans: ["Inter", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+    <link rel="stylesheet" href="../assets/css/rtl.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      defer
+    ></script>
+  </head>
+  <body
+    class="font-sans text-gray-700 bg-earth-light dark:bg-earth-dark dark:text-gray-300 antialiased"
+  >
+    <div class="preloader"><div class="preloader__spinner"></div></div>
+
+    <!-- Navbar -->
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 w-full h-20 bg-white/95 backdrop-blur-xl border-b border-gray-100 z-50 transition-all"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between"
+      >
+        <a
+          href="index.html"
+          class="flex items-center gap-2 text-xl font-extrabold text-gray-900"
+          ><span
+            class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-white text-lg"
+            ><i class="fas fa-building"></i></span
+          >CoWork Hub</a
+        >
+        <ul class="hidden lg:flex items-center gap-1">
+          <li class="nav-item relative group">
+            <a
+              href="#"
+              class="flex items-center gap-1 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition"
+              >Home <i class="fas fa-chevron-down text-[10px] ml-1"></i
+            ></a>
+            <div
+              class="nav-dropdown absolute top-full left-0 min-w-[200px] bg-white border border-gray-100 rounded-xl shadow-xl p-2 z-50 dark:bg-earth-card dark:border-white/10"
+            >
+              <a
+                href="index.html"
+                class="block px-4 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-primary/5 rounded-lg"
+                >Home 1</a
+              >
+              <a
+                href="index-2.html"
+                class="block px-4 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-primary/5 rounded-lg"
+                >Home 2</a
+              >
+            </div>
+          </li>
+          <li>
+            <a
+              href="about.html"
+              class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="services.html"
+              class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="blog.html"
+              class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a
+              href="contact.html"
+              class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300"
+              >Contact</a
+            >
+          </li>
+          <li class="nav-item relative group">
+            <a
+              href="#"
+              class="flex items-center gap-1 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg transition dark:text-gray-300"
+              >Dashboards <i class="fas fa-chevron-down text-[10px] ml-1"></i
+            ></a>
+            <div
+              class="nav-dropdown absolute top-full left-0 min-w-[200px] bg-white border border-gray-100 dark:bg-earth-card dark:border-white/10 rounded-xl shadow-xl p-2 z-50"
+            >
+              <a
+                href="dashboard-user.html"
+                class="block px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg dark:text-gray-300"
+                >User Dashboard</a
+              >
+              <a
+                href="dashboard-admin.html"
+                class="block px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg dark:text-gray-300"
+                >Admin Dashboard</a
+              >
+            </div>
+          </li>
+        </ul>
+        <div class="hidden lg:flex items-center gap-3">
+          <button
+            id="rtlToggle"
+            class="px-3 py-1.5 text-[10px] font-bold border border-gray-200 text-gray-500 dark:text-gray-300 rounded-lg hover:border-primary hover:text-primary transition uppercase tracking-wider"
+          >
+            RTL</button
+          ><button
+            id="darkToggle"
+            class="w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 text-gray-500 dark:text-gray-300 hover:text-primary transition"
+          >
+            <i class="fas fa-moon"></i>
+          </button>
+          <a
+            href="dashboard-user.html"
+            class="px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-full hover:bg-primary-dark transition-all"
+            >Member Login</a
+          >
         </div>
-      </li>
-      <li><a href="about.html" class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300">About</a></li>
-      <li><a href="services.html" class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300">Services</a></li>
-      <li><a href="blog.html" class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300">Blog</a></li>
-      <li><a href="contact.html" class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300">Contact</a></li>
-      <li class="nav-item relative group"><a href="#" class="flex items-center gap-1 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg transition dark:text-gray-300">Dashboards <i class="fas fa-chevron-down text-[10px] ml-1"></i></a>
-        <div class="nav-dropdown absolute top-full left-0 min-w-[200px] bg-white border border-gray-100 dark:bg-earth-card dark:border-white/10 rounded-xl shadow-xl p-2 z-50">
-          <a href="dashboard-user.html" class="block px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg dark:text-gray-300">User Dashboard</a>
-          <a href="dashboard-admin.html" class="block px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg dark:text-gray-300">Admin Dashboard</a>
+        <button id="menuToggle" class="lg:hidden flex flex-col gap-1.5 p-2">
+          <span class="w-6 h-0.5 bg-gray-700 rounded"></span
+          ><span class="w-6 h-0.5 bg-gray-700 rounded"></span
+          ><span class="w-6 h-0.5 bg-gray-700 rounded"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section
+      class="pt-32 pb-16 bg-gradient-to-br from-gray-900 via-primary-dark to-gray-900 text-center page-header-pattern"
+    >
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">
+          Amenities
+        </h1>
+        <p class="text-gray-400 dark:text-gray-300 max-w-xl mx-auto mb-4">
+          World-class facilities designed for productivity and comfort.
+        </p>
+        <div
+          class="flex items-center justify-center gap-2 text-sm text-gray-400 dark:text-gray-300"
+        >
+          <a href="index.html" class="hover:text-primary transition">Home</a
+          ><i class="fas fa-chevron-right text-[10px]"></i
+          ><span class="text-primary/80">Amenities</span>
         </div>
-      </li>
-    </ul>
-    <div class="hidden lg:flex items-center gap-3">
-      <button id="rtlToggle" class="px-3 py-1.5 text-[10px] font-bold border border-gray-200 text-gray-500 dark:text-gray-300 rounded-lg hover:border-primary hover:text-primary transition uppercase tracking-wider">RTL</button><button id="darkToggle" class="w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 text-gray-500 dark:text-gray-300 hover:text-primary transition"><i class="fas fa-moon"></i></button>
-      <a href="dashboard-user.html" class="px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-full hover:bg-primary-dark transition-all">Member Login</a>
-    </div>
-    <button id="menuToggle" class="lg:hidden flex flex-col gap-1.5 p-2"><span class="w-6 h-0.5 bg-gray-700 rounded"></span><span class="w-6 h-0.5 bg-gray-700 rounded"></span><span class="w-6 h-0.5 bg-gray-700 rounded"></span></button>
-  </div>
-</nav>
+      </div>
+    </section>
 
-<!-- Page Header -->
-<section class="pt-32 pb-16 bg-gradient-to-br from-gray-900 via-primary-dark to-gray-900 text-center page-header-pattern">
-  <div class="max-w-7xl mx-auto px-6 relative z-10">
-    <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Amenities</h1>
-    <p class="text-gray-400 dark:text-gray-300 max-w-xl mx-auto mb-4">World-class facilities designed for productivity and comfort.</p>
-    <div class="flex items-center justify-center gap-2 text-sm text-gray-400 dark:text-gray-300"><a href="index.html" class="hover:text-primary transition">Home</a><i class="fas fa-chevron-right text-[10px]"></i><span class="text-primary/80">Amenities</span></div>
-  </div>
-</section>
+    <!-- Amenities Grid -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 gsap-stagger">
+          <div
+            class="p-8 rounded-2xl border border-gray-100 dark:border-white/5 hover:shadow-xl hover:-translate-y-1 transition-all group bg-gradient-to-br from-white to-primary/5 dark:from-earth-card dark:to-earth-dark"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-3xl mb-5 group-hover:bg-primary group-hover:text-white group-hover:scale-110 transition-all"
+            >
+              <i class="fas fa-wifi"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              Ultra-Fast WiFi
+            </h3>
+            <p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">
+              1Gbps fiber connection with dedicated bandwidth per member.
+              Seamless video calls and file transfers.
+            </p>
+          </div>
+          <div
+            class="p-8 rounded-2xl border border-gray-100 dark:border-white/5 hover:shadow-xl hover:-translate-y-1 transition-all group bg-gradient-to-br from-white to-secondary/5 dark:from-earth-card dark:to-earth-dark"
+          >
+            <div
+              class="w-16 h-16 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center text-3xl mb-5 group-hover:bg-secondary group-hover:text-white group-hover:scale-110 transition-all"
+            >
+              <i class="fas fa-mug-hot"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              Premium Coffee & Snacks
+            </h3>
+            <p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">
+              Artisan coffee bar with specialty drinks, organic teas, fresh
+              fruit, and healthy snacks throughout the day.
+            </p>
+          </div>
+          <div
+            class="p-8 rounded-2xl border border-gray-100 dark:border-white/5 hover:shadow-xl hover:-translate-y-1 transition-all group bg-gradient-to-br from-white to-accent/5 dark:from-earth-card dark:to-earth-dark"
+          >
+            <div
+              class="w-16 h-16 bg-accent/10 text-accent rounded-2xl flex items-center justify-center text-3xl mb-5 group-hover:bg-accent group-hover:text-white group-hover:scale-110 transition-all"
+            >
+              <i class="fas fa-shield-halved"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              24/7 Security
+            </h3>
+            <p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">
+              Biometric access control, CCTV monitoring, and on-site security
+              personnel for your peace of mind.
+            </p>
+          </div>
+          <div
+            class="p-8 rounded-2xl border border-gray-100 dark:border-white/5 hover:shadow-xl hover:-translate-y-1 transition-all group bg-gradient-to-br from-white to-primary/5 dark:from-earth-card dark:to-earth-dark"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 text-secondary rounded-2xl flex items-center justify-center text-3xl mb-5 group-hover:bg-primary group-hover:text-white group-hover:scale-110 transition-all"
+            >
+              <i class="fas fa-print"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              Printing & Scanning
+            </h3>
+            <p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">
+              High-speed color printing, scanning, and copying. Included in most
+              membership plans.
+            </p>
+          </div>
+          <div
+            class="p-8 rounded-2xl border border-gray-100 dark:border-white/5 hover:shadow-xl hover:-translate-y-1 transition-all group bg-gradient-to-br from-white to-secondary/5 dark:from-earth-card dark:to-earth-dark"
+          >
+            <div
+              class="w-16 h-16 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center text-3xl mb-5 group-hover:bg-secondary group-hover:text-white group-hover:scale-110 transition-all"
+            >
+              <i class="fas fa-video"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              AV-Equipped Rooms
+            </h3>
+            <p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">
+              Conference rooms with 4K displays, wireless presentation, video
+              conferencing, and whiteboard walls.
+            </p>
+          </div>
+          <div
+            class="p-8 rounded-2xl border border-gray-100 dark:border-white/5 hover:shadow-xl hover:-translate-y-1 transition-all group bg-gradient-to-br from-white to-primary/5 dark:from-earth-card dark:to-earth-dark"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-3xl mb-5 group-hover:bg-primary group-hover:text-white group-hover:scale-110 transition-all"
+            >
+              <i class="fas fa-dumbbell"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              Wellness Room
+            </h3>
+            <p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">
+              Meditation space, standing desks, and yoga sessions to keep your
+              mind and body balanced.
+            </p>
+          </div>
+          <div
+            class="p-8 rounded-2xl border border-gray-100 dark:border-white/5 hover:shadow-xl hover:-translate-y-1 transition-all group bg-gradient-to-br from-white to-accent/5 dark:from-earth-card dark:to-earth-dark"
+          >
+            <div
+              class="w-16 h-16 bg-accent/10 text-accent rounded-2xl flex items-center justify-center text-3xl mb-5 group-hover:bg-accent group-hover:text-white group-hover:scale-110 transition-all"
+            >
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              Mail Handling
+            </h3>
+            <p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">
+              Dedicated business address with mail and package reception.
+              Forwarding service available.
+            </p>
+          </div>
+          <div
+            class="p-8 rounded-2xl border border-gray-100 dark:border-white/5 hover:shadow-xl hover:-translate-y-1 transition-all group bg-gradient-to-br from-white to-primary/5 dark:from-earth-card dark:to-earth-dark"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-3xl mb-5 group-hover:bg-primary group-hover:text-white group-hover:scale-110 transition-all"
+            >
+              <i class="fas fa-parking"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              Parking
+            </h3>
+            <p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">
+              Underground parking with EV charging stations. Bike storage and
+              shower facilities for cyclists.
+            </p>
+          </div>
+          <div
+            class="p-8 rounded-2xl border border-gray-100 dark:border-white/5 hover:shadow-xl hover:-translate-y-1 transition-all group bg-gradient-to-br from-white to-accent/5 dark:from-earth-card dark:to-earth-dark"
+          >
+            <div
+              class="w-16 h-16 bg-accent/10 text-accent rounded-2xl flex items-center justify-center text-3xl mb-5 group-hover:bg-accent group-hover:text-white group-hover:scale-110 transition-all"
+            >
+              <i class="fas fa-phone-volume"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              Phone Booths
+            </h3>
+            <p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">
+              Soundproof phone booths for private calls and focused work.
+              Available on every floor.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- Amenities Grid -->
-<section class="py-20 bg-white">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 gsap-stagger">
-      <div class="p-8 rounded-2xl border border-gray-100 dark:border-white/5 hover:shadow-xl hover:-translate-y-1 transition-all group bg-gradient-to-br from-white to-primary/5 dark:from-earth-card dark:to-earth-dark">
-        <div class="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-3xl mb-5 group-hover:bg-primary group-hover:text-white group-hover:scale-110 transition-all"><i class="fas fa-wifi"></i></div>
-        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Ultra-Fast WiFi</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">1Gbps fiber connection with dedicated bandwidth per member. Seamless video calls and file transfers.</p>
+    <!-- CTA -->
+    <section
+      class="py-20 bg-gradient-to-r from-primary via-primary-dark to-accent/60 relative overflow-hidden"
+    >
+      <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">
+          Experience It All First-Hand
+        </h2>
+        <p class="text-lg text-white/80 mb-8">
+          Book a visit and see our amenities in action.
+        </p>
+        <a
+          href="contact.html"
+          class="px-8 py-4 bg-white text-gray-900 font-bold rounded-xl hover:shadow-2xl hover:-translate-y-1 transition-all inline-flex items-center gap-2"
+          >Book a Tour <i class="fas fa-arrow-right"></i
+        ></a>
       </div>
-      <div class="p-8 rounded-2xl border border-gray-100 dark:border-white/5 hover:shadow-xl hover:-translate-y-1 transition-all group bg-gradient-to-br from-white to-secondary/5 dark:from-earth-card dark:to-earth-dark">
-        <div class="w-16 h-16 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center text-3xl mb-5 group-hover:bg-secondary group-hover:text-white group-hover:scale-110 transition-all"><i class="fas fa-mug-hot"></i></div>
-        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Premium Coffee & Snacks</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">Artisan coffee bar with specialty drinks, organic teas, fresh fruit, and healthy snacks throughout the day.</p>
-      </div>
-      <div class="p-8 rounded-2xl border border-gray-100 dark:border-white/5 hover:shadow-xl hover:-translate-y-1 transition-all group bg-gradient-to-br from-white to-accent/5 dark:from-earth-card dark:to-earth-dark">
-        <div class="w-16 h-16 bg-accent/10 text-accent rounded-2xl flex items-center justify-center text-3xl mb-5 group-hover:bg-accent group-hover:text-white group-hover:scale-110 transition-all"><i class="fas fa-shield-halved"></i></div>
-        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">24/7 Security</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">Biometric access control, CCTV monitoring, and on-site security personnel for your peace of mind.</p>
-      </div>
-      <div class="p-8 rounded-2xl border border-gray-100 dark:border-white/5 hover:shadow-xl hover:-translate-y-1 transition-all group bg-gradient-to-br from-white to-primary/5 dark:from-earth-card dark:to-earth-dark">
-        <div class="w-16 h-16 bg-primary/10 text-secondary rounded-2xl flex items-center justify-center text-3xl mb-5 group-hover:bg-primary group-hover:text-white group-hover:scale-110 transition-all"><i class="fas fa-print"></i></div>
-        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Printing & Scanning</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">High-speed color printing, scanning, and copying. Included in most membership plans.</p>
-      </div>
-      <div class="p-8 rounded-2xl border border-gray-100 dark:border-white/5 hover:shadow-xl hover:-translate-y-1 transition-all group bg-gradient-to-br from-white to-secondary/5 dark:from-earth-card dark:to-earth-dark">
-        <div class="w-16 h-16 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center text-3xl mb-5 group-hover:bg-secondary group-hover:text-white group-hover:scale-110 transition-all"><i class="fas fa-video"></i></div>
-        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">AV-Equipped Rooms</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">Conference rooms with 4K displays, wireless presentation, video conferencing, and whiteboard walls.</p>
-      </div>
-      <div class="p-8 rounded-2xl border border-gray-100 dark:border-white/5 hover:shadow-xl hover:-translate-y-1 transition-all group bg-gradient-to-br from-white to-primary/5 dark:from-earth-card dark:to-earth-dark">
-        <div class="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-3xl mb-5 group-hover:bg-primary group-hover:text-white group-hover:scale-110 transition-all"><i class="fas fa-dumbbell"></i></div>
-        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Wellness Room</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">Meditation space, standing desks, and yoga sessions to keep your mind and body balanced.</p>
-      </div>
-      <div class="p-8 rounded-2xl border border-gray-100 dark:border-white/5 hover:shadow-xl hover:-translate-y-1 transition-all group bg-gradient-to-br from-white to-accent/5 dark:from-earth-card dark:to-earth-dark">
-        <div class="w-16 h-16 bg-accent/10 text-accent rounded-2xl flex items-center justify-center text-3xl mb-5 group-hover:bg-accent group-hover:text-white group-hover:scale-110 transition-all"><i class="fas fa-envelope"></i></div>
-        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Mail Handling</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">Dedicated business address with mail and package reception. Forwarding service available.</p>
-      </div>
-      <div class="p-8 rounded-2xl border border-gray-100 dark:border-white/5 hover:shadow-xl hover:-translate-y-1 transition-all group bg-gradient-to-br from-white to-primary/5 dark:from-earth-card dark:to-earth-dark">
-        <div class="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-3xl mb-5 group-hover:bg-primary group-hover:text-white group-hover:scale-110 transition-all"><i class="fas fa-parking"></i></div>
-        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Parking</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">Underground parking with EV charging stations. Bike storage and shower facilities for cyclists.</p>
-      </div>
-      <div class="p-8 rounded-2xl border border-gray-100 dark:border-white/5 hover:shadow-xl hover:-translate-y-1 transition-all group bg-gradient-to-br from-white to-accent/5 dark:from-earth-card dark:to-earth-dark">
-        <div class="w-16 h-16 bg-accent/10 text-accent rounded-2xl flex items-center justify-center text-3xl mb-5 group-hover:bg-accent group-hover:text-white group-hover:scale-110 transition-all"><i class="fas fa-phone-volume"></i></div>
-        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Phone Booths</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">Soundproof phone booths for private calls and focused work. Available on every floor.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- CTA -->
-<section class="py-20 bg-gradient-to-r from-primary via-primary-dark to-accent/60 relative overflow-hidden">
-  <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-    <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">Experience It All First-Hand</h2>
-    <p class="text-lg text-white/80 mb-8">Book a visit and see our amenities in action.</p>
-    <a href="contact.html" class="px-8 py-4 bg-white text-gray-900 font-bold rounded-xl hover:shadow-2xl hover:-translate-y-1 transition-all inline-flex items-center gap-2">Book a Tour <i class="fas fa-arrow-right"></i></a>
-  </div>
-</section>
+    <!-- Footer -->
+    <footer class="bg-primary-dark text-gray-400 dark:text-gray-300 pt-20 pb-8">
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-white/10"
+        >
+          <div>
+            <a
+              href="index.html"
+              class="flex items-center gap-2 text-xl font-extrabold text-white mb-4"
+              ><span
+                class="w-9 h-9 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white text-sm"
+                ><i class="fas fa-building"></i
+              ></span>
+              CoWork Hub</a
+            >
+            <p class="text-sm leading-relaxed mb-5">
+              Premium co-working spaces.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-5">Quick Links</h4>
+            <ul class="space-y-3 text-sm">
+              <li>
+                <a href="about.html" class="hover:text-primary transition"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a href="spaces.html" class="hover:text-primary transition"
+                  >Spaces</a
+                >
+              </li>
+              <li>
+                <a href="pricing.html" class="hover:text-primary transition"
+                  >Pricing</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-5">Support</h4>
+            <ul class="space-y-3 text-sm">
+              <li>
+                <a href="contact.html" class="hover:text-primary transition"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition">Privacy</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-5">Contact</h4>
+            <ul class="space-y-3 text-sm">
+              <li class="flex items-center gap-3">
+                <i class="fas fa-envelope text-primary"></i>hello@coworkhub.com
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="pt-6 text-sm text-center">
+          <p>&copy; 2026 CoWork Hub. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
 
-<!-- Footer -->
-<footer class="bg-primary-dark text-gray-400 dark:text-gray-300 pt-20 pb-8">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-white/10">
-      <div><a href="index.html" class="flex items-center gap-2 text-xl font-extrabold text-white mb-4"><span class="w-9 h-9 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white text-sm"><i class="fas fa-building"></i></span> CoWork Hub</a><p class="text-sm leading-relaxed mb-5">Premium co-working spaces.</p></div>
-      <div><h4 class="text-white font-bold mb-5">Quick Links</h4><ul class="space-y-3 text-sm"><li><a href="about.html" class="hover:text-primary transition">About</a></li><li><a href="spaces.html" class="hover:text-primary transition">Spaces</a></li><li><a href="pricing.html" class="hover:text-primary transition">Pricing</a></li></ul></div>
-      <div><h4 class="text-white font-bold mb-5">Support</h4><ul class="space-y-3 text-sm"><li><a href="contact.html" class="hover:text-primary transition">Contact</a></li><li><a href="#" class="hover:text-primary transition">Privacy</a></li></ul></div>
-      <div><h4 class="text-white font-bold mb-5">Contact</h4><ul class="space-y-3 text-sm"><li class="flex items-center gap-3"><i class="fas fa-envelope text-primary"></i>hello@coworkhub.com</li></ul></div>
-    </div>
-    <div class="pt-6 text-sm text-center"><p>&copy; 2026 CoWork Hub. All rights reserved.</p></div>
-  </div>
-</footer>
-
-<button id="backToTop" class="back-to-top fixed bottom-8 right-8 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center shadow-lg shadow-primary/30 hover:-translate-y-1 transition-all z-50"><i class="fas fa-chevron-up"></i></button>
-<script src="../assets/js/main.js"></script>
-</body>
+    <button
+      id="backToTop"
+      class="back-to-top fixed bottom-8 right-8 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center shadow-lg shadow-primary/30 hover:-translate-y-1 transition-all z-50"
+    >
+      <i class="fas fa-chevron-up"></i>
+    </button>
+    <script src="../assets/js/main.js"></script>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-

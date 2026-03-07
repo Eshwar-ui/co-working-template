@@ -1,183 +1,695 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta name="keywords" content="coworking space, startup hub, flexible office, meeting rooms, private office, hot desk">
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Workspaces - CoWork Hub</title>
-  <meta name="description" content="Browse premium workspace options at CoWork Hub including hot desks, dedicated desks, private offices.">
-  <meta property="og:title" content="Our Spaces - CoWork Hub">
-  <meta property="og:description" content="Browse premium workspace options at CoWork Hub including hot desks, dedicated desks, private offices.">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Our Spaces - CoWork Hub">
-  <meta name="twitter:description" content="Browse premium workspace options at CoWork Hub including hot desks, dedicated desks, private offices.">
-  <link rel="canonical" href="https://coworkhub.com/spaces.html">
-  
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:'#3F4E3F','primary-dark':'#2C362C',secondary:'#D4A373',accent:'#B3541E',earth:{light:'#FDFCF0',dark:'#1A1C1A',card:'#242924'}},fontFamily:{sans:['Inter','sans-serif']}}}}</script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/dark-mode.css"><link rel="stylesheet" href="../assets/css/rtl.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-</head>
-<body class="font-sans text-gray-700 bg-earth-light dark:bg-earth-dark dark:text-gray-300 antialiased">
-<div class="preloader"><div class="preloader__spinner"></div></div>
+  <head>
+    <meta
+      name="keywords"
+      content="coworking space, startup hub, flexible office, meeting rooms, private office, hot desk"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workspaces - CoWork Hub</title>
+    <meta
+      name="description"
+      content="Browse premium workspace options at CoWork Hub including hot desks, dedicated desks, private offices."
+    />
+    <meta property="og:title" content="Our Spaces - CoWork Hub" />
+    <meta
+      property="og:description"
+      content="Browse premium workspace options at CoWork Hub including hot desks, dedicated desks, private offices."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Our Spaces - CoWork Hub" />
+    <meta
+      name="twitter:description"
+      content="Browse premium workspace options at CoWork Hub including hot desks, dedicated desks, private offices."
+    />
+    <link rel="canonical" href="https://coworkhub.com/spaces.html" />
 
-<!-- Navbar (same structure) -->
-<nav id="navbar" class="fixed top-0 left-0 w-full h-20 bg-white/95 backdrop-blur-xl border-b border-gray-100 z-50 transition-all">
-  <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
-    <a href="index.html" class="flex items-center gap-2 text-xl font-extrabold text-gray-900"><span class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-white text-lg"><i class="fas fa-building"></i></span>CoWork Hub</a>
-    <ul class="hidden lg:flex items-center gap-1">
-      <li class="nav-item relative group"><a href="#" class="flex items-center gap-1 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition">Home <i class="fas fa-chevron-down text-[10px] ml-1"></i></a>
-        <div class="nav-dropdown absolute top-full left-0 min-w-[200px] bg-white border border-gray-100 rounded-xl shadow-xl p-2 z-50 dark:bg-earth-card dark:border-white/10">
-          <a href="index.html" class="block px-4 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-primary/5 rounded-lg">Home 1</a>
-          <a href="index-2.html" class="block px-4 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-primary/5 rounded-lg">Home 2</a>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3F4E3F",
+              "primary-dark": "#2C362C",
+              secondary: "#D4A373",
+              accent: "#B3541E",
+              earth: { light: "#FDFCF0", dark: "#1A1C1A", card: "#242924" },
+            },
+            fontFamily: { sans: ["Inter", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+    <link rel="stylesheet" href="../assets/css/rtl.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      defer
+    ></script>
+  </head>
+  <body
+    class="font-sans text-gray-700 bg-earth-light dark:bg-earth-dark dark:text-gray-300 antialiased"
+  >
+    <div class="preloader"><div class="preloader__spinner"></div></div>
+
+    <!-- Navbar (same structure) -->
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 w-full h-20 bg-white/95 backdrop-blur-xl border-b border-gray-100 z-50 transition-all"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between"
+      >
+        <a
+          href="index.html"
+          class="flex items-center gap-2 text-xl font-extrabold text-gray-900"
+          ><span
+            class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-white text-lg"
+            ><i class="fas fa-building"></i></span
+          >CoWork Hub</a
+        >
+        <ul class="hidden lg:flex items-center gap-1">
+          <li class="nav-item relative group">
+            <a
+              href="#"
+              class="flex items-center gap-1 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition"
+              >Home <i class="fas fa-chevron-down text-[10px] ml-1"></i
+            ></a>
+            <div
+              class="nav-dropdown absolute top-full left-0 min-w-[200px] bg-white border border-gray-100 rounded-xl shadow-xl p-2 z-50 dark:bg-earth-card dark:border-white/10"
+            >
+              <a
+                href="index.html"
+                class="block px-4 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-primary/5 rounded-lg"
+                >Home 1</a
+              >
+              <a
+                href="index-2.html"
+                class="block px-4 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-primary/5 rounded-lg"
+                >Home 2</a
+              >
+            </div>
+          </li>
+          <li>
+            <a
+              href="about.html"
+              class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="services.html"
+              class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="blog.html"
+              class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a
+              href="contact.html"
+              class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300"
+              >Contact</a
+            >
+          </li>
+          <li class="nav-item relative group">
+            <a
+              href="#"
+              class="flex items-center gap-1 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg transition dark:text-gray-300"
+              >Dashboards <i class="fas fa-chevron-down text-[10px] ml-1"></i
+            ></a>
+            <div
+              class="nav-dropdown absolute top-full left-0 min-w-[200px] bg-white border border-gray-100 dark:bg-earth-card dark:border-white/10 rounded-xl shadow-xl p-2 z-50"
+            >
+              <a
+                href="dashboard-user.html"
+                class="block px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg dark:text-gray-300"
+                >User Dashboard</a
+              >
+              <a
+                href="dashboard-admin.html"
+                class="block px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg dark:text-gray-300"
+                >Admin Dashboard</a
+              >
+            </div>
+          </li>
+        </ul>
+        <div class="hidden lg:flex items-center gap-3">
+          <button
+            id="rtlToggle"
+            class="px-3 py-1.5 text-[10px] font-bold border border-gray-200 text-gray-500 dark:text-gray-300 rounded-lg hover:border-primary hover:text-primary transition uppercase tracking-wider"
+          >
+            RTL</button
+          ><button
+            id="darkToggle"
+            class="w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 text-gray-500 dark:text-gray-300 hover:text-primary transition"
+          >
+            <i class="fas fa-moon"></i>
+          </button>
+          <a
+            href="dashboard-user.html"
+            class="px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-full hover:bg-primary-dark transition-all"
+            >Member Login</a
+          >
         </div>
-      </li>
-      <li><a href="about.html" class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300">About</a></li>
-      <li><a href="services.html" class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300">Services</a></li>
-      <li><a href="blog.html" class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300">Blog</a></li>
-      <li><a href="contact.html" class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300">Contact</a></li>
-      <li class="nav-item relative group"><a href="#" class="flex items-center gap-1 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg transition dark:text-gray-300">Dashboards <i class="fas fa-chevron-down text-[10px] ml-1"></i></a>
-        <div class="nav-dropdown absolute top-full left-0 min-w-[200px] bg-white border border-gray-100 dark:bg-earth-card dark:border-white/10 rounded-xl shadow-xl p-2 z-50">
-          <a href="dashboard-user.html" class="block px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg dark:text-gray-300">User Dashboard</a>
-          <a href="dashboard-admin.html" class="block px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg dark:text-gray-300">Admin Dashboard</a>
-        </div>
-      </li>
-    </ul>
-    <div class="hidden lg:flex items-center gap-3">
-      <button id="rtlToggle" class="px-3 py-1.5 text-[10px] font-bold border border-gray-200 text-gray-500 dark:text-gray-300 rounded-lg hover:border-primary hover:text-primary transition uppercase tracking-wider">RTL</button><button id="darkToggle" class="w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 text-gray-500 dark:text-gray-300 hover:text-primary transition"><i class="fas fa-moon"></i></button>
-      <a href="dashboard-user.html" class="px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-full hover:bg-primary-dark transition-all">Member Login</a>
-    </div>
-    <button id="menuToggle" class="lg:hidden flex flex-col gap-1.5 p-2"><span class="w-6 h-0.5 bg-gray-700 rounded"></span><span class="w-6 h-0.5 bg-gray-700 rounded"></span><span class="w-6 h-0.5 bg-gray-700 rounded"></span></button>
-  </div>
-</nav>
+        <button id="menuToggle" class="lg:hidden flex flex-col gap-1.5 p-2">
+          <span class="w-6 h-0.5 bg-gray-700 rounded"></span
+          ><span class="w-6 h-0.5 bg-gray-700 rounded"></span
+          ><span class="w-6 h-0.5 bg-gray-700 rounded"></span>
+        </button>
+      </div>
+    </nav>
 
-<!-- Page Header -->
-<section class="pt-32 pb-16 bg-gradient-to-br from-gray-900 via-primary-dark to-gray-900 text-center page-header-pattern relative">
-  <div class="max-w-7xl mx-auto px-6 relative z-10">
-    <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Our Workspaces</h1>
-    <p class="text-gray-400 dark:text-gray-300 max-w-xl mx-auto mb-4">From hot desks to private suites, find the perfect workspace for you.</p>
-    <div class="flex items-center justify-center gap-2 text-sm text-gray-400 dark:text-gray-300"><a href="index.html" class="hover:text-primary transition">Home</a><i class="fas fa-chevron-right text-[10px]"></i><span class="text-primary/80">Spaces</span></div>
-  </div>
-</section>
-
-<!-- Filter Bar -->
-<section class="py-8 bg-white border-b border-gray-100 sticky top-20 z-40 backdrop-blur-xl">
-  <div class="max-w-7xl mx-auto px-6 flex flex-wrap items-center gap-3" data-tab-group>
-    <button data-tab="all" class="px-5 py-2 text-sm font-semibold rounded-full text-primary bg-primary/5 border border-primary/20 transition">All Spaces</button>
-    <button data-tab="hot-desk" class="px-5 py-2 text-sm font-semibold rounded-full text-gray-500 dark:text-gray-300 border border-gray-200 hover:border-primary hover:text-primary transition">Hot Desks</button>
-    <button data-tab="dedicated" class="px-5 py-2 text-sm font-semibold rounded-full text-gray-500 dark:text-gray-300 border border-gray-200 hover:border-primary hover:text-primary transition">Dedicated Desks</button>
-    <button data-tab="private" class="px-5 py-2 text-sm font-semibold rounded-full text-gray-500 dark:text-gray-300 border border-gray-200 hover:border-primary hover:text-primary transition">Private Offices</button>
-    <button data-tab="meeting" class="px-5 py-2 text-sm font-semibold rounded-full text-gray-500 dark:text-gray-300 border border-gray-200 hover:border-primary hover:text-primary transition">Meeting Rooms</button>
-  </div>
-</section>
-
-<!-- Workspace Grid -->
-<section class="py-16 bg-white">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 gsap-stagger">
-      <!-- Workspace Card 1 -->
-      <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-        <div class="relative h-56 overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10"><img src="../assets/images/office-desk.webp" alt="Hot Desk" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'" loading="lazy"><span class="absolute top-4 left-4 px-3 py-1 bg-primary text-white text-xs font-semibold rounded-full">Popular</span></div>
-        <div class="p-6">
-          <p class="text-xs font-bold text-primary uppercase tracking-wide mb-2">Hot Desk</p>
-          <h3 class="text-lg font-bold text-gray-900 mb-2"><a href="space-details.html" class="hover:text-primary transition">Flex Desk — Open Area</a></h3>
-          <div class="flex flex-wrap gap-3 text-xs text-gray-500 dark:text-gray-300 mb-4"><span class="flex items-center gap-1"><i class="fas fa-wifi text-primary"></i> WiFi</span><span class="flex items-center gap-1"><i class="fas fa-plug text-primary"></i> Power</span><span class="flex items-center gap-1"><i class="fas fa-users text-primary"></i> 1 Seat</span></div>
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100"><span class="text-xl font-bold text-gray-900">$29<span class="text-sm font-normal text-gray-500 dark:text-gray-300">/day</span></span><a href="space-details.html" class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary-dark transition">Book Now</a></div>
+    <!-- Page Header -->
+    <section
+      class="pt-32 pb-16 bg-gradient-to-br from-gray-900 via-primary-dark to-gray-900 text-center page-header-pattern relative"
+    >
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">
+          Our Workspaces
+        </h1>
+        <p class="text-gray-400 dark:text-gray-300 max-w-xl mx-auto mb-4">
+          From hot desks to private suites, find the perfect workspace for you.
+        </p>
+        <div
+          class="flex items-center justify-center gap-2 text-sm text-gray-400 dark:text-gray-300"
+        >
+          <a href="index.html" class="hover:text-primary transition">Home</a
+          ><i class="fas fa-chevron-right text-[10px]"></i
+          ><span class="text-primary/80">Spaces</span>
         </div>
       </div>
-      <!-- Workspace Card 2 -->
-      <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-        <div class="relative h-56 overflow-hidden bg-gradient-to-br from-secondary/10 to-primary/10"><img src="../assets/images/coworking-space-2.webp" alt="Dedicated Desk" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'" loading="lazy"></div>
-        <div class="p-6">
-          <p class="text-xs font-bold text-secondary uppercase tracking-wide mb-2">Dedicated Desk</p>
-          <h3 class="text-lg font-bold text-gray-900 mb-2"><a href="space-details.html" class="hover:text-primary transition">Personal Desk — Quiet Zone</a></h3>
-          <div class="flex flex-wrap gap-3 text-xs text-gray-500 dark:text-gray-300 mb-4"><span class="flex items-center gap-1"><i class="fas fa-lock text-primary"></i> Locker</span><span class="flex items-center gap-1"><i class="fas fa-desktop text-primary"></i> Monitor</span><span class="flex items-center gap-1"><i class="fas fa-users text-primary"></i> 1 Seat</span></div>
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100"><span class="text-xl font-bold text-gray-900">$199<span class="text-sm font-normal text-gray-500 dark:text-gray-300">/mo</span></span><a href="space-details.html" class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary-dark transition">Book Now</a></div>
-        </div>
-      </div>
-      <!-- Workspace Card 3 -->
-      <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-        <div class="relative h-56 overflow-hidden bg-gradient-to-br from-accent/10 to-primary/10"><img src="../assets/images/startup-meeting.webp" alt="Private Office" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'" loading="lazy"><span class="absolute top-4 left-4 px-3 py-1 bg-accent text-white text-xs font-semibold rounded-full">Premium</span></div>
-        <div class="p-6">
-          <p class="text-xs font-bold text-accent uppercase tracking-wide mb-2">Private Office</p>
-          <h3 class="text-lg font-bold text-gray-900 mb-2"><a href="space-details.html" class="hover:text-primary transition">Team Suite — 4 Seats</a></h3>
-          <div class="flex flex-wrap gap-3 text-xs text-gray-500 dark:text-gray-300 mb-4"><span class="flex items-center gap-1"><i class="fas fa-door-closed text-primary"></i> Private</span><span class="flex items-center gap-1"><i class="fas fa-tv text-primary"></i> Display</span><span class="flex items-center gap-1"><i class="fas fa-users text-primary"></i> 4 Seats</span></div>
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100"><span class="text-xl font-bold text-gray-900">$899<span class="text-sm font-normal text-gray-500 dark:text-gray-300">/mo</span></span><a href="space-details.html" class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary-dark transition">Book Now</a></div>
-        </div>
-      </div>
-      <!-- Card 4 -->
-      <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-        <div class="relative h-56 overflow-hidden bg-gradient-to-br from-primary/10 to-primary/10"><img src="../assets/images/coworking-space-1.webp" alt="Meeting Room" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'" loading="lazy"></div>
-        <div class="p-6">
-          <p class="text-xs font-bold text-secondary uppercase tracking-wide mb-2">Meeting Room</p>
-          <h3 class="text-lg font-bold text-gray-900 mb-2"><a href="space-details.html" class="hover:text-primary transition">Conference Room — 10 Seats</a></h3>
-          <div class="flex flex-wrap gap-3 text-xs text-gray-500 dark:text-gray-300 mb-4"><span class="flex items-center gap-1"><i class="fas fa-video text-primary"></i> AV Equipped</span><span class="flex items-center gap-1"><i class="fas fa-chalkboard text-primary"></i> Whiteboard</span></div>
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100"><span class="text-xl font-bold text-gray-900">$50<span class="text-sm font-normal text-gray-500 dark:text-gray-300">/hr</span></span><a href="space-details.html" class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary-dark transition">Book Now</a></div>
-        </div>
-      </div>
-      <!-- Card 5 -->
-      <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-        <div class="relative h-56 overflow-hidden bg-gradient-to-br from-secondary/10 to-primary/10"><img src="../assets/images/networking-event.webp" alt="Event Space" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'" loading="lazy"></div>
-        <div class="p-6">
-          <p class="text-xs font-bold text-secondary uppercase tracking-wide mb-2">Event Space</p>
-          <h3 class="text-lg font-bold text-gray-900 mb-2"><a href="space-details.html" class="hover:text-primary transition">Main Hall — 100 Seats</a></h3>
-          <div class="flex flex-wrap gap-3 text-xs text-gray-500 dark:text-gray-300 mb-4"><span class="flex items-center gap-1"><i class="fas fa-microphone text-primary"></i> PA System</span><span class="flex items-center gap-1"><i class="fas fa-video text-primary"></i> Projector</span></div>
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100"><span class="text-xl font-bold text-gray-900">$200<span class="text-sm font-normal text-gray-500 dark:text-gray-300">/hr</span></span><a href="space-details.html" class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary-dark transition">Book Now</a></div>
-        </div>
-      </div>
-      <!-- Card 6 -->
-      <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-        <div class="relative h-56 overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10"><img src="../assets/images/team-collaboration.webp" alt="Team Office" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'" loading="lazy"></div>
-        <div class="p-6">
-          <p class="text-xs font-bold text-primary uppercase tracking-wide mb-2">Private Office</p>
-          <h3 class="text-lg font-bold text-gray-900 mb-2"><a href="space-details.html" class="hover:text-primary transition">Executive Suite — 8 Seats</a></h3>
-          <div class="flex flex-wrap gap-3 text-xs text-gray-500 dark:text-gray-300 mb-4"><span class="flex items-center gap-1"><i class="fas fa-door-closed text-primary"></i> Private</span><span class="flex items-center gap-1"><i class="fas fa-couch text-primary"></i> Lounge</span></div>
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100"><span class="text-xl font-bold text-gray-900">$1,499<span class="text-sm font-normal text-gray-500 dark:text-gray-300">/mo</span></span><a href="space-details.html" class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary-dark transition">Book Now</a></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- CTA -->
-<section class="py-20 bg-gradient-to-r from-primary via-primary-dark to-accent/60 relative overflow-hidden">
-  <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-    <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">Can't Decide? Book a Tour!</h2>
-    <p class="text-lg text-white/80 mb-8">Visit us and explore the spaces in person. We'll help you find the perfect fit.</p>
-    <a href="contact.html" class="px-8 py-4 bg-white text-gray-900 font-bold rounded-xl hover:shadow-2xl hover:-translate-y-1 transition-all inline-flex items-center gap-2">Schedule a Tour <i class="fas fa-arrow-right"></i></a>
-  </div>
-</section>
+    <!-- Filter Bar -->
+    <section
+      class="py-8 bg-white border-b border-gray-100 sticky top-20 z-40 backdrop-blur-xl"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 flex flex-wrap items-center gap-3"
+        data-tab-group
+      >
+        <button
+          data-tab="all"
+          class="px-5 py-2 text-sm font-semibold rounded-full text-primary bg-primary/5 border border-primary/20 transition"
+        >
+          All Spaces
+        </button>
+        <button
+          data-tab="hot-desk"
+          class="px-5 py-2 text-sm font-semibold rounded-full text-gray-500 dark:text-gray-300 border border-gray-200 hover:border-primary hover:text-primary transition"
+        >
+          Hot Desks
+        </button>
+        <button
+          data-tab="dedicated"
+          class="px-5 py-2 text-sm font-semibold rounded-full text-gray-500 dark:text-gray-300 border border-gray-200 hover:border-primary hover:text-primary transition"
+        >
+          Dedicated Desks
+        </button>
+        <button
+          data-tab="private"
+          class="px-5 py-2 text-sm font-semibold rounded-full text-gray-500 dark:text-gray-300 border border-gray-200 hover:border-primary hover:text-primary transition"
+        >
+          Private Offices
+        </button>
+        <button
+          data-tab="meeting"
+          class="px-5 py-2 text-sm font-semibold rounded-full text-gray-500 dark:text-gray-300 border border-gray-200 hover:border-primary hover:text-primary transition"
+        >
+          Meeting Rooms
+        </button>
+      </div>
+    </section>
 
-<!-- Footer -->
-<footer class="bg-primary-dark text-gray-400 dark:text-gray-300 pt-20 pb-8">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-white/10">
-      <div><a href="index.html" class="flex items-center gap-2 text-xl font-extrabold text-white mb-4"><span class="w-9 h-9 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white text-sm"><i class="fas fa-building"></i></span> CoWork Hub</a><p class="text-sm leading-relaxed mb-5">Premium co-working spaces for startups, freelancers, and enterprises.</p></div>
-      <div><h4 class="text-white font-bold mb-5">Quick Links</h4><ul class="space-y-3 text-sm"><li><a href="dashboard-user.html" class="hover:text-primary transition">Member Dashboard</a></li><li><a href="dashboard-admin.html" class="hover:text-primary transition">Admin Dashboard</a></li></ul></div>
-      <div><h4 class="text-white font-bold mb-5">Support</h4><ul class="space-y-3 text-sm"><li><a href="contact.html" class="hover:text-primary transition">Contact</a></li><li><a href="#" class="hover:text-primary transition">Privacy Policy</a></li><li><a href="#" class="hover:text-primary transition">Terms</a></li></ul></div>
-      <div><h4 class="text-white font-bold mb-5">Contact</h4><ul class="space-y-3 text-sm"><li class="flex items-start gap-3"><i class="fas fa-map-marker-alt mt-1 text-primary"></i>123 Innovation Drive, SF</li><li class="flex items-center gap-3"><i class="fas fa-envelope text-primary"></i>hello@coworkhub.com</li></ul></div>
-    </div>
-    <div class="flex flex-col md:flex-row items-center justify-between pt-6 text-sm"><p>&copy; 2026 CoWork Hub. All rights reserved.</p></div>
-  </div>
-</footer>
+    <!-- Workspace Grid -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 gsap-stagger">
+          <!-- Workspace Card 1 -->
+          <div
+            class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+          >
+            <div
+              class="relative h-56 overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10"
+            >
+              <img
+                src="../assets/images/office-desk.webp"
+                alt="Hot Desk"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                onerror="this.style.display = 'none'"
+                loading="lazy"
+              /><span
+                class="absolute top-4 left-4 px-3 py-1 bg-primary text-white text-xs font-semibold rounded-full"
+                >Popular</span
+              >
+            </div>
+            <div class="p-6">
+              <p
+                class="text-xs font-bold text-primary uppercase tracking-wide mb-2"
+              >
+                Hot Desk
+              </p>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                <a
+                  href="space-details.html"
+                  class="hover:text-primary transition"
+                  >Flex Desk — Open Area</a
+                >
+              </h3>
+              <div
+                class="flex flex-wrap gap-3 text-xs text-gray-500 dark:text-gray-300 mb-4"
+              >
+                <span class="flex items-center gap-1"
+                  ><i class="fas fa-wifi text-primary"></i> WiFi</span
+                ><span class="flex items-center gap-1"
+                  ><i class="fas fa-plug text-primary"></i> Power</span
+                ><span class="flex items-center gap-1"
+                  ><i class="fas fa-users text-primary"></i> 1 Seat</span
+                >
+              </div>
+              <div
+                class="flex items-center justify-between pt-4 border-t border-gray-100"
+              >
+                <span class="text-xl font-bold text-gray-900"
+                  >$29<span
+                    class="text-sm font-normal text-gray-500 dark:text-gray-300"
+                    >/day</span
+                  ></span
+                ><a
+                  href="space-details.html"
+                  class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary-dark transition"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Workspace Card 2 -->
+          <div
+            class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+          >
+            <div
+              class="relative h-56 overflow-hidden bg-gradient-to-br from-secondary/10 to-primary/10"
+            >
+              <img
+                src="../assets/images/coworking-space-2.webp"
+                alt="Dedicated Desk"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                onerror="this.style.display = 'none'"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-6">
+              <p
+                class="text-xs font-bold text-secondary uppercase tracking-wide mb-2"
+              >
+                Dedicated Desk
+              </p>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                <a
+                  href="space-details.html"
+                  class="hover:text-primary transition"
+                  >Personal Desk — Quiet Zone</a
+                >
+              </h3>
+              <div
+                class="flex flex-wrap gap-3 text-xs text-gray-500 dark:text-gray-300 mb-4"
+              >
+                <span class="flex items-center gap-1"
+                  ><i class="fas fa-lock text-primary"></i> Locker</span
+                ><span class="flex items-center gap-1"
+                  ><i class="fas fa-desktop text-primary"></i> Monitor</span
+                ><span class="flex items-center gap-1"
+                  ><i class="fas fa-users text-primary"></i> 1 Seat</span
+                >
+              </div>
+              <div
+                class="flex items-center justify-between pt-4 border-t border-gray-100"
+              >
+                <span class="text-xl font-bold text-gray-900"
+                  >$199<span
+                    class="text-sm font-normal text-gray-500 dark:text-gray-300"
+                    >/mo</span
+                  ></span
+                ><a
+                  href="space-details.html"
+                  class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary-dark transition"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Workspace Card 3 -->
+          <div
+            class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+          >
+            <div
+              class="relative h-56 overflow-hidden bg-gradient-to-br from-accent/10 to-primary/10"
+            >
+              <img
+                src="../assets/images/startup-meeting.webp"
+                alt="Private Office"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                onerror="this.style.display = 'none'"
+                loading="lazy"
+              /><span
+                class="absolute top-4 left-4 px-3 py-1 bg-accent text-white text-xs font-semibold rounded-full"
+                >Premium</span
+              >
+            </div>
+            <div class="p-6">
+              <p
+                class="text-xs font-bold text-accent uppercase tracking-wide mb-2"
+              >
+                Private Office
+              </p>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                <a
+                  href="space-details.html"
+                  class="hover:text-primary transition"
+                  >Team Suite — 4 Seats</a
+                >
+              </h3>
+              <div
+                class="flex flex-wrap gap-3 text-xs text-gray-500 dark:text-gray-300 mb-4"
+              >
+                <span class="flex items-center gap-1"
+                  ><i class="fas fa-door-closed text-primary"></i> Private</span
+                ><span class="flex items-center gap-1"
+                  ><i class="fas fa-tv text-primary"></i> Display</span
+                ><span class="flex items-center gap-1"
+                  ><i class="fas fa-users text-primary"></i> 4 Seats</span
+                >
+              </div>
+              <div
+                class="flex items-center justify-between pt-4 border-t border-gray-100"
+              >
+                <span class="text-xl font-bold text-gray-900"
+                  >$899<span
+                    class="text-sm font-normal text-gray-500 dark:text-gray-300"
+                    >/mo</span
+                  ></span
+                ><a
+                  href="space-details.html"
+                  class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary-dark transition"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div
+            class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+          >
+            <div
+              class="relative h-56 overflow-hidden bg-gradient-to-br from-primary/10 to-primary/10"
+            >
+              <img
+                src="../assets/images/coworking-space-1.webp"
+                alt="Meeting Room"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                onerror="this.style.display = 'none'"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-6">
+              <p
+                class="text-xs font-bold text-secondary uppercase tracking-wide mb-2"
+              >
+                Meeting Room
+              </p>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                <a
+                  href="space-details.html"
+                  class="hover:text-primary transition"
+                  >Conference Room — 10 Seats</a
+                >
+              </h3>
+              <div
+                class="flex flex-wrap gap-3 text-xs text-gray-500 dark:text-gray-300 mb-4"
+              >
+                <span class="flex items-center gap-1"
+                  ><i class="fas fa-video text-primary"></i> AV Equipped</span
+                ><span class="flex items-center gap-1"
+                  ><i class="fas fa-chalkboard text-primary"></i>
+                  Whiteboard</span
+                >
+              </div>
+              <div
+                class="flex items-center justify-between pt-4 border-t border-gray-100"
+              >
+                <span class="text-xl font-bold text-gray-900"
+                  >$50<span
+                    class="text-sm font-normal text-gray-500 dark:text-gray-300"
+                    >/hr</span
+                  ></span
+                ><a
+                  href="space-details.html"
+                  class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary-dark transition"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div
+            class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+          >
+            <div
+              class="relative h-56 overflow-hidden bg-gradient-to-br from-secondary/10 to-primary/10"
+            >
+              <img
+                src="../assets/images/networking-event.webp"
+                alt="Event Space"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                onerror="this.style.display = 'none'"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-6">
+              <p
+                class="text-xs font-bold text-secondary uppercase tracking-wide mb-2"
+              >
+                Event Space
+              </p>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                <a
+                  href="space-details.html"
+                  class="hover:text-primary transition"
+                  >Main Hall — 100 Seats</a
+                >
+              </h3>
+              <div
+                class="flex flex-wrap gap-3 text-xs text-gray-500 dark:text-gray-300 mb-4"
+              >
+                <span class="flex items-center gap-1"
+                  ><i class="fas fa-microphone text-primary"></i> PA
+                  System</span
+                ><span class="flex items-center gap-1"
+                  ><i class="fas fa-video text-primary"></i> Projector</span
+                >
+              </div>
+              <div
+                class="flex items-center justify-between pt-4 border-t border-gray-100"
+              >
+                <span class="text-xl font-bold text-gray-900"
+                  >$200<span
+                    class="text-sm font-normal text-gray-500 dark:text-gray-300"
+                    >/hr</span
+                  ></span
+                ><a
+                  href="space-details.html"
+                  class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary-dark transition"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div
+            class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+          >
+            <div
+              class="relative h-56 overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10"
+            >
+              <img
+                src="../assets/images/team-collaboration.webp"
+                alt="Team Office"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                onerror="this.style.display = 'none'"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-6">
+              <p
+                class="text-xs font-bold text-primary uppercase tracking-wide mb-2"
+              >
+                Private Office
+              </p>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                <a
+                  href="space-details.html"
+                  class="hover:text-primary transition"
+                  >Executive Suite — 8 Seats</a
+                >
+              </h3>
+              <div
+                class="flex flex-wrap gap-3 text-xs text-gray-500 dark:text-gray-300 mb-4"
+              >
+                <span class="flex items-center gap-1"
+                  ><i class="fas fa-door-closed text-primary"></i> Private</span
+                ><span class="flex items-center gap-1"
+                  ><i class="fas fa-couch text-primary"></i> Lounge</span
+                >
+              </div>
+              <div
+                class="flex items-center justify-between pt-4 border-t border-gray-100"
+              >
+                <span class="text-xl font-bold text-gray-900"
+                  >$1,499<span
+                    class="text-sm font-normal text-gray-500 dark:text-gray-300"
+                    >/mo</span
+                  ></span
+                ><a
+                  href="space-details.html"
+                  class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary-dark transition"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<button id="backToTop" class="back-to-top fixed bottom-8 right-8 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center shadow-lg shadow-primary/30 hover:-translate-y-1 transition-all z-50"><i class="fas fa-chevron-up"></i></button>
-<script src="../assets/js/main.js"></script>
-</body>
+    <!-- CTA -->
+    <section
+      class="py-20 bg-gradient-to-r from-primary via-primary-dark to-accent/60 relative overflow-hidden"
+    >
+      <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">
+          Can't Decide? Book a Tour!
+        </h2>
+        <p class="text-lg text-white/80 mb-8">
+          Visit us and explore the spaces in person. We'll help you find the
+          perfect fit.
+        </p>
+        <a
+          href="contact.html"
+          class="px-8 py-4 bg-white text-gray-900 font-bold rounded-xl hover:shadow-2xl hover:-translate-y-1 transition-all inline-flex items-center gap-2"
+          >Schedule a Tour <i class="fas fa-arrow-right"></i
+        ></a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-dark text-gray-400 dark:text-gray-300 pt-20 pb-8">
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-white/10"
+        >
+          <div>
+            <a
+              href="index.html"
+              class="flex items-center gap-2 text-xl font-extrabold text-white mb-4"
+              ><span
+                class="w-9 h-9 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white text-sm"
+                ><i class="fas fa-building"></i
+              ></span>
+              CoWork Hub</a
+            >
+            <p class="text-sm leading-relaxed mb-5">
+              Premium co-working spaces for startups, freelancers, and
+              enterprises.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-5">Quick Links</h4>
+            <ul class="space-y-3 text-sm">
+              <li>
+                <a
+                  href="dashboard-user.html"
+                  class="hover:text-primary transition"
+                  >Member Dashboard</a
+                >
+              </li>
+              <li>
+                <a
+                  href="dashboard-admin.html"
+                  class="hover:text-primary transition"
+                  >Admin Dashboard</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-5">Support</h4>
+            <ul class="space-y-3 text-sm">
+              <li>
+                <a href="contact.html" class="hover:text-primary transition"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition">Terms</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-5">Contact</h4>
+            <ul class="space-y-3 text-sm">
+              <li class="flex items-start gap-3">
+                <i class="fas fa-map-marker-alt mt-1 text-primary"></i>123
+                Innovation Drive, SF
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fas fa-envelope text-primary"></i>hello@coworkhub.com
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="flex flex-col md:flex-row items-center justify-between pt-6 text-sm"
+        >
+          <p>&copy; 2026 CoWork Hub. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <button
+      id="backToTop"
+      class="back-to-top fixed bottom-8 right-8 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center shadow-lg shadow-primary/30 hover:-translate-y-1 transition-all z-50"
+    >
+      <i class="fas fa-chevron-up"></i>
+    </button>
+    <script src="../assets/js/main.js"></script>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-

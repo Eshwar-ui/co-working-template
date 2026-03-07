@@ -1,74 +1,400 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Manage Bookings - Admin - CoWork Hub</title>
-  <meta name="description" content="Manage Bookings - Admin - CoWork Hub portal for CoWork Hub members and administrators.">
-  <meta property="og:title" content="Manage Bookings - Admin - CoWork Hub">
-  <meta property="og:description" content="Manage Bookings - Admin - CoWork Hub portal for CoWork Hub members and administrators.">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Manage Bookings - Admin - CoWork Hub">
-  <meta name="twitter:description" content="Manage Bookings - Admin - CoWork Hub portal for CoWork Hub members and administrators.">
-  <link rel="canonical" href="https://coworkhub.com/manage-bookings.html">
-  
-  <meta name="keywords" content="coworking space, startup hub, flexible office, meeting rooms, private office, hot desk">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:'#3F4E3F','primary-dark':'#2C362C',secondary:'#D4A373',accent:'#B3541E',earth:{light:'#FDFCF0',dark:'#1A1C1A',card:'#242924'}},fontFamily:{sans:['Inter','sans-serif']}}}}</script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="../../assets/css/style.css"><link rel="stylesheet" href="../../assets/css/dark-mode.css"><link rel="stylesheet" href="../../assets/css/rtl.css">
-</head>
-<body class="font-sans bg-earth-light dark:bg-earth-dark text-gray-700 dark:text-gray-300 antialiased">
-<div class="flex min-h-screen">
-  <aside id="sidebar" class="w-64 bg-primary-dark fixed h-full z-40 transition-transform -translate-x-full lg:translate-x-0"><div class="p-6 border-b border-white/10"><a href="../../index.html" class="flex items-center gap-2 text-lg font-extrabold text-white"><span class="w-9 h-9 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-sm"><i class="fas fa-building"></i></span>CoWork Hub</a><span class="inline-block mt-2 px-2 py-0.5 bg-primary/20 text-primary text-[10px] font-bold rounded uppercase">Admin</span></div><nav class="p-4 space-y-1"><a href="admin-dashboard.html" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-400 dark:text-gray-300 hover:text-white hover:bg-white dark:bg-earth-card/5 rounded-xl transition"><i class="fas fa-th-large w-5"></i> Dashboard</a><a href="manage-members.html" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-400 dark:text-gray-300 hover:text-white hover:bg-white dark:bg-earth-card/5 rounded-xl transition"><i class="fas fa-users w-5"></i> Members</a><a href="manage-bookings.html" class="flex items-center gap-3 px-4 py-2.5 text-sm font-semibold text-white bg-white dark:bg-earth-card/10 rounded-xl"><i class="fas fa-calendar-alt w-5"></i> Bookings</a><a href="manage-spaces.html" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-400 dark:text-gray-300 hover:text-white hover:bg-white dark:bg-earth-card/5 rounded-xl transition"><i class="fas fa-building w-5"></i> Spaces</a><a href="revenue.html" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-400 dark:text-gray-300 hover:text-white hover:bg-white dark:bg-earth-card/5 rounded-xl transition"><i class="fas fa-chart-line w-5"></i> Revenue</a><a href="settings.html" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-400 dark:text-gray-300 hover:text-white hover:bg-white dark:bg-earth-card/5 rounded-xl transition"><i class="fas fa-cog w-5"></i> Settings</a><div class="pt-4 mt-4 border-t border-white/10"><a href="../../index.html" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-400 dark:text-gray-300 hover:text-white hover:bg-white dark:bg-earth-card/5 rounded-xl transition"><i class="fas fa-arrow-left w-5"></i> Back</a></div></nav></aside>
-  <div class="flex-1 lg:ml-64">
-    <header class="h-16 bg-white dark:bg-earth-card border-b border-gray-100 dark:border-white/10 flex items-center justify-between px-6 sticky top-0 z-30">
-      <div class="flex items-center gap-4"><button id="sidebarToggle" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 text-gray-500 dark:text-gray-300"><i class="fas fa-bars"></i></button><h1 class="text-lg font-bold text-gray-900 dark:text-white">Manage Bookings</h1></div><div class="flex items-center gap-3"><button id="rtlToggle" class="px-3 py-1.5 text-[10px] font-bold border border-gray-200 text-gray-500 dark:text-gray-300 rounded-lg hover:border-primary hover:text-primary transition uppercase tracking-wider">RTL</button><button id="darkToggle" class="w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 text-gray-500 dark:text-gray-300 hover:text-primary transition"><i class="fas fa-moon"></i></button></div></header>
-    <main class="p-6">
-      <div class="grid sm:grid-cols-4 gap-6 mb-8">
-        <div class="bg-white dark:bg-earth-card rounded-2xl p-5 border border-gray-100 dark:border-white/10 text-center"><div class="text-2xl font-extrabold text-gray-900 dark:text-white">1,847</div><p class="text-xs text-gray-500 dark:text-gray-300">Total This Month</p></div>
-        <div class="bg-white dark:bg-earth-card rounded-2xl p-5 border border-gray-100 dark:border-white/10 text-center"><div class="text-2xl font-extrabold text-primary-600">342</div><p class="text-xs text-gray-500 dark:text-gray-300">Today</p></div>
-        <div class="bg-white dark:bg-earth-card rounded-2xl p-5 border border-gray-100 dark:border-white/10 text-center"><div class="text-2xl font-extrabold text-secondary">28</div><p class="text-xs text-gray-500 dark:text-gray-300">Pending Approval</p></div>
-        <div class="bg-white dark:bg-earth-card rounded-2xl p-5 border border-gray-100 dark:border-white/10 text-center"><div class="text-2xl font-extrabold text-red-500">5</div><p class="text-xs text-gray-500 dark:text-gray-300">Cancelled</p></div>
-      </div>
-      <div class="bg-white dark:bg-earth-card rounded-2xl border border-gray-100 dark:border-white/10 overflow-hidden">
-        <div class="p-6 border-b border-gray-100 dark:border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div class="flex gap-3"><div class="relative"><input type="text" placeholder="Search..." class="pl-10 pr-4 py-2 border border-gray-200 rounded-lg text-sm focus:border-primary outline-none w-48 dark:bg-earth-dark dark:border-white/10 dark:text-white "><i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-300 text-xs"></i></div><select class="px-3 py-2 border border-gray-200 rounded-lg text-sm outline-none dark:bg-earth-dark dark:border-white/10 dark:text-white "><option>All Status</option><option>Confirmed</option><option>Pending</option><option>Cancelled</option></select><input type="date" class="px-3 py-2 border border-gray-200 rounded-lg text-sm outline-none dark:bg-earth-dark dark:border-white/10 dark:text-white "></div>
-          <button class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary-dark transition"><i class="fas fa-download mr-1"></i> Export</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Bookings - Admin - CoWork Hub</title>
+    <meta
+      name="description"
+      content="Manage Bookings - Admin - CoWork Hub portal for CoWork Hub members and administrators."
+    />
+    <meta property="og:title" content="Manage Bookings - Admin - CoWork Hub" />
+    <meta
+      property="og:description"
+      content="Manage Bookings - Admin - CoWork Hub portal for CoWork Hub members and administrators."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Manage Bookings - Admin - CoWork Hub" />
+    <meta
+      name="twitter:description"
+      content="Manage Bookings - Admin - CoWork Hub portal for CoWork Hub members and administrators."
+    />
+    <link rel="canonical" href="https://coworkhub.com/manage-bookings.html" />
+
+    <meta
+      name="keywords"
+      content="coworking space, startup hub, flexible office, meeting rooms, private office, hot desk"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3F4E3F",
+              "primary-dark": "#2C362C",
+              secondary: "#D4A373",
+              accent: "#B3541E",
+              earth: { light: "#FDFCF0", dark: "#1A1C1A", card: "#242924" },
+            },
+            fontFamily: { sans: ["Inter", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/dark-mode.css" />
+    <link rel="stylesheet" href="../../assets/css/rtl.css" />
+  </head>
+  <body
+    class="font-sans bg-earth-light dark:bg-earth-dark text-gray-700 dark:text-gray-300 antialiased"
+  >
+    <div class="flex min-h-screen">
+      <aside
+        id="sidebar"
+        class="w-64 bg-primary-dark fixed h-full z-40 transition-transform -translate-x-full lg:translate-x-0"
+      >
+        <div class="p-6 border-b border-white/10">
+          <a
+            href="../../index.html"
+            class="flex items-center gap-2 text-lg font-extrabold text-white"
+            ><span
+              class="w-9 h-9 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-sm"
+              ><i class="fas fa-building"></i></span
+            >CoWork Hub</a
+          ><span
+            class="inline-block mt-2 px-2 py-0.5 bg-primary/20 text-primary text-[10px] font-bold rounded uppercase"
+            >Admin</span
+          >
         </div>
-        <div class="overflow-x-auto">
-          <table class="w-full text-sm">
-            <thead><tr class="bg-earth-light dark:bg-earth-dark text-left"><th class="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase">Booking ID</th><th class="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase">Member</th><th class="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase">Space</th><th class="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase">Date</th><th class="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase">Time</th><th class="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase">Status</th><th class="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase">Actions</th></tr></thead>
-            <tbody>
-              <tr class="border-b border-gray-50 hover:bg-earth-light dark:bg-earth-dark/50"><td class="px-6 py-4 font-semibold text-primary">#BK-4521</td><td class="px-6 py-4 text-gray-900 dark:text-white">John Doe</td><td class="px-6 py-4 text-gray-600">Conf. Room A</td><td class="px-6 py-4 text-gray-500 dark:text-gray-300">Mar 15</td><td class="px-6 py-4 text-gray-500 dark:text-gray-300">10-12 PM</td><td class="px-6 py-4"><span class="px-2.5 py-1 bg-secondary/20 text-secondary text-xs font-bold rounded-full">Confirmed</span></td><td class="px-6 py-4"><div class="flex gap-2"><button class="w-8 h-8 flex items-center justify-center rounded-lg text-gray-400 dark:text-gray-300 hover:text-primary hover:bg-primary/5 transition"><i class="fas fa-eye"></i></button><button class="w-8 h-8 flex items-center justify-center rounded-lg text-gray-400 dark:text-gray-300 hover:text-red-500 hover:bg-red-50 transition"><i class="fas fa-times"></i></button></div></td></tr>
-              <tr class="border-b border-gray-50 hover:bg-earth-light dark:bg-earth-dark/50"><td class="px-6 py-4 font-semibold text-primary">#BK-4520</td><td class="px-6 py-4 text-gray-900 dark:text-white">Sarah M.</td><td class="px-6 py-4 text-gray-600">Hot Desk</td><td class="px-6 py-4 text-gray-500 dark:text-gray-300">Mar 15</td><td class="px-6 py-4 text-gray-500 dark:text-gray-300">All Day</td><td class="px-6 py-4"><span class="px-2.5 py-1 bg-secondary-100 text-secondary-700 text-xs font-bold rounded-full">Pending</span></td><td class="px-6 py-4"><div class="flex gap-2"><button class="w-8 h-8 flex items-center justify-center rounded-lg text-primary hover:bg-primary-50 transition"><i class="fas fa-check"></i></button><button class="w-8 h-8 flex items-center justify-center rounded-lg text-gray-400 dark:text-gray-300 hover:text-red-500 hover:bg-red-50 transition"><i class="fas fa-times"></i></button></div></td></tr>
-              <tr class="border-b border-gray-50 hover:bg-earth-light dark:bg-earth-dark/50"><td class="px-6 py-4 font-semibold text-primary">#BK-4519</td><td class="px-6 py-4 text-gray-900 dark:text-white">Marcus K.</td><td class="px-6 py-4 text-gray-600">Phone Booth</td><td class="px-6 py-4 text-gray-500 dark:text-gray-300">Mar 14</td><td class="px-6 py-4 text-gray-500 dark:text-gray-300">2-3 PM</td><td class="px-6 py-4"><span class="px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-bold rounded-full">Completed</span></td><td class="px-6 py-4"><button class="w-8 h-8 flex items-center justify-center rounded-lg text-gray-400 dark:text-gray-300 hover:text-primary hover:bg-primary/5 transition"><i class="fas fa-eye"></i></button></td></tr>
-              <tr><td class="px-6 py-4 font-semibold text-gray-400 dark:text-gray-300">#BK-4518</td><td class="px-6 py-4 text-gray-900 dark:text-white">Emily W.</td><td class="px-6 py-4 text-gray-600">Event Space</td><td class="px-6 py-4 text-gray-500 dark:text-gray-300">Mar 13</td><td class="px-6 py-4 text-gray-500 dark:text-gray-300">6-9 PM</td><td class="px-6 py-4"><span class="px-2.5 py-1 bg-red-100 text-red-700 text-xs font-bold rounded-full">Cancelled</span></td><td class="px-6 py-4"><button class="w-8 h-8 flex items-center justify-center rounded-lg text-gray-400 dark:text-gray-300 hover:text-primary hover:bg-primary/5 transition"><i class="fas fa-eye"></i></button></td></tr>
-            </tbody>
-          </table>
-        </div>
+        <nav class="p-4 space-y-1">
+          <a
+            href="admin-dashboard.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-400 dark:text-gray-300 hover:text-white hover:bg-white dark:bg-earth-card/5 rounded-xl transition"
+            ><i class="fas fa-th-large w-5"></i> Dashboard</a
+          ><a
+            href="manage-members.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-400 dark:text-gray-300 hover:text-white hover:bg-white dark:bg-earth-card/5 rounded-xl transition"
+            ><i class="fas fa-users w-5"></i> Members</a
+          ><a
+            href="manage-bookings.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-semibold text-white bg-white dark:bg-earth-card/10 rounded-xl"
+            ><i class="fas fa-calendar-alt w-5"></i> Bookings</a
+          ><a
+            href="manage-spaces.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-400 dark:text-gray-300 hover:text-white hover:bg-white dark:bg-earth-card/5 rounded-xl transition"
+            ><i class="fas fa-building w-5"></i> Spaces</a
+          ><a
+            href="revenue.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-400 dark:text-gray-300 hover:text-white hover:bg-white dark:bg-earth-card/5 rounded-xl transition"
+            ><i class="fas fa-chart-line w-5"></i> Revenue</a
+          ><a
+            href="settings.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-400 dark:text-gray-300 hover:text-white hover:bg-white dark:bg-earth-card/5 rounded-xl transition"
+            ><i class="fas fa-cog w-5"></i> Settings</a
+          >
+          <div class="pt-4 mt-4 border-t border-white/10">
+            <a
+              href="../../index.html"
+              class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-400 dark:text-gray-300 hover:text-white hover:bg-white dark:bg-earth-card/5 rounded-xl transition"
+              ><i class="fas fa-arrow-left w-5"></i> Back</a
+            >
+          </div>
+        </nav>
+      </aside>
+      <div class="flex-1 lg:ml-64">
+        <header
+          class="h-16 bg-white dark:bg-earth-card border-b border-gray-100 dark:border-white/10 flex items-center justify-between px-6 sticky top-0 z-30"
+        >
+          <div class="flex items-center gap-4">
+            <button
+              id="sidebarToggle"
+              class="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 text-gray-500 dark:text-gray-300"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+            <h1 class="text-lg font-bold text-gray-900 dark:text-white">
+              Manage Bookings
+            </h1>
+          </div>
+          <div class="flex items-center gap-3">
+            <button
+              id="rtlToggle"
+              class="px-3 py-1.5 text-[10px] font-bold border border-gray-200 text-gray-500 dark:text-gray-300 rounded-lg hover:border-primary hover:text-primary transition uppercase tracking-wider"
+            >
+              RTL</button
+            ><button
+              id="darkToggle"
+              class="w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 text-gray-500 dark:text-gray-300 hover:text-primary transition"
+            >
+              <i class="fas fa-moon"></i>
+            </button>
+          </div>
+        </header>
+        <main class="p-6">
+          <div class="grid sm:grid-cols-4 gap-6 mb-8">
+            <div
+              class="bg-white dark:bg-earth-card rounded-2xl p-5 border border-gray-100 dark:border-white/10 text-center"
+            >
+              <div
+                class="text-2xl font-extrabold text-gray-900 dark:text-white"
+              >
+                1,847
+              </div>
+              <p class="text-xs text-gray-500 dark:text-gray-300">
+                Total This Month
+              </p>
+            </div>
+            <div
+              class="bg-white dark:bg-earth-card rounded-2xl p-5 border border-gray-100 dark:border-white/10 text-center"
+            >
+              <div class="text-2xl font-extrabold text-primary-600">342</div>
+              <p class="text-xs text-gray-500 dark:text-gray-300">Today</p>
+            </div>
+            <div
+              class="bg-white dark:bg-earth-card rounded-2xl p-5 border border-gray-100 dark:border-white/10 text-center"
+            >
+              <div class="text-2xl font-extrabold text-secondary">28</div>
+              <p class="text-xs text-gray-500 dark:text-gray-300">
+                Pending Approval
+              </p>
+            </div>
+            <div
+              class="bg-white dark:bg-earth-card rounded-2xl p-5 border border-gray-100 dark:border-white/10 text-center"
+            >
+              <div class="text-2xl font-extrabold text-red-500">5</div>
+              <p class="text-xs text-gray-500 dark:text-gray-300">Cancelled</p>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-earth-card rounded-2xl border border-gray-100 dark:border-white/10 overflow-hidden"
+          >
+            <div
+              class="p-6 border-b border-gray-100 dark:border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
+            >
+              <div class="flex gap-3">
+                <div class="relative">
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    class="pl-10 pr-4 py-2 border border-gray-200 rounded-lg text-sm focus:border-primary outline-none w-48 dark:bg-earth-dark dark:border-white/10 dark:text-white"
+                  /><i
+                    class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-300 text-xs"
+                  ></i>
+                </div>
+                <select
+                  class="px-3 py-2 border border-gray-200 rounded-lg text-sm outline-none dark:bg-earth-dark dark:border-white/10 dark:text-white"
+                >
+                  <option>All Status</option>
+                  <option>Confirmed</option>
+                  <option>Pending</option>
+                  <option>Cancelled</option></select
+                ><input
+                  type="date"
+                  class="px-3 py-2 border border-gray-200 rounded-lg text-sm outline-none dark:bg-earth-dark dark:border-white/10 dark:text-white"
+                />
+              </div>
+              <button
+                class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary-dark transition"
+              >
+                <i class="fas fa-download mr-1"></i> Export
+              </button>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm">
+                <thead>
+                  <tr class="bg-earth-light dark:bg-earth-dark text-left">
+                    <th
+                      class="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase"
+                    >
+                      Booking ID
+                    </th>
+                    <th
+                      class="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase"
+                    >
+                      Member
+                    </th>
+                    <th
+                      class="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase"
+                    >
+                      Space
+                    </th>
+                    <th
+                      class="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase"
+                    >
+                      Date
+                    </th>
+                    <th
+                      class="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase"
+                    >
+                      Time
+                    </th>
+                    <th
+                      class="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase"
+                    >
+                      Status
+                    </th>
+                    <th
+                      class="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase"
+                    >
+                      Actions
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    class="border-b border-gray-50 hover:bg-earth-light dark:bg-earth-dark/50"
+                  >
+                    <td class="px-6 py-4 font-semibold text-primary">
+                      #BK-4521
+                    </td>
+                    <td class="px-6 py-4 text-gray-900 dark:text-white">
+                      John Doe
+                    </td>
+                    <td class="px-6 py-4 text-gray-600">Conf. Room A</td>
+                    <td class="px-6 py-4 text-gray-500 dark:text-gray-300">
+                      Mar 15
+                    </td>
+                    <td class="px-6 py-4 text-gray-500 dark:text-gray-300">
+                      10-12 PM
+                    </td>
+                    <td class="px-6 py-4">
+                      <span
+                        class="px-2.5 py-1 bg-secondary/20 text-secondary text-xs font-bold rounded-full"
+                        >Confirmed</span
+                      >
+                    </td>
+                    <td class="px-6 py-4">
+                      <div class="flex gap-2">
+                        <button
+                          class="w-8 h-8 flex items-center justify-center rounded-lg text-gray-400 dark:text-gray-300 hover:text-primary hover:bg-primary/5 transition"
+                        >
+                          <i class="fas fa-eye"></i></button
+                        ><button
+                          class="w-8 h-8 flex items-center justify-center rounded-lg text-gray-400 dark:text-gray-300 hover:text-red-500 hover:bg-red-50 transition"
+                        >
+                          <i class="fas fa-times"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="border-b border-gray-50 hover:bg-earth-light dark:bg-earth-dark/50"
+                  >
+                    <td class="px-6 py-4 font-semibold text-primary">
+                      #BK-4520
+                    </td>
+                    <td class="px-6 py-4 text-gray-900 dark:text-white">
+                      Sarah M.
+                    </td>
+                    <td class="px-6 py-4 text-gray-600">Hot Desk</td>
+                    <td class="px-6 py-4 text-gray-500 dark:text-gray-300">
+                      Mar 15
+                    </td>
+                    <td class="px-6 py-4 text-gray-500 dark:text-gray-300">
+                      All Day
+                    </td>
+                    <td class="px-6 py-4">
+                      <span
+                        class="px-2.5 py-1 bg-secondary-100 text-secondary-700 text-xs font-bold rounded-full"
+                        >Pending</span
+                      >
+                    </td>
+                    <td class="px-6 py-4">
+                      <div class="flex gap-2">
+                        <button
+                          class="w-8 h-8 flex items-center justify-center rounded-lg text-primary hover:bg-primary-50 transition"
+                        >
+                          <i class="fas fa-check"></i></button
+                        ><button
+                          class="w-8 h-8 flex items-center justify-center rounded-lg text-gray-400 dark:text-gray-300 hover:text-red-500 hover:bg-red-50 transition"
+                        >
+                          <i class="fas fa-times"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="border-b border-gray-50 hover:bg-earth-light dark:bg-earth-dark/50"
+                  >
+                    <td class="px-6 py-4 font-semibold text-primary">
+                      #BK-4519
+                    </td>
+                    <td class="px-6 py-4 text-gray-900 dark:text-white">
+                      Marcus K.
+                    </td>
+                    <td class="px-6 py-4 text-gray-600">Phone Booth</td>
+                    <td class="px-6 py-4 text-gray-500 dark:text-gray-300">
+                      Mar 14
+                    </td>
+                    <td class="px-6 py-4 text-gray-500 dark:text-gray-300">
+                      2-3 PM
+                    </td>
+                    <td class="px-6 py-4">
+                      <span
+                        class="px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-bold rounded-full"
+                        >Completed</span
+                      >
+                    </td>
+                    <td class="px-6 py-4">
+                      <button
+                        class="w-8 h-8 flex items-center justify-center rounded-lg text-gray-400 dark:text-gray-300 hover:text-primary hover:bg-primary/5 transition"
+                      >
+                        <i class="fas fa-eye"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="px-6 py-4 font-semibold text-gray-400 dark:text-gray-300"
+                    >
+                      #BK-4518
+                    </td>
+                    <td class="px-6 py-4 text-gray-900 dark:text-white">
+                      Emily W.
+                    </td>
+                    <td class="px-6 py-4 text-gray-600">Event Space</td>
+                    <td class="px-6 py-4 text-gray-500 dark:text-gray-300">
+                      Mar 13
+                    </td>
+                    <td class="px-6 py-4 text-gray-500 dark:text-gray-300">
+                      6-9 PM
+                    </td>
+                    <td class="px-6 py-4">
+                      <span
+                        class="px-2.5 py-1 bg-red-100 text-red-700 text-xs font-bold rounded-full"
+                        >Cancelled</span
+                      >
+                    </td>
+                    <td class="px-6 py-4">
+                      <button
+                        class="w-8 h-8 flex items-center justify-center rounded-lg text-gray-400 dark:text-gray-300 hover:text-primary hover:bg-primary/5 transition"
+                      >
+                        <i class="fas fa-eye"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </main>
       </div>
-    </main>
-  </div>
-</div>
-<div id="sidebarOverlay" class="hidden fixed inset-0 bg-primary-dark/50 z-30 lg:hidden"></div>
-<script src="../../assets/js/dashboard.js"></script>
-</body>
+    </div>
+    <div
+      id="sidebarOverlay"
+      class="hidden fixed inset-0 bg-primary-dark/50 z-30 lg:hidden"
+    ></div>
+    <script src="../../assets/js/dashboard.js"></script>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,129 +1,377 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta name="keywords" content="coworking space, startup hub, flexible office, meeting rooms, private office, hot desk">
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile - CoWork Hub</title>
-  <meta name="description" content="Profile - CoWork Hub portal for CoWork Hub members and administrators.">
-  <meta property="og:title" content="Profile - CoWork Hub">
-  <meta property="og:description" content="Profile - CoWork Hub portal for CoWork Hub members and administrators.">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Profile - CoWork Hub">
-  <meta name="twitter:description" content="Profile - CoWork Hub portal for CoWork Hub members and administrators.">
-  <link rel="canonical" href="https://coworkhub.com/profile.html">
-  
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:'#3F4E3F','primary-dark':'#2C362C',secondary:'#D4A373',accent:'#B3541E',earth:{light:'#FDFCF0',dark:'#1A1C1A',card:'#242924'}},fontFamily:{sans:['Inter','sans-serif']}}}}</script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="../../assets/css/style.css"><link rel="stylesheet" href="../../assets/css/dark-mode.css"><link rel="stylesheet" href="../../assets/css/rtl.css">
-</head>
-<body class="font-sans bg-earth-light dark:bg-earth-dark text-gray-700 dark:text-gray-300 antialiased">
-<div class="flex min-h-screen">
-  <aside id="sidebar" class="w-64 bg-white dark:bg-earth-card border-r border-gray-100 dark:border-white/10 fixed h-full z-40 transition-transform -translate-x-full lg:translate-x-0">
-    <div class="p-6 border-b border-gray-100 dark:border-white/10"><a href="../../index.html" class="flex items-center gap-2 text-lg font-extrabold text-gray-900 dark:text-white"><span class="w-9 h-9 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white text-sm"><i class="fas fa-building"></i></span>CoWork Hub</a></div>
-    <nav class="p-4 space-y-1">
-      <a href="dashboard.html" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition"><i class="fas fa-th-large w-5"></i> Dashboard</a>
-      <a href="bookings.html" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition"><i class="fas fa-calendar-alt w-5"></i> My Bookings</a>
-      <a href="invoices.html" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition"><i class="fas fa-file-invoice w-5"></i> Invoices</a>
-      <a href="profile.html" class="flex items-center gap-3 px-4 py-2.5 text-sm font-semibold text-primary bg-primary/5 rounded-xl"><i class="fas fa-user w-5"></i> Profile</a>
-      <a href="support.html" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition"><i class="fas fa-life-ring w-5"></i> Support</a>
-      <div class="pt-4 mt-4 border-t border-gray-100 dark:border-white/10"><a href="../../index.html" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition"><i class="fas fa-arrow-left w-5"></i> Back to Website</a></div>
-    </nav>
-  </aside>
+  <head>
+    <meta
+      name="keywords"
+      content="coworking space, startup hub, flexible office, meeting rooms, private office, hot desk"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - CoWork Hub</title>
+    <meta
+      name="description"
+      content="Profile - CoWork Hub portal for CoWork Hub members and administrators."
+    />
+    <meta property="og:title" content="Profile - CoWork Hub" />
+    <meta
+      property="og:description"
+      content="Profile - CoWork Hub portal for CoWork Hub members and administrators."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Profile - CoWork Hub" />
+    <meta
+      name="twitter:description"
+      content="Profile - CoWork Hub portal for CoWork Hub members and administrators."
+    />
+    <link rel="canonical" href="https://coworkhub.com/profile.html" />
 
-  <div class="flex-1 lg:ml-64">
-    <header class="h-16 bg-white dark:bg-earth-card border-b border-gray-100 dark:border-white/10 flex items-center justify-between px-6 sticky top-0 z-30">
-  
-      <div class="flex items-center gap-4"><button id="sidebarToggle" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 text-gray-500 dark:text-gray-300"><i class="fas fa-bars"></i></button><h1 class="text-lg font-bold text-gray-900 dark:text-white">Profile Settings</h1></div>
-      <div class="flex items-center gap-3"><button id="rtlToggle" class="px-3 py-1.5 text-[10px] font-bold border border-gray-200 text-gray-500 dark:text-gray-300 rounded-lg hover:border-primary hover:text-primary transition uppercase tracking-wider">RTL</button><button id="darkToggle" class="w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 text-gray-500 dark:text-gray-300 hover:text-primary transition"><i class="fas fa-moon"></i></button><div class="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white text-xs font-bold">JD</div></div>
-    </header>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3F4E3F",
+              "primary-dark": "#2C362C",
+              secondary: "#D4A373",
+              accent: "#B3541E",
+              earth: { light: "#FDFCF0", dark: "#1A1C1A", card: "#242924" },
+            },
+            fontFamily: { sans: ["Inter", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/dark-mode.css" />
+    <link rel="stylesheet" href="../../assets/css/rtl.css" />
+  </head>
+  <body
+    class="font-sans bg-earth-light dark:bg-earth-dark text-gray-700 dark:text-gray-300 antialiased"
+  >
+    <div class="flex min-h-screen">
+      <aside
+        id="sidebar"
+        class="w-64 bg-white dark:bg-earth-card border-r border-gray-100 dark:border-white/10 fixed h-full z-40 transition-transform -translate-x-full lg:translate-x-0"
+      >
+        <div class="p-6 border-b border-gray-100 dark:border-white/10">
+          <a
+            href="../../index.html"
+            class="flex items-center gap-2 text-lg font-extrabold text-gray-900 dark:text-white"
+            ><span
+              class="w-9 h-9 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white text-sm"
+              ><i class="fas fa-building"></i></span
+            >CoWork Hub</a
+          >
+        </div>
+        <nav class="p-4 space-y-1">
+          <a
+            href="dashboard.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition"
+            ><i class="fas fa-th-large w-5"></i> Dashboard</a
+          >
+          <a
+            href="bookings.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition"
+            ><i class="fas fa-calendar-alt w-5"></i> My Bookings</a
+          >
+          <a
+            href="invoices.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition"
+            ><i class="fas fa-file-invoice w-5"></i> Invoices</a
+          >
+          <a
+            href="profile.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-semibold text-primary bg-primary/5 rounded-xl"
+            ><i class="fas fa-user w-5"></i> Profile</a
+          >
+          <a
+            href="support.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition"
+            ><i class="fas fa-life-ring w-5"></i> Support</a
+          >
+          <div class="pt-4 mt-4 border-t border-gray-100 dark:border-white/10">
+            <a
+              href="../../index.html"
+              class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition"
+              ><i class="fas fa-arrow-left w-5"></i> Back to Website</a
+            >
+          </div>
+        </nav>
+      </aside>
 
-    <main class="p-6">
-      <!-- Profile Header -->
-      <div class="bg-white dark:bg-earth-card rounded-2xl border border-gray-100 dark:border-white/10 p-8 mb-8">
-        <div class="flex flex-col sm:flex-row items-center gap-6">
-          <div class="w-24 h-24 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center text-white text-3xl font-bold">JD</div>
-          <div class="text-center sm:text-left">
-            <h2 class="text-2xl font-extrabold text-gray-900 dark:text-white">John Doe</h2>
-            <p class="text-sm text-gray-500 dark:text-gray-300 mb-2">john.doe@example.com</p>
-            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
-              <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full">Professional Plan</span>
-              <span class="px-3 py-1 bg-primary-100 text-primary-600 text-xs font-bold rounded-full">Active</span>
-              <span class="text-xs text-gray-400 dark:text-gray-300">Member since Jan 2025</span>
+      <div class="flex-1 lg:ml-64">
+        <header
+          class="h-16 bg-white dark:bg-earth-card border-b border-gray-100 dark:border-white/10 flex items-center justify-between px-6 sticky top-0 z-30"
+        >
+          <div class="flex items-center gap-4">
+            <button
+              id="sidebarToggle"
+              class="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 text-gray-500 dark:text-gray-300"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+            <h1 class="text-lg font-bold text-gray-900 dark:text-white">
+              Profile Settings
+            </h1>
+          </div>
+          <div class="flex items-center gap-3">
+            <button
+              id="rtlToggle"
+              class="px-3 py-1.5 text-[10px] font-bold border border-gray-200 text-gray-500 dark:text-gray-300 rounded-lg hover:border-primary hover:text-primary transition uppercase tracking-wider"
+            >
+              RTL</button
+            ><button
+              id="darkToggle"
+              class="w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 text-gray-500 dark:text-gray-300 hover:text-primary transition"
+            >
+              <i class="fas fa-moon"></i>
+            </button>
+            <div
+              class="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white text-xs font-bold"
+            >
+              JD
             </div>
           </div>
-        </div>
+        </header>
+
+        <main class="p-6">
+          <!-- Profile Header -->
+          <div
+            class="bg-white dark:bg-earth-card rounded-2xl border border-gray-100 dark:border-white/10 p-8 mb-8"
+          >
+            <div class="flex flex-col sm:flex-row items-center gap-6">
+              <div
+                class="w-24 h-24 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center text-white text-3xl font-bold"
+              >
+                JD
+              </div>
+              <div class="text-center sm:text-left">
+                <h2
+                  class="text-2xl font-extrabold text-gray-900 dark:text-white"
+                >
+                  John Doe
+                </h2>
+                <p class="text-sm text-gray-500 dark:text-gray-300 mb-2">
+                  john.doe@example.com
+                </p>
+                <div
+                  class="flex flex-wrap items-center justify-center sm:justify-start gap-2"
+                >
+                  <span
+                    class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full"
+                    >Professional Plan</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-primary-100 text-primary-600 text-xs font-bold rounded-full"
+                    >Active</span
+                  >
+                  <span class="text-xs text-gray-400 dark:text-gray-300"
+                    >Member since Jan 2025</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-8">
+            <!-- Personal Information -->
+            <div
+              class="bg-white dark:bg-earth-card rounded-2xl border border-gray-100 dark:border-white/10 p-6"
+            >
+              <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-6">
+                Personal Information
+              </h3>
+              <form class="space-y-4" data-validate>
+                <div class="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label
+                      class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
+                      >First Name</label
+                    ><input
+                      type="text"
+                      value="John"
+                      class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition dark:bg-earth-dark dark:border-white/10 dark:text-white"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
+                      >Last Name</label
+                    ><input
+                      type="text"
+                      value="Doe"
+                      class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition dark:bg-earth-dark dark:border-white/10 dark:text-white"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label
+                    class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
+                    >Email</label
+                  ><input
+                    type="email"
+                    value="john.doe@example.com"
+                    class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition dark:bg-earth-dark dark:border-white/10 dark:text-white"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
+                    >Phone</label
+                  ><input
+                    type="tel"
+                    value="+1 (555) 987-6543"
+                    class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition dark:bg-earth-dark dark:border-white/10 dark:text-white"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
+                    >Company</label
+                  ><input
+                    type="text"
+                    value="Doe Ventures"
+                    class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition dark:bg-earth-dark dark:border-white/10 dark:text-white"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
+                    >Bio</label
+                  ><textarea
+                    rows="3"
+                    class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition resize-y dark:bg-earth-dark dark:border-white/10 dark:text-white"
+                  >
+Founder & CEO at Doe Ventures. Building the future of remote work.</textarea
+                  >
+                </div>
+                <button
+                  type="submit"
+                  class="px-6 py-3 bg-primary text-white font-semibold rounded-xl hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/30 transition-all"
+                >
+                  Save Changes
+                </button>
+              </form>
+            </div>
+
+            <!-- Account & Security -->
+            <div class="space-y-8">
+              <div
+                class="bg-white dark:bg-earth-card rounded-2xl border border-gray-100 dark:border-white/10 p-6"
+              >
+                <h3
+                  class="text-lg font-bold text-gray-900 dark:text-white mb-6"
+                >
+                  Change Password
+                </h3>
+                <form class="space-y-4" data-validate>
+                  <div>
+                    <label
+                      class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
+                      >Current Password</label
+                    ><input
+                      type="password"
+                      class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition dark:bg-earth-dark dark:border-white/10 dark:text-white"
+                      placeholder="••••••••"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label
+                      class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
+                      >New Password</label
+                    ><input
+                      type="password"
+                      class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition dark:bg-earth-dark dark:border-white/10 dark:text-white"
+                      placeholder="••••••••"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label
+                      class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
+                      >Confirm New Password</label
+                    ><input
+                      type="password"
+                      class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition dark:bg-earth-dark dark:border-white/10 dark:text-white"
+                      placeholder="••••••••"
+                      required
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    class="px-6 py-3 bg-primary text-white font-semibold rounded-xl hover:bg-primary-dark transition-all"
+                  >
+                    Update Password
+                  </button>
+                </form>
+              </div>
+
+              <div
+                class="bg-white dark:bg-earth-card rounded-2xl border border-gray-100 dark:border-white/10 p-6"
+              >
+                <h3
+                  class="text-lg font-bold text-gray-900 dark:text-white mb-4"
+                >
+                  Membership
+                </h3>
+                <div class="p-4 rounded-xl bg-primary/5 mb-4">
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="font-bold text-gray-900 dark:text-white"
+                      >Professional Plan</span
+                    ><span class="text-primary font-bold">$149/mo</span>
+                  </div>
+                  <p class="text-sm text-gray-500 dark:text-gray-300">
+                    Next billing: April 1, 2026
+                  </p>
+                </div>
+                <div class="flex gap-3">
+                  <a
+                    href="../pricing.html"
+                    class="px-4 py-2 text-sm font-semibold text-primary border border-primary/30 rounded-lg hover:bg-primary/5 transition"
+                    >Change Plan</a
+                  >
+                  <button
+                    class="px-4 py-2 text-sm font-semibold text-red-500 border border-red-200 rounded-lg hover:bg-red-50 transition"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+
+              <div
+                class="bg-white dark:bg-earth-card rounded-2xl border border-red-100 p-6"
+              >
+                <h3 class="text-lg font-bold text-red-600 mb-2">Danger Zone</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-300 mb-4">
+                  Once you delete your account, there's no going back.
+                </p>
+                <button
+                  class="px-4 py-2 text-sm font-semibold text-red-500 border border-red-200 rounded-lg hover:bg-red-50 transition"
+                >
+                  Delete Account
+                </button>
+              </div>
+            </div>
+          </div>
+        </main>
       </div>
-
-      <div class="grid lg:grid-cols-2 gap-8">
-        <!-- Personal Information -->
-        <div class="bg-white dark:bg-earth-card rounded-2xl border border-gray-100 dark:border-white/10 p-6">
-          <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-6">Personal Information</h3>
-          <form class="space-y-4" data-validate>
-            <div class="grid sm:grid-cols-2 gap-4">
-              <div><label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">First Name</label><input type="text" value="John" class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition dark:bg-earth-dark dark:border-white/10 dark:text-white "></div>
-              <div><label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Last Name</label><input type="text" value="Doe" class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition dark:bg-earth-dark dark:border-white/10 dark:text-white "></div>
-            </div>
-            <div><label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Email</label><input type="email" value="john.doe@example.com" class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition dark:bg-earth-dark dark:border-white/10 dark:text-white "></div>
-            <div><label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Phone</label><input type="tel" value="+1 (555) 987-6543" class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition dark:bg-earth-dark dark:border-white/10 dark:text-white "></div>
-            <div><label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Company</label><input type="text" value="Doe Ventures" class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition dark:bg-earth-dark dark:border-white/10 dark:text-white "></div>
-            <div><label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Bio</label><textarea rows="3" class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition resize-y dark:bg-earth-dark dark:border-white/10 dark:text-white ">Founder & CEO at Doe Ventures. Building the future of remote work.</textarea></div>
-            <button type="submit" class="px-6 py-3 bg-primary text-white font-semibold rounded-xl hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/30 transition-all">Save Changes</button>
-          </form>
-        </div>
-
-        <!-- Account & Security -->
-        <div class="space-y-8">
-          <div class="bg-white dark:bg-earth-card rounded-2xl border border-gray-100 dark:border-white/10 p-6">
-            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-6">Change Password</h3>
-            <form class="space-y-4" data-validate>
-              <div><label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Current Password</label><input type="password" class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition dark:bg-earth-dark dark:border-white/10 dark:text-white " placeholder="••••••••" required></div>
-              <div><label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">New Password</label><input type="password" class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition dark:bg-earth-dark dark:border-white/10 dark:text-white " placeholder="••••••••" required></div>
-              <div><label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Confirm New Password</label><input type="password" class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition dark:bg-earth-dark dark:border-white/10 dark:text-white " placeholder="••••••••" required></div>
-              <button type="submit" class="px-6 py-3 bg-primary text-white font-semibold rounded-xl hover:bg-primary-dark transition-all">Update Password</button>
-            </form>
-          </div>
-
-          <div class="bg-white dark:bg-earth-card rounded-2xl border border-gray-100 dark:border-white/10 p-6">
-            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-4">Membership</h3>
-            <div class="p-4 rounded-xl bg-primary/5 mb-4">
-              <div class="flex items-center justify-between mb-2"><span class="font-bold text-gray-900 dark:text-white">Professional Plan</span><span class="text-primary font-bold">$149/mo</span></div>
-              <p class="text-sm text-gray-500 dark:text-gray-300">Next billing: April 1, 2026</p>
-            </div>
-            <div class="flex gap-3">
-              <a href="../pricing.html" class="px-4 py-2 text-sm font-semibold text-primary border border-primary/30 rounded-lg hover:bg-primary/5 transition">Change Plan</a>
-              <button class="px-4 py-2 text-sm font-semibold text-red-500 border border-red-200 rounded-lg hover:bg-red-50 transition">Cancel</button>
-            </div>
-          </div>
-
-          <div class="bg-white dark:bg-earth-card rounded-2xl border border-red-100 p-6">
-            <h3 class="text-lg font-bold text-red-600 mb-2">Danger Zone</h3>
-            <p class="text-sm text-gray-500 dark:text-gray-300 mb-4">Once you delete your account, there's no going back.</p>
-            <button class="px-4 py-2 text-sm font-semibold text-red-500 border border-red-200 rounded-lg hover:bg-red-50 transition">Delete Account</button>
-          </div>
-        </div>
-      </div>
-    </main>
-  </div>
-</div>
-<div id="sidebarOverlay" class="hidden fixed inset-0 bg-primary-dark/50 z-30 lg:hidden"></div>
-<script src="../../assets/js/dashboard.js"></script>
-</body>
+    </div>
+    <div
+      id="sidebarOverlay"
+      class="hidden fixed inset-0 bg-primary-dark/50 z-30 lg:hidden"
+    ></div>
+    <script src="../../assets/js/dashboard.js"></script>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

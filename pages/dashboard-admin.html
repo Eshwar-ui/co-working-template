@@ -1,123 +1,525 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta name="keywords" content="coworking space, startup hub, flexible office, meeting rooms, private office, hot desk">
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Dashboard - CoWork Hub</title>
-  <meta name="description" content="CoWork Hub admin dashboard. Monitor members, bookings, revenue analytics, and occupancy rates.">
-  <meta property="og:title" content="Admin Dashboard - CoWork Hub">
-  <meta property="og:description" content="CoWork Hub admin dashboard. Monitor members, bookings, revenue analytics, and occupancy rates.">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Admin Dashboard - CoWork Hub">
-  <meta name="twitter:description" content="CoWork Hub admin dashboard. Monitor members, bookings, revenue analytics, and occupancy rates.">
-  <link rel="canonical" href="https://coworkhub.com/dashboard-admin.html">
-  
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-  <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:'#3F4E3F','primary-dark':'#2C362C',secondary:'#D4A373',accent:'#B3541E',earth:{light:'#FDFCF0',dark:'#1A1C1A',card:'#242924'}},fontFamily:{sans:['Inter','sans-serif']}}}}</script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/dark-mode.css">
-  <link rel="stylesheet" href="../assets/css/rtl.css">
-</head>
-<body class="font-sans bg-gray-50 dark:bg-earth-dark text-gray-700 dark:text-gray-300 antialiased">
-<div class="flex min-h-screen">
-  <!-- Admin Sidebar -->
-  <aside id="sidebar" class="w-64 bg-white dark:bg-earth-card border-r border-gray-100 dark:border-white/10 fixed h-full z-40 transition-transform -translate-x-full lg:translate-x-0">
-    <div class="p-6 border-b border-gray-100 dark:border-white/10">
-      <a href="index.html" class="flex items-center gap-2 text-lg font-extrabold text-gray-900 dark:text-white"><span class="w-9 h-9 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white text-sm"><i class="fas fa-building"></i></span>CoWork Hub</a>
-      <span class="inline-block mt-2 px-2 py-0.5 bg-primary/10 text-primary border border-primary/20 text-[10px] font-bold rounded uppercase">Admin Panel</span>
+  <head>
+    <meta
+      name="keywords"
+      content="coworking space, startup hub, flexible office, meeting rooms, private office, hot desk"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - CoWork Hub</title>
+    <meta
+      name="description"
+      content="CoWork Hub admin dashboard. Monitor members, bookings, revenue analytics, and occupancy rates."
+    />
+    <meta property="og:title" content="Admin Dashboard - CoWork Hub" />
+    <meta
+      property="og:description"
+      content="CoWork Hub admin dashboard. Monitor members, bookings, revenue analytics, and occupancy rates."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Admin Dashboard - CoWork Hub" />
+    <meta
+      name="twitter:description"
+      content="CoWork Hub admin dashboard. Monitor members, bookings, revenue analytics, and occupancy rates."
+    />
+    <link rel="canonical" href="https://coworkhub.com/dashboard-admin.html" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3F4E3F",
+              "primary-dark": "#2C362C",
+              secondary: "#D4A373",
+              accent: "#B3541E",
+              earth: { light: "#FDFCF0", dark: "#1A1C1A", card: "#242924" },
+            },
+            fontFamily: { sans: ["Inter", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+    <link rel="stylesheet" href="../assets/css/rtl.css" />
+  </head>
+  <body
+    class="font-sans bg-gray-50 dark:bg-earth-dark text-gray-700 dark:text-gray-300 antialiased"
+  >
+    <div class="flex min-h-screen">
+      <!-- Admin Sidebar -->
+      <aside
+        id="sidebar"
+        class="w-64 bg-white dark:bg-earth-card border-r border-gray-100 dark:border-white/10 fixed h-full z-40 transition-transform -translate-x-full lg:translate-x-0"
+      >
+        <div class="p-6 border-b border-gray-100 dark:border-white/10">
+          <a
+            href="index.html"
+            class="flex items-center gap-2 text-lg font-extrabold text-gray-900 dark:text-white"
+            ><span
+              class="w-9 h-9 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white text-sm"
+              ><i class="fas fa-building"></i></span
+            >CoWork Hub</a
+          >
+          <span
+            class="inline-block mt-2 px-2 py-0.5 bg-primary/10 text-primary border border-primary/20 text-[10px] font-bold rounded uppercase"
+            >Admin Panel</span
+          >
+        </div>
+        <nav class="p-4 space-y-1">
+          <a
+            href="dashboard-admin.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-semibold text-primary bg-primary/5 rounded-xl"
+            ><i class="fas fa-th-large w-5"></i> Dashboard</a
+          >
+          <a
+            href="#"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
+            ><i class="fas fa-users w-5"></i> Members</a
+          >
+          <a
+            href="#"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
+            ><i class="fas fa-calendar-alt w-5"></i> Bookings</a
+          >
+          <a
+            href="#"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
+            ><i class="fas fa-building w-5"></i> Spaces</a
+          >
+          <a
+            href="#"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
+            ><i class="fas fa-chart-line w-5"></i> Revenue</a
+          >
+          <a
+            href="#"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
+            ><i class="fas fa-cog w-5"></i> Settings</a
+          >
+          <div class="pt-4 mt-4 border-t border-gray-100 dark:border-white/10">
+            <a
+              href="index.html"
+              class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
+              ><i class="fas fa-arrow-left w-5"></i> Back to Website</a
+            >
+            <a
+              href="#"
+              class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-red-500 hover:bg-red-50 rounded-xl transition"
+              ><i class="fas fa-sign-out-alt w-5"></i> Logout</a
+            >
+          </div>
+        </nav>
+      </aside>
+
+      <div class="flex-1 lg:ml-64">
+        <header
+          class="h-16 bg-white dark:bg-earth-card border-b border-gray-100 dark:border-white/10 flex items-center justify-between px-6 sticky top-0 z-30"
+        >
+          <div class="flex items-center gap-4">
+            <button
+              id="sidebarToggle"
+              class="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 text-gray-500 dark:text-gray-300"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+            <h1 class="text-lg font-bold text-gray-900 dark:text-white">
+              Admin Dashboard
+            </h1>
+          </div>
+          <div class="flex items-center gap-3">
+            <button
+              id="rtlToggle"
+              class="px-3 py-1.5 text-[10px] font-bold border border-gray-200 text-gray-500 dark:text-gray-300 rounded-lg hover:border-primary hover:text-primary transition uppercase tracking-wider"
+            >
+              RTL</button
+            ><button
+              id="darkToggle"
+              class="w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 text-gray-500 dark:text-gray-300 hover:text-primary transition"
+            >
+              <i class="fas fa-moon"></i>
+            </button>
+            <div
+              class="w-8 h-8 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center text-white text-xs font-bold ring-2 ring-primary/20"
+            >
+              A
+            </div>
+          </div>
+        </header>
+
+        <main class="p-6">
+          <!-- KPI Cards -->
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div
+              class="bg-white dark:bg-earth-card rounded-2xl p-6 border border-gray-100 dark:border-white/10"
+            >
+              <div class="flex items-center justify-between mb-4">
+                <div
+                  class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center text-xl"
+                >
+                  <i class="fas fa-users"></i>
+                </div>
+                <span
+                  class="text-xs text-primary font-bold bg-primary-50 px-2 py-1 rounded-full"
+                  >+8%</span
+                >
+              </div>
+              <div
+                class="text-3xl font-extrabold text-gray-900 dark:text-white mb-1"
+              >
+                512
+              </div>
+              <p class="text-sm text-gray-500 dark:text-gray-300">
+                Total Members
+              </p>
+            </div>
+            <div
+              class="bg-white dark:bg-earth-card rounded-2xl p-6 border border-gray-100 dark:border-white/10"
+            >
+              <div class="flex items-center justify-between mb-4">
+                <div
+                  class="w-12 h-12 bg-secondary/10 text-secondary rounded-xl flex items-center justify-center text-xl"
+                >
+                  <i class="fas fa-calendar-check"></i>
+                </div>
+                <span
+                  class="text-xs text-primary font-bold bg-primary-50 px-2 py-1 rounded-full"
+                  >+15%</span
+                >
+              </div>
+              <div
+                class="text-3xl font-extrabold text-gray-900 dark:text-white mb-1"
+              >
+                1,847
+              </div>
+              <p class="text-sm text-gray-500 dark:text-gray-300">
+                Bookings This Month
+              </p>
+            </div>
+            <div
+              class="bg-white dark:bg-earth-card rounded-2xl p-6 border border-gray-100 dark:border-white/10"
+            >
+              <div class="flex items-center justify-between mb-4">
+                <div
+                  class="w-12 h-12 bg-accent/10 text-accent rounded-xl flex items-center justify-center text-xl"
+                >
+                  <i class="fas fa-dollar-sign"></i>
+                </div>
+                <span
+                  class="text-xs text-primary font-bold bg-primary-50 px-2 py-1 rounded-full"
+                  >+22%</span
+                >
+              </div>
+              <div
+                class="text-3xl font-extrabold text-gray-900 dark:text-white mb-1"
+              >
+                $87.4K
+              </div>
+              <p class="text-sm text-gray-500 dark:text-gray-300">
+                Revenue This Month
+              </p>
+            </div>
+            <div
+              class="bg-white dark:bg-earth-card rounded-2xl p-6 border border-gray-100 dark:border-white/10"
+            >
+              <div class="flex items-center justify-between mb-4">
+                <div
+                  class="w-12 h-12 bg-secondary/10 text-secondary rounded-xl flex items-center justify-center text-xl"
+                >
+                  <i class="fas fa-percentage"></i>
+                </div>
+              </div>
+              <div
+                class="text-3xl font-extrabold text-gray-900 dark:text-white mb-1"
+              >
+                91%
+              </div>
+              <p class="text-sm text-gray-500 dark:text-gray-300">
+                Occupancy Rate
+              </p>
+            </div>
+          </div>
+
+          <div class="grid lg:grid-cols-3 gap-8 mb-8">
+            <!-- Revenue Chart Placeholder -->
+            <div
+              class="lg:col-span-2 bg-white dark:bg-earth-card rounded-2xl border border-gray-100 dark:border-white/10 p-6"
+            >
+              <div class="flex items-center justify-between mb-6">
+                <h3 class="text-lg font-bold text-gray-900 dark:text-white">
+                  Revenue Overview
+                </h3>
+                <div class="flex gap-2">
+                  <button
+                    class="px-3 py-1.5 text-xs font-semibold text-primary bg-primary/5 rounded-lg"
+                  >
+                    Monthly</button
+                  ><button
+                    class="px-3 py-1.5 text-xs font-semibold text-gray-500 dark:text-gray-300 rounded-lg hover:bg-gray-100 dark:hover:bg-earth-dark transition"
+                  >
+                    Yearly
+                  </button>
+                </div>
+              </div>
+              <div id="revenueChart" class="w-full h-72"></div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div
+              class="bg-white dark:bg-earth-card rounded-2xl border border-gray-100 dark:border-white/10 p-6"
+            >
+              <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-6">
+                Recent Activity
+              </h3>
+              <div class="space-y-4">
+                <div class="flex items-start gap-3">
+                  <div
+                    class="w-8 h-8 bg-primary-100 text-primary-600 rounded-lg flex items-center justify-center flex-shrink-0 text-xs"
+                  >
+                    <i class="fas fa-user-plus"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gray-700 dark:text-gray-300">
+                      <span class="font-semibold">Sarah M.</span> joined as new
+                      member
+                    </p>
+                    <span class="text-xs text-gray-400 dark:text-gray-300"
+                      >5 mins ago</span
+                    >
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div
+                    class="w-8 h-8 bg-secondary/10 text-secondary rounded-lg flex items-center justify-center flex-shrink-0 text-xs"
+                  >
+                    <i class="fas fa-calendar-plus"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gray-700 dark:text-gray-300">
+                      <span class="font-semibold">Marcus K.</span> booked Conf.
+                      Room A
+                    </p>
+                    <span class="text-xs text-gray-400 dark:text-gray-300"
+                      >23 mins ago</span
+                    >
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div
+                    class="w-8 h-8 bg-primary/10 text-primary rounded-lg flex items-center justify-center flex-shrink-0 text-xs"
+                  >
+                    <i class="fas fa-credit-card"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gray-700 dark:text-gray-300">
+                      <span class="font-semibold">Emily W.</span> paid invoice
+                      #2042
+                    </p>
+                    <span class="text-xs text-gray-400 dark:text-gray-300"
+                      >1 hour ago</span
+                    >
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div
+                    class="w-8 h-8 bg-secondary-100 text-secondary-600 rounded-lg flex items-center justify-center flex-shrink-0 text-xs"
+                  >
+                    <i class="fas fa-ticket"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gray-700 dark:text-gray-300">
+                      <span class="font-semibold">David J.</span> registered for
+                      Hackathon
+                    </p>
+                    <span class="text-xs text-gray-400 dark:text-gray-300"
+                      >2 hours ago</span
+                    >
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div
+                    class="w-8 h-8 bg-red-100 text-red-600 rounded-lg flex items-center justify-center flex-shrink-0 text-xs"
+                  >
+                    <i class="fas fa-times-circle"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gray-700 dark:text-gray-300">
+                      <span class="font-semibold">Lisa P.</span> cancelled desk
+                      booking
+                    </p>
+                    <span class="text-xs text-gray-400 dark:text-gray-300"
+                      >3 hours ago</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Members Table -->
+          <div
+            class="bg-white dark:bg-earth-card rounded-2xl border border-gray-100 dark:border-white/10 overflow-hidden"
+          >
+            <div
+              class="p-6 border-b border-gray-100 dark:border-white/10 flex items-center justify-between"
+            >
+              <h3 class="font-bold text-gray-900 dark:text-white">
+                Recent Members
+              </h3>
+              <a
+                href="manage-members.html"
+                class="text-sm text-primary font-semibold hover:underline"
+                >View All →</a
+              >
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm">
+                <thead>
+                  <tr class="bg-gray-50 dark:bg-earth-dark text-left">
+                    <th
+                      class="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase"
+                    >
+                      Member
+                    </th>
+                    <th
+                      class="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase"
+                    >
+                      Plan
+                    </th>
+                    <th
+                      class="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase"
+                    >
+                      Joined
+                    </th>
+                    <th
+                      class="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase"
+                    >
+                      Status
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-b border-gray-50">
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center text-xs font-bold text-primary"
+                        >
+                          SM
+                        </div>
+                        <div>
+                          <span
+                            class="font-medium text-gray-900 dark:text-white"
+                            >Sarah Martinez</span
+                          ><br /><span
+                            class="text-xs text-gray-400 dark:text-gray-300"
+                            >sarah@email.com</span
+                          >
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-gray-600 dark:text-gray-200">
+                      Enterprise
+                    </td>
+                    <td class="px-6 py-4 text-gray-500 dark:text-gray-300">
+                      Mar 12
+                    </td>
+                    <td class="px-6 py-4">
+                      <span
+                        class="px-2.5 py-1 bg-secondary/20 text-secondary text-xs font-bold rounded-full"
+                        >Active</span
+                      >
+                    </td>
+                  </tr>
+                  <tr class="border-b border-gray-50">
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="w-8 h-8 bg-secondary/10 rounded-lg flex items-center justify-center text-xs font-bold text-secondary"
+                        >
+                          MK
+                        </div>
+                        <div>
+                          <span
+                            class="font-medium text-gray-900 dark:text-white"
+                            >Marcus Kim</span
+                          ><br /><span
+                            class="text-xs text-gray-400 dark:text-gray-300"
+                            >marcus@email.com</span
+                          >
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-gray-600 dark:text-gray-200">
+                      Professional
+                    </td>
+                    <td class="px-6 py-4 text-gray-500 dark:text-gray-300">
+                      Mar 10
+                    </td>
+                    <td class="px-6 py-4">
+                      <span
+                        class="px-2.5 py-1 bg-secondary/20 text-secondary text-xs font-bold rounded-full"
+                        >Active</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="w-8 h-8 bg-accent/10 rounded-lg flex items-center justify-center text-xs font-bold text-accent"
+                        >
+                          EW
+                        </div>
+                        <div>
+                          <span
+                            class="font-medium text-gray-900 dark:text-white"
+                            >Emily Wang</span
+                          ><br /><span
+                            class="text-xs text-gray-400 dark:text-gray-300"
+                            >emily@email.com</span
+                          >
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-gray-600 dark:text-gray-200">
+                      Starter
+                    </td>
+                    <td class="px-6 py-4 text-gray-500 dark:text-gray-300">
+                      Mar 8
+                    </td>
+                    <td class="px-6 py-4">
+                      <span
+                        class="px-2.5 py-1 bg-secondary/20 text-secondary text-xs font-bold rounded-full"
+                        >Active</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </main>
+      </div>
     </div>
-    <nav class="p-4 space-y-1">
-      <a href="dashboard-admin.html" class="flex items-center gap-3 px-4 py-2.5 text-sm font-semibold text-primary bg-primary/5 rounded-xl"><i class="fas fa-th-large w-5"></i> Dashboard</a>
-      <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"><i class="fas fa-users w-5"></i> Members</a>
-      <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"><i class="fas fa-calendar-alt w-5"></i> Bookings</a>
-      <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"><i class="fas fa-building w-5"></i> Spaces</a>
-      <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"><i class="fas fa-chart-line w-5"></i> Revenue</a>
-      <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"><i class="fas fa-cog w-5"></i> Settings</a>
-      <div class="pt-4 mt-4 border-t border-gray-100 dark:border-white/10">
-        <a href="index.html" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"><i class="fas fa-arrow-left w-5"></i> Back to Website</a>
-        <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-red-500 hover:bg-red-50 rounded-xl transition"><i class="fas fa-sign-out-alt w-5"></i> Logout</a>
-      </div>
-    </nav>
-  </aside>
-
-  <div class="flex-1 lg:ml-64">
-    <header class="h-16 bg-white dark:bg-earth-card border-b border-gray-100 dark:border-white/10 flex items-center justify-between px-6 sticky top-0 z-30">
-      <div class="flex items-center gap-4"><button id="sidebarToggle" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 text-gray-500 dark:text-gray-300"><i class="fas fa-bars"></i></button><h1 class="text-lg font-bold text-gray-900 dark:text-white">Admin Dashboard</h1></div>
-      <div class="flex items-center gap-3">
-        <button id="rtlToggle" class="px-3 py-1.5 text-[10px] font-bold border border-gray-200 text-gray-500 dark:text-gray-300 rounded-lg hover:border-primary hover:text-primary transition uppercase tracking-wider">RTL</button><button id="darkToggle" class="w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 text-gray-500 dark:text-gray-300 hover:text-primary transition"><i class="fas fa-moon"></i></button>
-        <div class="w-8 h-8 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center text-white text-xs font-bold ring-2 ring-primary/20">A</div>
-      </div>
-    </header>
-
-    <main class="p-6">
-      <!-- KPI Cards -->
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        <div class="bg-white dark:bg-earth-card rounded-2xl p-6 border border-gray-100 dark:border-white/10">
-          <div class="flex items-center justify-between mb-4"><div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center text-xl"><i class="fas fa-users"></i></div><span class="text-xs text-primary font-bold bg-primary-50 px-2 py-1 rounded-full">+8%</span></div>
-          <div class="text-3xl font-extrabold text-gray-900 dark:text-white mb-1">512</div>
-          <p class="text-sm text-gray-500 dark:text-gray-300">Total Members</p>
-        </div>
-        <div class="bg-white dark:bg-earth-card rounded-2xl p-6 border border-gray-100 dark:border-white/10">
-          <div class="flex items-center justify-between mb-4"><div class="w-12 h-12 bg-secondary/10 text-secondary rounded-xl flex items-center justify-center text-xl"><i class="fas fa-calendar-check"></i></div><span class="text-xs text-primary font-bold bg-primary-50 px-2 py-1 rounded-full">+15%</span></div>
-          <div class="text-3xl font-extrabold text-gray-900 dark:text-white mb-1">1,847</div>
-          <p class="text-sm text-gray-500 dark:text-gray-300">Bookings This Month</p>
-        </div>
-        <div class="bg-white dark:bg-earth-card rounded-2xl p-6 border border-gray-100 dark:border-white/10">
-          <div class="flex items-center justify-between mb-4"><div class="w-12 h-12 bg-accent/10 text-accent rounded-xl flex items-center justify-center text-xl"><i class="fas fa-dollar-sign"></i></div><span class="text-xs text-primary font-bold bg-primary-50 px-2 py-1 rounded-full">+22%</span></div>
-          <div class="text-3xl font-extrabold text-gray-900 dark:text-white mb-1">$87.4K</div>
-          <p class="text-sm text-gray-500 dark:text-gray-300">Revenue This Month</p>
-        </div>
-        <div class="bg-white dark:bg-earth-card rounded-2xl p-6 border border-gray-100 dark:border-white/10">
-          <div class="flex items-center justify-between mb-4"><div class="w-12 h-12 bg-secondary/10 text-secondary rounded-xl flex items-center justify-center text-xl"><i class="fas fa-percentage"></i></div></div>
-          <div class="text-3xl font-extrabold text-gray-900 dark:text-white mb-1">91%</div>
-          <p class="text-sm text-gray-500 dark:text-gray-300">Occupancy Rate</p>
-        </div>
-      </div>
-
-      <div class="grid lg:grid-cols-3 gap-8 mb-8">
-        <!-- Revenue Chart Placeholder -->
-        <div class="lg:col-span-2 bg-white dark:bg-earth-card rounded-2xl border border-gray-100 dark:border-white/10 p-6">
-          <div class="flex items-center justify-between mb-6"><h3 class="text-lg font-bold text-gray-900 dark:text-white">Revenue Overview</h3>
-            <div class="flex gap-2"><button class="px-3 py-1.5 text-xs font-semibold text-primary bg-primary/5 rounded-lg">Monthly</button><button class="px-3 py-1.5 text-xs font-semibold text-gray-500 dark:text-gray-300 rounded-lg hover:bg-gray-100 dark:hover:bg-earth-dark transition">Yearly</button></div>
-          </div>
-          <div id="revenueChart" class="w-full h-72"></div>
-        </div>
-
-        <!-- Recent Activity -->
-        <div class="bg-white dark:bg-earth-card rounded-2xl border border-gray-100 dark:border-white/10 p-6">
-          <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-6">Recent Activity</h3>
-          <div class="space-y-4">
-            <div class="flex items-start gap-3"><div class="w-8 h-8 bg-primary-100 text-primary-600 rounded-lg flex items-center justify-center flex-shrink-0 text-xs"><i class="fas fa-user-plus"></i></div><div><p class="text-sm text-gray-700 dark:text-gray-300"><span class="font-semibold">Sarah M.</span> joined as new member</p><span class="text-xs text-gray-400 dark:text-gray-300">5 mins ago</span></div></div>
-            <div class="flex items-start gap-3"><div class="w-8 h-8 bg-secondary/10 text-secondary rounded-lg flex items-center justify-center flex-shrink-0 text-xs"><i class="fas fa-calendar-plus"></i></div><div><p class="text-sm text-gray-700 dark:text-gray-300"><span class="font-semibold">Marcus K.</span> booked Conf. Room A</p><span class="text-xs text-gray-400 dark:text-gray-300">23 mins ago</span></div></div>
-            <div class="flex items-start gap-3"><div class="w-8 h-8 bg-primary/10 text-primary rounded-lg flex items-center justify-center flex-shrink-0 text-xs"><i class="fas fa-credit-card"></i></div><div><p class="text-sm text-gray-700 dark:text-gray-300"><span class="font-semibold">Emily W.</span> paid invoice #2042</p><span class="text-xs text-gray-400 dark:text-gray-300">1 hour ago</span></div></div>
-            <div class="flex items-start gap-3"><div class="w-8 h-8 bg-secondary-100 text-secondary-600 rounded-lg flex items-center justify-center flex-shrink-0 text-xs"><i class="fas fa-ticket"></i></div><div><p class="text-sm text-gray-700 dark:text-gray-300"><span class="font-semibold">David J.</span> registered for Hackathon</p><span class="text-xs text-gray-400 dark:text-gray-300">2 hours ago</span></div></div>
-            <div class="flex items-start gap-3"><div class="w-8 h-8 bg-red-100 text-red-600 rounded-lg flex items-center justify-center flex-shrink-0 text-xs"><i class="fas fa-times-circle"></i></div><div><p class="text-sm text-gray-700 dark:text-gray-300"><span class="font-semibold">Lisa P.</span> cancelled desk booking</p><span class="text-xs text-gray-400 dark:text-gray-300">3 hours ago</span></div></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Recent Members Table -->
-      <div class="bg-white dark:bg-earth-card rounded-2xl border border-gray-100 dark:border-white/10 overflow-hidden">
-        <div class="p-6 border-b border-gray-100 dark:border-white/10 flex items-center justify-between"><h3 class="font-bold text-gray-900 dark:text-white">Recent Members</h3><a href="manage-members.html" class="text-sm text-primary font-semibold hover:underline">View All →</a></div>
-        <div class="overflow-x-auto">
-          <table class="w-full text-sm">
-            <thead><tr class="bg-gray-50 dark:bg-earth-dark text-left"><th class="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase">Member</th><th class="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase">Plan</th><th class="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase">Joined</th><th class="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-300 uppercase">Status</th></tr></thead>
-            <tbody>
-              <tr class="border-b border-gray-50"><td class="px-6 py-4"><div class="flex items-center gap-3"><div class="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center text-xs font-bold text-primary">SM</div><div><span class="font-medium text-gray-900 dark:text-white">Sarah Martinez</span><br><span class="text-xs text-gray-400 dark:text-gray-300">sarah@email.com</span></div></div></td><td class="px-6 py-4 text-gray-600 dark:text-gray-200">Enterprise</td><td class="px-6 py-4 text-gray-500 dark:text-gray-300">Mar 12</td><td class="px-6 py-4"><span class="px-2.5 py-1 bg-secondary/20 text-secondary text-xs font-bold rounded-full">Active</span></td></tr>
-              <tr class="border-b border-gray-50"><td class="px-6 py-4"><div class="flex items-center gap-3"><div class="w-8 h-8 bg-secondary/10 rounded-lg flex items-center justify-center text-xs font-bold text-secondary">MK</div><div><span class="font-medium text-gray-900 dark:text-white">Marcus Kim</span><br><span class="text-xs text-gray-400 dark:text-gray-300">marcus@email.com</span></div></div></td><td class="px-6 py-4 text-gray-600 dark:text-gray-200">Professional</td><td class="px-6 py-4 text-gray-500 dark:text-gray-300">Mar 10</td><td class="px-6 py-4"><span class="px-2.5 py-1 bg-secondary/20 text-secondary text-xs font-bold rounded-full">Active</span></td></tr>
-              <tr><td class="px-6 py-4"><div class="flex items-center gap-3"><div class="w-8 h-8 bg-accent/10 rounded-lg flex items-center justify-center text-xs font-bold text-accent">EW</div><div><span class="font-medium text-gray-900 dark:text-white">Emily Wang</span><br><span class="text-xs text-gray-400 dark:text-gray-300">emily@email.com</span></div></div></td><td class="px-6 py-4 text-gray-600 dark:text-gray-200">Starter</td><td class="px-6 py-4 text-gray-500 dark:text-gray-300">Mar 8</td><td class="px-6 py-4"><span class="px-2.5 py-1 bg-secondary/20 text-secondary text-xs font-bold rounded-full">Active</span></td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </main>
-  </div>
-</div>
-<div id="sidebarOverlay" class="hidden fixed inset-0 bg-primary-dark/50 z-30 lg:hidden"></div>
-<script src="../assets/js/dashboard.js"></script>
-</body>
+    <div
+      id="sidebarOverlay"
+      class="hidden fixed inset-0 bg-primary-dark/50 z-30 lg:hidden"
+    ></div>
+    <script src="../assets/js/dashboard.js"></script>
+  </body>
 </html>

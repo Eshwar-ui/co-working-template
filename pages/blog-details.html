@@ -1,119 +1,450 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>10 Tips to Maximize Your Co-Working Experience - CoWork Hub Blog</title>
-  <meta name="description" content="Premium co-working spaces and flexible office solutions at CoWork Hub.">
-  <meta property="og:title" content="10 Tips to Maximize Your Co-Working Experience - CoWork Hub Blog">
-  <meta property="og:description" content="Premium co-working spaces and flexible office solutions at CoWork Hub.">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="10 Tips to Maximize Your Co-Working Experience - CoWork Hub Blog">
-  <meta name="twitter:description" content="Premium co-working spaces and flexible office solutions at CoWork Hub.">
-  <link rel="canonical" href="https://coworkhub.com/blog-details.html">
-  
-  <meta name="keywords" content="coworking space, startup hub, flexible office, meeting rooms, private office, hot desk">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:'#3F4E3F','primary-dark':'#2C362C',secondary:'#D4A373',accent:'#B3541E',earth:{light:'#FDFCF0',dark:'#1A1C1A',card:'#242924'}},fontFamily:{sans:['Inter','sans-serif']}}}}</script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/dark-mode.css"><link rel="stylesheet" href="../assets/css/rtl.css">
-</head>
-<body class="font-sans text-gray-700 bg-earth-light dark:bg-earth-dark dark:text-gray-300 antialiased">
-<div class="preloader"><div class="preloader__spinner"></div></div>
-<nav id="navbar" class="fixed top-0 left-0 w-full h-20 bg-white/95 backdrop-blur-xl border-b border-gray-100 z-50 transition-all"><div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between"><a href="index.html" class="flex items-center gap-2 text-xl font-extrabold text-gray-900"><span class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-white text-lg"><i class="fas fa-building"></i></span>CoWork Hub</a><ul class="hidden lg:flex items-center gap-1">
-      <li class="nav-item relative group"><a href="#" class="flex items-center gap-1 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition">Home <i class="fas fa-chevron-down text-[10px] ml-1"></i></a>
-        <div class="nav-dropdown absolute top-full left-0 min-w-[200px] bg-white border border-gray-100 rounded-xl shadow-xl p-2 z-50 dark:bg-earth-card dark:border-white/10">
-          <a href="index.html" class="block px-4 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-primary/5 rounded-lg">Home 1</a>
-          <a href="index-2.html" class="block px-4 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-primary/5 rounded-lg">Home 2</a>
-        </div>
-      </li>
-      <li><a href="about.html" class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300">About</a></li>
-      <li><a href="services.html" class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300">Services</a></li>
-      <li><a href="blog.html" class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300">Blog</a></li>
-      <li><a href="contact.html" class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300">Contact</a></li>
-      <li class="nav-item relative group"><a href="#" class="flex items-center gap-1 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg transition dark:text-gray-300">Dashboards <i class="fas fa-chevron-down text-[10px] ml-1"></i></a>
-        <div class="nav-dropdown absolute top-full left-0 min-w-[200px] bg-white border border-gray-100 dark:bg-earth-card dark:border-white/10 rounded-xl shadow-xl p-2 z-50">
-          <a href="dashboard-user.html" class="block px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg dark:text-gray-300">User Dashboard</a>
-          <a href="dashboard-admin.html" class="block px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg dark:text-gray-300">Admin Dashboard</a>
-        </div>
-      </li>
-    </ul><div class="hidden lg:flex items-center gap-3"><button id="rtlToggle" class="px-3 py-1.5 text-[10px] font-bold border border-gray-200 text-gray-500 dark:text-gray-300 rounded-lg hover:border-primary hover:text-primary transition uppercase tracking-wider">RTL</button><button id="darkToggle" class="w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 text-gray-500 dark:text-gray-300 hover:text-primary transition"><i class="fas fa-moon"></i></button><a href="dashboard-user.html" class="px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-full hover:bg-primary-dark transition-all">Member Login</a></div><button id="menuToggle" class="lg:hidden flex flex-col gap-1.5 p-2"><span class="w-6 h-0.5 bg-gray-700 rounded"></span><span class="w-6 h-0.5 bg-gray-700 rounded"></span><span class="w-6 h-0.5 bg-gray-700 rounded"></span></button></div></nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      10 Tips to Maximize Your Co-Working Experience - CoWork Hub Blog
+    </title>
+    <meta
+      name="description"
+      content="Premium co-working spaces and flexible office solutions at CoWork Hub."
+    />
+    <meta
+      property="og:title"
+      content="10 Tips to Maximize Your Co-Working Experience - CoWork Hub Blog"
+    />
+    <meta
+      property="og:description"
+      content="Premium co-working spaces and flexible office solutions at CoWork Hub."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="10 Tips to Maximize Your Co-Working Experience - CoWork Hub Blog"
+    />
+    <meta
+      name="twitter:description"
+      content="Premium co-working spaces and flexible office solutions at CoWork Hub."
+    />
+    <link rel="canonical" href="https://coworkhub.com/blog-details.html" />
 
-<section class="pt-32 pb-16 bg-gradient-to-br from-gray-900 via-primary-dark to-gray-900 text-center page-header-pattern"><div class="max-w-7xl mx-auto px-6 relative z-10"><h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Blog Details</h2><div class="flex items-center justify-center gap-2 text-sm text-gray-400 dark:text-gray-300"><a href="index.html" class="hover:text-primary transition">Home</a><i class="fas fa-chevron-right text-[10px]"></i><a href="blog.html" class="hover:text-primary transition">Blog</a><i class="fas fa-chevron-right text-[10px]"></i><span class="text-primary/80">Article</span></div></div></section>
-
-<section class="py-16 bg-white">
-  <div class="max-w-4xl mx-auto px-6">
-    <div class="mb-8">
-      <span class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full mb-4">Productivity</span>
-      <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 leading-tight">10 Tips to Maximize Your Co-Working Experience</h1>
-      <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-300">
-        <div class="flex items-center gap-2"><div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-xs font-bold text-primary">SR</div><div><span class="font-semibold text-gray-900 block">Sarah Rodriguez</span><span class="text-xs">CEO, TechLaunch</span></div></div>
-        <span>•</span><span>March 5, 2026</span><span>•</span><span>6 min read</span>
+    <meta
+      name="keywords"
+      content="coworking space, startup hub, flexible office, meeting rooms, private office, hot desk"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3F4E3F",
+              "primary-dark": "#2C362C",
+              secondary: "#D4A373",
+              accent: "#B3541E",
+              earth: { light: "#FDFCF0", dark: "#1A1C1A", card: "#242924" },
+            },
+            fontFamily: { sans: ["Inter", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+    <link rel="stylesheet" href="../assets/css/rtl.css" />
+  </head>
+  <body
+    class="font-sans text-gray-700 bg-earth-light dark:bg-earth-dark dark:text-gray-300 antialiased"
+  >
+    <div class="preloader"><div class="preloader__spinner"></div></div>
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 w-full h-20 bg-white/95 backdrop-blur-xl border-b border-gray-100 z-50 transition-all"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between"
+      >
+        <a
+          href="index.html"
+          class="flex items-center gap-2 text-xl font-extrabold text-gray-900"
+          ><span
+            class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-white text-lg"
+            ><i class="fas fa-building"></i></span
+          >CoWork Hub</a
+        >
+        <ul class="hidden lg:flex items-center gap-1">
+          <li class="nav-item relative group">
+            <a
+              href="#"
+              class="flex items-center gap-1 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition"
+              >Home <i class="fas fa-chevron-down text-[10px] ml-1"></i
+            ></a>
+            <div
+              class="nav-dropdown absolute top-full left-0 min-w-[200px] bg-white border border-gray-100 rounded-xl shadow-xl p-2 z-50 dark:bg-earth-card dark:border-white/10"
+            >
+              <a
+                href="index.html"
+                class="block px-4 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-primary/5 rounded-lg"
+                >Home 1</a
+              >
+              <a
+                href="index-2.html"
+                class="block px-4 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-primary/5 rounded-lg"
+                >Home 2</a
+              >
+            </div>
+          </li>
+          <li>
+            <a
+              href="about.html"
+              class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="services.html"
+              class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="blog.html"
+              class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a
+              href="contact.html"
+              class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300"
+              >Contact</a
+            >
+          </li>
+          <li class="nav-item relative group">
+            <a
+              href="#"
+              class="flex items-center gap-1 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg transition dark:text-gray-300"
+              >Dashboards <i class="fas fa-chevron-down text-[10px] ml-1"></i
+            ></a>
+            <div
+              class="nav-dropdown absolute top-full left-0 min-w-[200px] bg-white border border-gray-100 dark:bg-earth-card dark:border-white/10 rounded-xl shadow-xl p-2 z-50"
+            >
+              <a
+                href="dashboard-user.html"
+                class="block px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg dark:text-gray-300"
+                >User Dashboard</a
+              >
+              <a
+                href="dashboard-admin.html"
+                class="block px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg dark:text-gray-300"
+                >Admin Dashboard</a
+              >
+            </div>
+          </li>
+        </ul>
+        <div class="hidden lg:flex items-center gap-3">
+          <button
+            id="rtlToggle"
+            class="px-3 py-1.5 text-[10px] font-bold border border-gray-200 text-gray-500 dark:text-gray-300 rounded-lg hover:border-primary hover:text-primary transition uppercase tracking-wider"
+          >
+            RTL</button
+          ><button
+            id="darkToggle"
+            class="w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 text-gray-500 dark:text-gray-300 hover:text-primary transition"
+          >
+            <i class="fas fa-moon"></i></button
+          ><a
+            href="dashboard-user.html"
+            class="px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-full hover:bg-primary-dark transition-all"
+            >Member Login</a
+          >
+        </div>
+        <button id="menuToggle" class="lg:hidden flex flex-col gap-1.5 p-2">
+          <span class="w-6 h-0.5 bg-gray-700 rounded"></span
+          ><span class="w-6 h-0.5 bg-gray-700 rounded"></span
+          ><span class="w-6 h-0.5 bg-gray-700 rounded"></span>
+        </button>
       </div>
-    </div>
-    <div class="rounded-2xl overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10 aspect-video mb-10"><img src="../assets/images/coworking-space-1.webp" alt="Co-working tips" class="w-full h-full object-cover" onerror="this.style.display='none'" loading="lazy"></div>
-    
-    <!-- Article Content -->
-    <div class="prose prose-lg max-w-none">
-      <p class="text-gray-600 leading-relaxed mb-6">Co-working spaces have revolutionized how we work. Whether you're a freelancer, remote worker, or startup founder, these shared environments offer unique opportunities to boost productivity, expand your network, and find inspiration.</p>
-      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">1. Choose Your Spot Wisely</h2>
-      <p class="text-gray-600 leading-relaxed mb-6">Not all desks are created equal. If you need deep focus, choose a quiet corner or a dedicated desk away from high-traffic areas. If you thrive on energy, sit near communal areas where conversations flow naturally.</p>
-      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">2. Establish a Routine</h2>
-      <p class="text-gray-600 leading-relaxed mb-6">Treat your co-working space like an office. Arrive at the same time, take scheduled breaks, and create a consistent work rhythm. This signals to your brain that it's time to focus.</p>
-      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">3. Leverage the Community</h2>
-      <p class="text-gray-600 leading-relaxed mb-6">One of the biggest advantages of co-working is the community. Attend networking events, join Slack channels, and don't be afraid to introduce yourself. Your next client, partner, or friend might be sitting right next to you.</p>
-      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">4. Use Noise-Cancelling Headphones</h2>
-      <p class="text-gray-600 leading-relaxed mb-6">Open floor plans mean ambient noise. A good pair of noise-cancelling headphones can be your best investment. Use them with focus music or white noise for maximum concentration.</p>
-      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">5. Take Advantage of Amenities</h2>
-      <p class="text-gray-600 leading-relaxed mb-6">Most co-working spaces offer more than desks. Book meeting rooms for important calls, use phone booths for private conversations, and enjoy the free coffee. These perks are part of your membership — use them!</p>
-      
-      <blockquote class="border-l-4 border-primary pl-6 my-8 italic text-gray-600">"The best thing about co-working is the serendipity. You never know who you'll meet at the coffee machine." — Marcus Kim, CoWork Hub Member</blockquote>
+    </nav>
 
-      <p class="text-gray-600 leading-relaxed mb-6">By following these tips, you'll transform your co-working experience from simply renting a desk to building a productive, fulfilling work lifestyle.</p>
-    </div>
+    <section
+      class="pt-32 pb-16 bg-gradient-to-br from-gray-900 via-primary-dark to-gray-900 text-center page-header-pattern"
+    >
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">
+          Blog Details
+        </h2>
+        <div
+          class="flex items-center justify-center gap-2 text-sm text-gray-400 dark:text-gray-300"
+        >
+          <a href="index.html" class="hover:text-primary transition">Home</a
+          ><i class="fas fa-chevron-right text-[10px]"></i
+          ><a href="blog.html" class="hover:text-primary transition">Blog</a
+          ><i class="fas fa-chevron-right text-[10px]"></i
+          ><span class="text-primary/80">Article</span>
+        </div>
+      </div>
+    </section>
 
-    <!-- Tags -->
-    <div class="flex flex-wrap gap-2 mt-10 pt-8 border-t border-gray-100">
-      <span class="text-sm font-semibold text-gray-700 mr-2">Tags:</span>
-      <a href="#" class="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-semibold rounded-full hover:bg-primary/10 hover:text-primary transition">Productivity</a>
-      <a href="#" class="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-semibold rounded-full hover:bg-primary/10 hover:text-primary transition">Co-Working</a>
-      <a href="#" class="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-semibold rounded-full hover:bg-primary/10 hover:text-primary transition">Tips</a>
-      <a href="#" class="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-semibold rounded-full hover:bg-primary/10 hover:text-primary transition">Remote Work</a>
-    </div>
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="mb-8">
+          <span
+            class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full mb-4"
+            >Productivity</span
+          >
+          <h1
+            class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 leading-tight"
+          >
+            10 Tips to Maximize Your Co-Working Experience
+          </h1>
+          <div
+            class="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-300"
+          >
+            <div class="flex items-center gap-2">
+              <div
+                class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-xs font-bold text-primary"
+              >
+                SR
+              </div>
+              <div>
+                <span class="font-semibold text-gray-900 block"
+                  >Sarah Rodriguez</span
+                ><span class="text-xs">CEO, TechLaunch</span>
+              </div>
+            </div>
+            <span>•</span><span>March 5, 2026</span><span>•</span
+            ><span>6 min read</span>
+          </div>
+        </div>
+        <div
+          class="rounded-2xl overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10 aspect-video mb-10"
+        >
+          <img
+            src="../assets/images/coworking-space-1.webp"
+            alt="Co-working tips"
+            class="w-full h-full object-cover"
+            onerror="this.style.display = 'none'"
+            loading="lazy"
+          />
+        </div>
 
-    <!-- Share -->
-    <div class="flex items-center gap-4 mt-6">
-      <span class="text-sm font-semibold text-gray-700">Share:</span>
-      <a href="#" class="w-9 h-9 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500 dark:text-gray-300 hover:bg-primary hover:text-white transition"><i class="fab fa-twitter"></i></a>
-      <a href="#" class="w-9 h-9 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500 dark:text-gray-300 hover:bg-primary hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
-      <a href="#" class="w-9 h-9 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500 dark:text-gray-300 hover:bg-primary hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" class="w-9 h-9 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500 dark:text-gray-300 hover:bg-primary hover:text-white transition"><i class="fas fa-link"></i></a>
-    </div>
+        <!-- Article Content -->
+        <div class="prose prose-lg max-w-none">
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Co-working spaces have revolutionized how we work. Whether you're a
+            freelancer, remote worker, or startup founder, these shared
+            environments offer unique opportunities to boost productivity,
+            expand your network, and find inspiration.
+          </p>
+          <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">
+            1. Choose Your Spot Wisely
+          </h2>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Not all desks are created equal. If you need deep focus, choose a
+            quiet corner or a dedicated desk away from high-traffic areas. If
+            you thrive on energy, sit near communal areas where conversations
+            flow naturally.
+          </p>
+          <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">
+            2. Establish a Routine
+          </h2>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Treat your co-working space like an office. Arrive at the same time,
+            take scheduled breaks, and create a consistent work rhythm. This
+            signals to your brain that it's time to focus.
+          </p>
+          <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">
+            3. Leverage the Community
+          </h2>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            One of the biggest advantages of co-working is the community. Attend
+            networking events, join Slack channels, and don't be afraid to
+            introduce yourself. Your next client, partner, or friend might be
+            sitting right next to you.
+          </p>
+          <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">
+            4. Use Noise-Cancelling Headphones
+          </h2>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Open floor plans mean ambient noise. A good pair of noise-cancelling
+            headphones can be your best investment. Use them with focus music or
+            white noise for maximum concentration.
+          </p>
+          <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">
+            5. Take Advantage of Amenities
+          </h2>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Most co-working spaces offer more than desks. Book meeting rooms for
+            important calls, use phone booths for private conversations, and
+            enjoy the free coffee. These perks are part of your membership — use
+            them!
+          </p>
 
-    <!-- Author Box -->
-    <div class="mt-10 p-8 bg-gray-50 rounded-2xl flex flex-col sm:flex-row items-center gap-6">
-      <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center text-3xl font-bold text-primary flex-shrink-0">SR</div>
-      <div><h3 class="text-lg font-bold text-gray-900 mb-1">Sarah Rodriguez</h3><p class="text-sm text-primary font-medium mb-2">CEO, TechLaunch</p><p class="text-sm text-gray-500 dark:text-gray-300">Serial entrepreneur and productivity enthusiast. Sarah has built three startups from CoWork Hub and is passionate about helping others succeed in shared workspace environments.</p></div>
-    </div>
-  </div>
-</section>
+          <blockquote
+            class="border-l-4 border-primary pl-6 my-8 italic text-gray-600"
+          >
+            "The best thing about co-working is the serendipity. You never know
+            who you'll meet at the coffee machine." — Marcus Kim, CoWork Hub
+            Member
+          </blockquote>
 
-<footer class="bg-primary-dark text-gray-400 dark:text-gray-300 pt-20 pb-8"><div class="max-w-7xl mx-auto px-6"><div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-white/10"><div><a href="index.html" class="flex items-center gap-2 text-xl font-extrabold text-white mb-4"><span class="w-9 h-9 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white text-sm"><i class="fas fa-building"></i></span> CoWork Hub</a><p class="text-sm leading-relaxed">Premium co-working spaces.</p></div><div><h4 class="text-white font-bold mb-5">Quick Links</h4><ul class="space-y-3 text-sm"><li><a href="about.html" class="hover:text-primary transition">About</a></li><li><a href="spaces.html" class="hover:text-primary transition">Spaces</a></li></ul></div><div><h4 class="text-white font-bold mb-5">Support</h4><ul class="space-y-3 text-sm"><li><a href="contact.html" class="hover:text-primary transition">Contact</a></li></ul></div><div><h4 class="text-white font-bold mb-5">Contact</h4><ul class="space-y-3 text-sm"><li class="flex items-center gap-3"><i class="fas fa-envelope text-primary"></i>hello@coworkhub.com</li></ul></div></div><div class="pt-6 text-sm text-center"><p>&copy; 2026 CoWork Hub.</p></div></div></footer>
-<button id="backToTop" class="back-to-top fixed bottom-8 right-8 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center shadow-lg shadow-primary/30 hover:-translate-y-1 transition-all z-50"><i class="fas fa-chevron-up"></i></button>
-<script src="../assets/js/main.js"></script>
-</body>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            By following these tips, you'll transform your co-working experience
+            from simply renting a desk to building a productive, fulfilling work
+            lifestyle.
+          </p>
+        </div>
+
+        <!-- Tags -->
+        <div class="flex flex-wrap gap-2 mt-10 pt-8 border-t border-gray-100">
+          <span class="text-sm font-semibold text-gray-700 mr-2">Tags:</span>
+          <a
+            href="#"
+            class="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-semibold rounded-full hover:bg-primary/10 hover:text-primary transition"
+            >Productivity</a
+          >
+          <a
+            href="#"
+            class="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-semibold rounded-full hover:bg-primary/10 hover:text-primary transition"
+            >Co-Working</a
+          >
+          <a
+            href="#"
+            class="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-semibold rounded-full hover:bg-primary/10 hover:text-primary transition"
+            >Tips</a
+          >
+          <a
+            href="#"
+            class="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-semibold rounded-full hover:bg-primary/10 hover:text-primary transition"
+            >Remote Work</a
+          >
+        </div>
+
+        <!-- Share -->
+        <div class="flex items-center gap-4 mt-6">
+          <span class="text-sm font-semibold text-gray-700">Share:</span>
+          <a
+            href="#"
+            class="w-9 h-9 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500 dark:text-gray-300 hover:bg-primary hover:text-white transition"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a
+            href="#"
+            class="w-9 h-9 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500 dark:text-gray-300 hover:bg-primary hover:text-white transition"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            href="#"
+            class="w-9 h-9 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500 dark:text-gray-300 hover:bg-primary hover:text-white transition"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            href="#"
+            class="w-9 h-9 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500 dark:text-gray-300 hover:bg-primary hover:text-white transition"
+            ><i class="fas fa-link"></i
+          ></a>
+        </div>
+
+        <!-- Author Box -->
+        <div
+          class="mt-10 p-8 bg-gray-50 rounded-2xl flex flex-col sm:flex-row items-center gap-6"
+        >
+          <div
+            class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center text-3xl font-bold text-primary flex-shrink-0"
+          >
+            SR
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-gray-900 mb-1">
+              Sarah Rodriguez
+            </h3>
+            <p class="text-sm text-primary font-medium mb-2">CEO, TechLaunch</p>
+            <p class="text-sm text-gray-500 dark:text-gray-300">
+              Serial entrepreneur and productivity enthusiast. Sarah has built
+              three startups from CoWork Hub and is passionate about helping
+              others succeed in shared workspace environments.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-primary-dark text-gray-400 dark:text-gray-300 pt-20 pb-8">
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-white/10"
+        >
+          <div>
+            <a
+              href="index.html"
+              class="flex items-center gap-2 text-xl font-extrabold text-white mb-4"
+              ><span
+                class="w-9 h-9 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white text-sm"
+                ><i class="fas fa-building"></i
+              ></span>
+              CoWork Hub</a
+            >
+            <p class="text-sm leading-relaxed">Premium co-working spaces.</p>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-5">Quick Links</h4>
+            <ul class="space-y-3 text-sm">
+              <li>
+                <a href="about.html" class="hover:text-primary transition"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a href="spaces.html" class="hover:text-primary transition"
+                  >Spaces</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-5">Support</h4>
+            <ul class="space-y-3 text-sm">
+              <li>
+                <a href="contact.html" class="hover:text-primary transition"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-5">Contact</h4>
+            <ul class="space-y-3 text-sm">
+              <li class="flex items-center gap-3">
+                <i class="fas fa-envelope text-primary"></i>hello@coworkhub.com
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="pt-6 text-sm text-center">
+          <p>&copy; 2026 CoWork Hub.</p>
+        </div>
+      </div>
+    </footer>
+    <button
+      id="backToTop"
+      class="back-to-top fixed bottom-8 right-8 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center shadow-lg shadow-primary/30 hover:-translate-y-1 transition-all z-50"
+    >
+      <i class="fas fa-chevron-up"></i>
+    </button>
+    <script src="../assets/js/main.js"></script>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
