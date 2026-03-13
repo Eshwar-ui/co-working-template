@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta
+      name="keywords"
+      content="coworking space, startup hub, flexible office, meeting rooms, private office, hot desk"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Settings - CoWork Hub</title>
+    <meta
+      name="description"
+      content="Configure CoWork Hub system settings. Manage platform preferences, security, and administrative controls."
+    />
+    <meta property="og:title" content="Admin Settings - CoWork Hub" />
+    <meta property="og:type" content="website" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3F4E3F",
+              "primary-dark": "#2C362C",
+              secondary: "#D4A373",
+              accent: "#B3541E",
+              earth: { light: "#FDFCF0", dark: "#1A1C1A", card: "#242924" },
+            },
+            fontFamily: { sans: ["Inter", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+    <link rel="stylesheet" href="../assets/css/rtl.css" />
+  </head>
+  <body
+    class="font-sans bg-gray-50 dark:bg-earth-dark text-gray-700 dark:text-gray-300 antialiased"
+  >
+    <div class="flex min-h-screen">
+      <!-- Admin Sidebar -->
+      <aside
+        id="sidebar"
+        class="w-64 bg-white dark:bg-earth-card border-r border-gray-100 dark:border-white/10 fixed h-full z-40 transition-transform -translate-x-full lg:translate-x-0"
+      >
+        <div class="p-6 border-b border-gray-100 dark:border-white/10">
+          <a
+            href="index.html"
+            class="flex items-center gap-2 text-lg font-extrabold text-gray-900 dark:text-white"
+            ><span
+              class="w-9 h-9 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white text-sm"
+              ><i class="fas fa-building"></i></span
+            >CoWork Hub</a
+          >
+           <span
+            class="inline-block mt-2 px-2 py-0.5 bg-primary/10 text-primary border border-primary/20 text-[10px] font-bold rounded uppercase"
+            >Admin Panel</span
+          >
+        </div>
+        <nav class="p-4 space-y-1">
+          <a
+            href="dashboard-admin.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
+            ><i class="fas fa-th-large w-5"></i> Dashboard</a
+          >
+          <a
+            href="manage-members.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
+            ><i class="fas fa-users w-5"></i> Members</a
+          >
+          <a
+            href="manage-bookings.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
+            ><i class="fas fa-calendar-alt w-5"></i> Bookings</a
+          >
+          <a
+            href="manage-spaces.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
+            ><i class="fas fa-building w-5"></i> Spaces</a
+          >
+          <a
+             href="revenue-analytics.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
+            ><i class="fas fa-chart-line w-5"></i> Revenue</a
+          >
+          <a
+            href="admin-settings.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-semibold text-primary bg-primary/5 rounded-xl transition dark:text-gray-300"
+            ><i class="fas fa-cog w-5"></i> Settings</a
+          >
+          <div class="pt-4 mt-4 border-t border-gray-100 dark:border-white/10">
+            <a
+              href="index.html"
+              class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
+              ><i class="fas fa-arrow-left w-5"></i> Back to Website</a
+            >
+            <a
+              href="#"
+              class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-red-500 hover:bg-red-50 rounded-xl transition"
+              ><i class="fas fa-sign-out-alt w-5"></i> Logout</a
+            >
+          </div>
+        </nav>
+      </aside>
+
+      <div class="flex-1 lg:ml-64">
+        <header
+          class="h-16 bg-white dark:bg-earth-card border-b border-gray-100 dark:border-white/10 flex items-center justify-between px-6 sticky top-0 z-30"
+        >
+          <div class="flex items-center gap-4">
+            <button
+              id="sidebarToggle"
+              class="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 text-gray-500 dark:text-gray-300"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+            <h1 class="text-lg font-bold text-gray-900 dark:text-white">
+              Admin Settings
+            </h1>
+          </div>
+           <button
+              id="darkToggle"
+              class="w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 text-gray-500 dark:text-gray-300 hover:text-primary transition"
+            >
+              <i class="fas fa-moon"></i>
+            </button>
+        </header>
+
+        <main class="p-6">
+          <div class="max-w-4xl">
+            <div class="mb-8">
+                <h2 class="text-2xl font-extrabold text-gray-900 dark:text-white mb-1">General Configuration</h2>
+                <p class="text-sm text-gray-500 dark:text-gray-300">Manage your hub's platform-wide settings.</p>
+            </div>
+
+            <div class="space-y-6">
+                 <!-- Hub Info -->
+                <div class="bg-white dark:bg-earth-card rounded-2xl p-8 border border-gray-100 dark:border-white/10">
+                    <h3 class="font-bold text-lg text-gray-900 dark:text-white mb-6">Hub Information</h3>
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div class="space-y-1">
+                            <label class="text-xs font-bold text-gray-400 uppercase">Platform Name</label>
+                            <input type="text" value="CoWork Hub" class="w-full px-4 py-2.5 bg-gray-50 dark:bg-earth-dark border border-gray-200 dark:border-white/10 rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none transition">
+                        </div>
+                         <div class="space-y-1">
+                            <label class="text-xs font-bold text-gray-400 uppercase">Contact Email</label>
+                            <input type="email" value="admin@coworkhub.com" class="w-full px-4 py-2.5 bg-gray-50 dark:bg-earth-dark border border-gray-200 dark:border-white/10 rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none transition">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Platform Settings -->
+                <div class="bg-white dark:bg-earth-card rounded-2xl p-8 border border-gray-100 dark:border-white/10">
+                    <h3 class="font-bold text-lg text-gray-900 dark:text-white mb-6">Platform Controls</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm font-bold text-gray-900 dark:text-white">Public Registration</p>
+                                <p class="text-xs text-gray-500">Allow new users to sign up without invitation.</p>
+                            </div>
+                            <div class="w-12 h-6 bg-primary rounded-full relative cursor-pointer">
+                                <div class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full"></div>
+                            </div>
+                        </div>
+                         <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm font-bold text-gray-900 dark:text-white">Maintenance Mode</p>
+                                <p class="text-xs text-gray-500">Temporarily disable access to the member dashboard.</p>
+                            </div>
+                            <div class="w-12 h-6 bg-gray-200 dark:bg-white/10 rounded-full relative cursor-pointer">
+                                <div class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full"></div>
+                            </div>
+                        </div>
+                         <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm font-bold text-gray-900 dark:text-white">Email Verification</p>
+                                <p class="text-xs text-gray-500">Require email confirmation for new members.</p>
+                            </div>
+                            <div class="w-12 h-6 bg-primary rounded-full relative cursor-pointer">
+                                <div class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Save Action -->
+                <div class="flex items-center justify-end gap-3">
+                    <button class="px-6 py-2.5 text-sm font-bold text-gray-500 hover:text-gray-900 transition">Discard</button>
+                    <button class="bg-primary text-white px-8 py-2.5 rounded-xl font-bold text-sm shadow-lg shadow-primary/20 hover:bg-primary-dark transition">Save All Settings</button>
+                </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div
+      id="sidebarOverlay"
+      class="hidden fixed inset-0 bg-primary-dark/50 z-30 lg:hidden"
+    ></div>
+    <script src="../assets/js/dashboard.js"></script>
+  </body>
+</html>

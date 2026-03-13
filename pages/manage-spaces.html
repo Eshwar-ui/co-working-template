@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta
+      name="keywords"
+      content="coworking space, startup hub, flexible office, meeting rooms, private office, hot desk"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Spaces - CoWork Hub Admin</title>
+    <meta
+      name="description"
+      content="Admin tool to manage CoWork Hub's physical spaces. Update availability, pricing, and features of meeting rooms and offices."
+    />
+    <meta property="og:title" content="Manage Spaces - CoWork Hub Admin" />
+    <meta property="og:type" content="website" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3F4E3F",
+              "primary-dark": "#2C362C",
+              secondary: "#D4A373",
+              accent: "#B3541E",
+              earth: { light: "#FDFCF0", dark: "#1A1C1A", card: "#242924" },
+            },
+            fontFamily: { sans: ["Inter", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+    <link rel="stylesheet" href="../assets/css/rtl.css" />
+  </head>
+  <body
+    class="font-sans bg-gray-50 dark:bg-earth-dark text-gray-700 dark:text-gray-300 antialiased"
+  >
+    <div class="flex min-h-screen">
+      <!-- Admin Sidebar -->
+      <aside
+        id="sidebar"
+        class="w-64 bg-white dark:bg-earth-card border-r border-gray-100 dark:border-white/10 fixed h-full z-40 transition-transform -translate-x-full lg:translate-x-0"
+      >
+        <div class="p-6 border-b border-gray-100 dark:border-white/10">
+          <a
+            href="index.html"
+            class="flex items-center gap-2 text-lg font-extrabold text-gray-900 dark:text-white"
+            ><span
+              class="w-9 h-9 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white text-sm"
+              ><i class="fas fa-building"></i></span
+            >CoWork Hub</a
+          >
+          <span
+            class="inline-block mt-2 px-2 py-0.5 bg-primary/10 text-primary border border-primary/20 text-[10px] font-bold rounded uppercase"
+            >Admin Panel</span
+          >
+        </div>
+        <nav class="p-4 space-y-1">
+          <a
+            href="dashboard-admin.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
+            ><i class="fas fa-th-large w-5"></i> Dashboard</a
+          >
+          <a
+            href="manage-members.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
+            ><i class="fas fa-users w-5"></i> Members</a
+          >
+          <a
+            href="manage-bookings.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
+            ><i class="fas fa-calendar-alt w-5"></i> Bookings</a
+          >
+          <a
+            href="manage-spaces.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-semibold text-primary bg-primary/5 rounded-xl transition dark:text-gray-300"
+            ><i class="fas fa-building w-5"></i> Spaces</a
+          >
+          <a
+            href="revenue-analytics.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
+            ><i class="fas fa-chart-line w-5"></i> Revenue</a
+          >
+          <a
+            href="admin-settings.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
+            ><i class="fas fa-cog w-5"></i> Settings</a
+          >
+          <div class="pt-4 mt-4 border-t border-gray-100 dark:border-white/10">
+            <a
+              href="index.html"
+              class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
+              ><i class="fas fa-arrow-left w-5"></i> Back to Website</a
+            >
+            <a
+              href="#"
+              class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-red-500 hover:bg-red-50 rounded-xl transition"
+              ><i class="fas fa-sign-out-alt w-5"></i> Logout</a
+            >
+          </div>
+        </nav>
+      </aside>
+
+      <div class="flex-1 lg:ml-64">
+        <header
+          class="h-16 bg-white dark:bg-earth-card border-b border-gray-100 dark:border-white/10 flex items-center justify-between px-6 sticky top-0 z-30"
+        >
+          <div class="flex items-center gap-4">
+            <button
+              id="sidebarToggle"
+              class="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 text-gray-500 dark:text-gray-300"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+            <h1 class="text-lg font-bold text-gray-900 dark:text-white">
+              Manage Spaces
+            </h1>
+          </div>
+           <button
+              id="darkToggle"
+              class="w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 text-gray-500 dark:text-gray-300 hover:text-primary transition"
+            >
+              <i class="fas fa-moon"></i>
+            </button>
+        </header>
+
+        <main class="p-6">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+            <div>
+              <h2 class="text-2xl font-extrabold text-gray-900 dark:text-white mb-1">Space Inventory</h2>
+              <p class="text-sm text-gray-500 dark:text-gray-300">Organize and monitor all co-working rooms and desks.</p>
+            </div>
+            <button class="bg-primary text-white px-6 py-2.5 rounded-xl font-bold text-sm shadow-lg shadow-primary/20 hover:bg-primary-dark transition flex items-center gap-2">
+              <i class="fas fa-plus-circle"></i> Add New Space
+            </button>
+          </div>
+
+          <!-- Space Cards Grid -->
+          <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+            <div class="bg-white dark:bg-earth-card rounded-2xl border border-gray-100 dark:border-white/10 overflow-hidden shadow-sm group">
+              <div class="h-48 relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute top-4 right-4 px-2.5 py-1 bg-white/90 backdrop-blur text-primary text-[10px] font-bold rounded-full shadow-sm">Meeting Room</div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-4">
+                  <h3 class="font-bold text-gray-900 dark:text-white">Conference Room A</h3>
+                  <span class="text-xs font-bold text-primary bg-primary/10 px-2 py-0.5 rounded">8-10 Pax</span>
+                </div>
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                  <div class="p-3 bg-gray-50 dark:bg-earth-dark rounded-xl">
+                    <p class="text-[10px] font-bold text-gray-400 uppercase mb-1">Status</p>
+                    <p class="text-xs font-bold text-secondary">Available</p>
+                  </div>
+                  <div class="p-3 bg-gray-50 dark:bg-earth-dark rounded-xl">
+                    <p class="text-[10px] font-bold text-gray-400 uppercase mb-1">Price / Hr</p>
+                    <p class="text-xs font-bold text-gray-900 dark:text-white">$45.00</p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-white/5">
+                  <div class="flex gap-2">
+                    <i class="fas fa-wifi text-gray-300 text-xs"></i>
+                    <i class="fas fa-tv text-gray-300 text-xs"></i>
+                    <i class="fas fa-coffee text-gray-300 text-xs"></i>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <button class="w-8 h-8 rounded-lg border border-gray-100 flex items-center justify-center text-gray-400 hover:text-primary transition"><i class="fas fa-edit text-xs"></i></button>
+                    <button class="w-8 h-8 rounded-lg border border-gray-100 flex items-center justify-center text-gray-400 hover:text-accent transition"><i class="fas fa-trash text-xs"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-earth-card rounded-2xl border border-gray-100 dark:border-white/10 overflow-hidden shadow-sm group">
+              <div class="h-48 relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute top-4 right-4 px-2.5 py-1 bg-white/90 backdrop-blur text-secondary text-[10px] font-bold rounded-full shadow-sm">Hot Desk Area</div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-4">
+                  <h3 class="font-bold text-gray-900 dark:text-white">Main Deck (Open)</h3>
+                  <span class="text-xs font-bold text-primary bg-primary/10 px-2 py-0.5 rounded">40 Desks</span>
+                </div>
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                  <div class="p-3 bg-gray-50 dark:bg-earth-dark rounded-xl">
+                    <p class="text-[10px] font-bold text-gray-400 uppercase mb-1">Occupancy</p>
+                    <p class="text-xs font-bold text-primary">32 / 40 Taken</p>
+                  </div>
+                  <div class="p-3 bg-gray-50 dark:bg-earth-dark rounded-xl">
+                    <p class="text-[10px] font-bold text-gray-400 uppercase mb-1">Daily Rate</p>
+                    <p class="text-xs font-bold text-gray-900 dark:text-white">$25.00</p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-white/5">
+                  <div class="flex gap-2">
+                    <i class="fas fa-couch text-gray-300 text-xs"></i>
+                    <i class="fas fa-plug text-gray-300 text-xs"></i>
+                    <i class="fas fa-print text-gray-300 text-xs"></i>
+                  </div>
+                   <div class="flex items-center gap-2">
+                    <button class="w-8 h-8 rounded-lg border border-gray-100 flex items-center justify-center text-gray-400 hover:text-primary transition"><i class="fas fa-edit text-xs"></i></button>
+                    <button class="w-8 h-8 rounded-lg border border-gray-100 flex items-center justify-center text-gray-400 hover:text-accent transition"><i class="fas fa-trash text-xs"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-earth-card rounded-2xl border border-gray-100 dark:border-white/10 overflow-hidden shadow-sm group">
+              <div class="h-48 relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1590247813693-5541d1c609fd?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute top-4 right-4 px-2.5 py-1 bg-white/90 backdrop-blur text-accent text-[10px] font-bold rounded-full shadow-sm">Private Office</div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-4">
+                  <h3 class="font-bold text-gray-900 dark:text-white">Studio Alpha</h3>
+                  <span class="text-xs font-bold text-primary bg-primary/10 px-2 py-0.5 rounded">4-6 Pax</span>
+                </div>
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                  <div class="p-3 bg-gray-50 dark:bg-earth-dark rounded-xl">
+                    <p class="text-[10px] font-bold text-gray-400 uppercase mb-1">Status</p>
+                    <p class="text-xs font-bold text-accent">Booked</p>
+                  </div>
+                  <div class="p-3 bg-gray-50 dark:bg-earth-dark rounded-xl">
+                    <p class="text-[10px] font-bold text-gray-400 uppercase mb-1">Monthly</p>
+                    <p class="text-xs font-bold text-gray-900 dark:text-white">$1,200.00</p>
+                  </div>
+                </div>
+                 <div class="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-white/5">
+                  <div class="flex gap-2">
+                    <i class="fas fa-door-closed text-gray-300 text-xs"></i>
+                    <i class="fas fa-snowflake text-gray-300 text-xs"></i>
+                  </div>
+                   <div class="flex items-center gap-2">
+                    <button class="w-8 h-8 rounded-lg border border-gray-100 flex items-center justify-center text-gray-400 hover:text-primary transition"><i class="fas fa-eye text-xs"></i></button>
+                    <button class="w-8 h-8 rounded-lg border border-gray-100 flex items-center justify-center text-gray-400 hover:text-primary transition"><i class="fas fa-edit text-xs"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div
+      id="sidebarOverlay"
+      class="hidden fixed inset-0 bg-primary-dark/50 z-30 lg:hidden"
+    ></div>
+    <script src="../assets/js/dashboard.js"></script>
+  </body>
+</html>

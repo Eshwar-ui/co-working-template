@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta
+      name="keywords"
+      content="coworking space, startup hub, flexible office, meeting rooms, private office, hot desk"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Members - CoWork Hub Admin</title>
+    <meta
+      name="description"
+      content="Admin tool to manage CoWork Hub members. View profiles, change plans, and monitor status."
+    />
+    <meta property="og:title" content="Manage Members - CoWork Hub Admin" />
+    <meta property="og:type" content="website" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3F4E3F",
+              "primary-dark": "#2C362C",
+              secondary: "#D4A373",
+              accent: "#B3541E",
+              earth: { light: "#FDFCF0", dark: "#1A1C1A", card: "#242924" },
+            },
+            fontFamily: { sans: ["Inter", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+    <link rel="stylesheet" href="../assets/css/rtl.css" />
+  </head>
+  <body
+    class="font-sans bg-gray-50 dark:bg-earth-dark text-gray-700 dark:text-gray-300 antialiased"
+  >
+    <div class="flex min-h-screen">
+      <!-- Admin Sidebar -->
+      <aside
+        id="sidebar"
+        class="w-64 bg-white dark:bg-earth-card border-r border-gray-100 dark:border-white/10 fixed h-full z-40 transition-transform -translate-x-full lg:translate-x-0"
+      >
+        <div class="p-6 border-b border-gray-100 dark:border-white/10">
+          <a
+            href="index.html"
+            class="flex items-center gap-2 text-lg font-extrabold text-gray-900 dark:text-white"
+            ><span
+              class="w-9 h-9 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white text-sm"
+              ><i class="fas fa-building"></i></span
+            >CoWork Hub</a
+          >
+          <span
+            class="inline-block mt-2 px-2 py-0.5 bg-primary/10 text-primary border border-primary/20 text-[10px] font-bold rounded uppercase"
+            >Admin Panel</span
+          >
+        </div>
+        <nav class="p-4 space-y-1">
+          <a
+            href="dashboard-admin.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
+            ><i class="fas fa-th-large w-5"></i> Dashboard</a
+          >
+          <a
+            href="manage-members.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-semibold text-primary bg-primary/5 rounded-xl transition dark:text-gray-300"
+            ><i class="fas fa-users w-5"></i> Members</a
+          >
+          <a
+            href="manage-bookings.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
+            ><i class="fas fa-calendar-alt w-5"></i> Bookings</a
+          >
+          <a
+            href="manage-spaces.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
+            ><i class="fas fa-building w-5"></i> Spaces</a
+          >
+          <a
+            href="revenue-analytics.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
+            ><i class="fas fa-chart-line w-5"></i> Revenue</a
+          >
+          <a
+            href="admin-settings.html"
+            class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
+            ><i class="fas fa-cog w-5"></i> Settings</a
+          >
+          <div class="pt-4 mt-4 border-t border-gray-100 dark:border-white/10">
+            <a
+              href="index.html"
+              class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
+              ><i class="fas fa-arrow-left w-5"></i> Back to Website</a
+            >
+            <a
+              href="#"
+              class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-red-500 hover:bg-red-50 rounded-xl transition"
+              ><i class="fas fa-sign-out-alt w-5"></i> Logout</a
+            >
+          </div>
+        </nav>
+      </aside>
+
+      <div class="flex-1 lg:ml-64">
+        <header
+          class="h-16 bg-white dark:bg-earth-card border-b border-gray-100 dark:border-white/10 flex items-center justify-between px-6 sticky top-0 z-30"
+        >
+          <div class="flex items-center gap-4">
+            <button
+              id="sidebarToggle"
+              class="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 text-gray-500 dark:text-gray-300"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+            <h1 class="text-lg font-bold text-gray-900 dark:text-white">
+              Manage Members
+            </h1>
+          </div>
+          <div class="flex items-center gap-3">
+             <button
+              id="darkToggle"
+              class="w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 text-gray-500 dark:text-gray-300 hover:text-primary transition"
+            >
+              <i class="fas fa-moon"></i>
+            </button>
+            <div
+              class="w-8 h-8 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center text-white text-xs font-bold ring-2 ring-primary/20"
+            >
+              A
+            </div>
+          </div>
+        </header>
+
+        <main class="p-6">
+          <!-- Header Actions -->
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+            <div class="relative w-full md:w-96">
+                <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                <input type="text" placeholder="Search members by name or email..." class="w-full pl-11 pr-4 py-2.5 bg-white dark:bg-earth-card border border-gray-100 dark:border-white/10 rounded-xl text-sm focus:ring-2 focus:ring-primary outline-none transition shadow-sm">
+            </div>
+            <div class="flex items-center gap-3">
+                <button class="bg-primary text-white px-6 py-2.5 rounded-xl font-bold text-sm shadow-lg shadow-primary/20 hover:bg-primary-dark transition flex items-center gap-2">
+                    <i class="fas fa-user-plus"></i> Add Member
+                </button>
+                <button class="w-10 h-10 flex items-center justify-center bg-white dark:bg-earth-card border border-gray-100 dark:border-white/10 rounded-xl text-gray-500 hover:text-primary transition shadow-sm">
+                    <i class="fas fa-filter"></i>
+                </button>
+            </div>
+          </div>
+
+          <!-- Members Table -->
+          <div class="bg-white dark:bg-earth-card rounded-2xl border border-gray-100 dark:border-white/10 overflow-hidden shadow-sm">
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm">
+                <thead>
+                  <tr class="bg-gray-50 dark:bg-earth-dark text-left">
+                    <th class="px-6 py-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">Member</th>
+                    <th class="px-6 py-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">Plan</th>
+                    <th class="px-6 py-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">Join Date</th>
+                    <th class="px-6 py-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">Last Active</th>
+                    <th class="px-6 py-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">Status</th>
+                    <th class="px-6 py-4 text-xs font-semibold text-gray-500 uppercase tracking-wider text-right">Actions</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100 dark:divide-white/5">
+                  <tr>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-sm font-bold text-primary">JD</div>
+                        <div>
+                          <p class="font-bold text-gray-900 dark:text-white leading-none mb-1">John Doe</p>
+                          <p class="text-xs text-gray-500">john.doe@email.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4">
+                      <span class="text-xs font-semibold text-gray-700 dark:text-gray-300">Professional</span>
+                    </td>
+                    <td class="px-6 py-4 text-gray-500">Jan 15, 2025</td>
+                    <td class="px-6 py-4 text-gray-500">2 hours ago</td>
+                    <td class="px-6 py-4">
+                      <span class="px-2.5 py-1 bg-secondary/10 text-secondary text-[10px] font-bold rounded-full uppercase">Active</span>
+                    </td>
+                    <td class="px-6 py-4 text-right">
+                      <button class="text-gray-400 hover:text-primary transition mx-2"><i class="fas fa-edit"></i></button>
+                      <button class="text-gray-400 hover:text-accent transition mx-2"><i class="fas fa-trash"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center text-sm font-bold text-secondary">SM</div>
+                        <div>
+                          <p class="font-bold text-gray-900 dark:text-white leading-none mb-1">Sarah Martinez</p>
+                          <p class="text-xs text-gray-500">sarah@email.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4">
+                      <span class="text-xs font-semibold text-gray-700 dark:text-gray-300">Enterprise</span>
+                    </td>
+                    <td class="px-6 py-4 text-gray-500">Mar 12, 2026</td>
+                    <td class="px-6 py-4 text-gray-500">5 mins ago</td>
+                    <td class="px-6 py-4">
+                      <span class="px-2.5 py-1 bg-secondary/10 text-secondary text-[10px] font-bold rounded-full uppercase">Active</span>
+                    </td>
+                    <td class="px-6 py-4 text-right">
+                      <button class="text-gray-400 hover:text-primary transition mx-2"><i class="fas fa-edit"></i></button>
+                      <button class="text-gray-400 hover:text-accent transition mx-2"><i class="fas fa-trash"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center text-sm font-bold text-accent">MK</div>
+                        <div>
+                          <p class="font-bold text-gray-900 dark:text-white leading-none mb-1">Marcus Kim</p>
+                          <p class="text-xs text-gray-500">marcus@email.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4">
+                      <span class="text-xs font-semibold text-gray-700 dark:text-gray-300">Professional</span>
+                    </td>
+                    <td class="px-6 py-4 text-gray-500">Mar 10, 2026</td>
+                    <td class="px-6 py-4 text-gray-500">23 mins ago</td>
+                    <td class="px-6 py-4">
+                      <span class="px-2.5 py-1 bg-secondary/10 text-secondary text-[10px] font-bold rounded-full uppercase">Active</span>
+                    </td>
+                    <td class="px-6 py-4 text-right">
+                      <button class="text-gray-400 hover:text-primary transition mx-2"><i class="fas fa-edit"></i></button>
+                      <button class="text-gray-400 hover:text-accent transition mx-2"><i class="fas fa-trash"></i></button>
+                    </td>
+                  </tr>
+                  <tr class="opacity-60 bg-gray-50/50 dark:bg-white/5">
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-gray-200 dark:bg-white/10 rounded-xl flex items-center justify-center text-sm font-bold text-gray-500">LP</div>
+                        <div>
+                          <p class="font-bold text-gray-900 dark:text-white leading-none mb-1">Lisa Porter</p>
+                          <p class="text-xs text-gray-500">lisa.p@email.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4">
+                      <span class="text-xs font-semibold text-gray-700 dark:text-gray-300">Starter</span>
+                    </td>
+                    <td class="px-6 py-4 text-gray-500">Dec 01, 2024</td>
+                    <td class="px-6 py-4 text-gray-500">2 days ago</td>
+                    <td class="px-6 py-4">
+                      <span class="px-2.5 py-1 bg-gray-200 text-gray-500 text-[10px] font-bold rounded-full uppercase">Suspended</span>
+                    </td>
+                    <td class="px-6 py-4 text-right">
+                      <button class="text-gray-400 hover:text-primary transition mx-2"><i class="fas fa-undo"></i></button>
+                      <button class="text-gray-400 hover:text-accent transition mx-2"><i class="fas fa-trash"></i></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="px-6 py-4 bg-gray-50 dark:bg-earth-dark border-t border-gray-100 dark:border-white/10 flex items-center justify-between">
+                <p class="text-xs text-gray-500">Showing <span class="font-bold">1-4</span> of <span class="font-bold">512</span> members</p>
+                <div class="flex items-center gap-2">
+                    <button class="w-8 h-8 flex items-center justify-center rounded-lg border border-gray-200 text-gray-400 hover:text-primary transition"><i class="fas fa-chevron-left text-[10px]"></i></button>
+                    <button class="w-8 h-8 flex items-center justify-center rounded-lg bg-primary text-white text-xs font-bold shadow-sm">1</button>
+                    <button class="w-8 h-8 flex items-center justify-center rounded-lg border border-gray-200 dark:border-white/10 text-gray-500 text-xs font-bold hover:bg-gray-100 transition">2</button>
+                    <button class="w-8 h-8 flex items-center justify-center rounded-lg border border-gray-200 dark:border-white/10 text-gray-500 text-xs font-bold hover:bg-gray-100 transition">3</button>
+                    <button class="w-8 h-8 flex items-center justify-center rounded-lg border border-gray-200 text-gray-500 hover:text-primary transition"><i class="fas fa-chevron-right text-[10px]"></i></button>
+                </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div
+      id="sidebarOverlay"
+      class="hidden fixed inset-0 bg-primary-dark/50 z-30 lg:hidden"
+    ></div>
+    <script src="../assets/js/dashboard.js"></script>
+  </body>
+</html>
