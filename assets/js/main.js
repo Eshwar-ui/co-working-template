@@ -1,18 +1,30 @@
-/* ============================================
+/* ==========================================================================
    CoWork Hub - Main JavaScript
-   ============================================ */
+   Author: Antigravity
+   Version: 1.1.0
+   Description: Handles core UI logic, animations, toggles, and validations.
+   ========================================================================== */
 
+/**
+ * Initializes all core UI components when the DOM is fully loaded.
+ */
 document.addEventListener("DOMContentLoaded", function () {
   "use strict";
 
-  // ---------- Preloader ----------
+  /**
+   * Preloader Logic
+   * Hides the preloader after site assets have finished loading or after 3 seconds.
+   */
   const preloader = document.querySelector(".preloader");
   if (preloader) {
     window.addEventListener("load", () => preloader.classList.add("loaded"));
     setTimeout(() => preloader.classList.add("loaded"), 3000);
   }
 
-  // ---------- Navbar Scroll ----------
+  /**
+   * Navbar Scroll Effect
+   * Adds a shadow and removes the bottom border when the user scrolls down.
+   */
   const navbar = document.querySelector("#navbar");
   if (navbar) {
     window.addEventListener("scroll", () => {
@@ -21,7 +33,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ---------- Mobile Menu ----------
+  /**
+   * Mobile Menu Logic
+   * Toggles the mobile menu visibility and animates the hamburger icon.
+   */
   const menuToggle = document.querySelector("#menuToggle");
   const mobileMenu = document.querySelector("#mobileMenu");
   if (menuToggle && mobileMenu) {
@@ -40,7 +55,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ---------- Dark Mode Toggle ----------
+  /**
+   * Dark Mode Engine
+   * Handles theme switching between Light and Dark modes with localStorage persistence.
+   */
   const darkToggle = document.querySelector("#darkToggle");
   const html = document.documentElement;
   const savedTheme = localStorage.getItem("theme");
@@ -59,7 +77,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ---------- RTL Toggle ----------
+  /**
+   * RTL (Right-to-Left) Support
+   * Toggles the document direction and updates the UI for RTL languages.
+   */
   const rtlToggle = document.querySelector("#rtlToggle");
   const savedRTL = localStorage.getItem("rtl");
 
@@ -88,7 +109,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ---------- Back to Top ----------
+  /**
+   * Back to Top Button
+   * Smoothly scrolls the viewport back to the top of the page.
+   */
   const backToTop = document.querySelector("#backToTop");
   if (backToTop) {
     window.addEventListener("scroll", () => {
@@ -99,7 +123,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ---------- GSAP Scroll Animations ----------
+  /**
+   * GSAP Scroll Animations
+   * Uses ScrollTrigger to trigger animations as elements enter the viewport.
+   * Note: Requires gsap and ScrollTrigger libraries to be loaded via CDN.
+   */
   if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -193,7 +221,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ---------- Form Validation ----------
+  /**
+   * Client-side Form Validation
+   * Validates required fields and email formats before submission.
+   * Triggered on forms with the [data-validate] attribute.
+   */
   document.querySelectorAll("form[data-validate]").forEach((form) => {
     form.addEventListener("submit", function (e) {
       let valid = true;

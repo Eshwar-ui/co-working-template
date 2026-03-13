@@ -1,9 +1,18 @@
-/* ============================================
+/* ==========================================================================
    CoWork Hub - Custom Styles
-   Supplements Tailwind CSS
-   ============================================ */
+   --------------------------------------------------------------------------
+   Table of Contents:
+   1. CSS Custom Properties
+   2. Preloader
+   3. Animations
+   4. Navbar & Dropdowns
+   5. Scrollbar
+   6. UI Components (Booking, Gallery, etc.)
+   7. Dashboard Specifics
+   8. Back to Top
+   ========================================================================== */
 
-/* ---------- CSS Custom Properties ---------- */
+/* ---------- 1. CSS Custom Properties ---------- */
 :root {
   --primary: #3f4e3f; /* Deep Forest Green */
   --primary-dark: #2c362c;

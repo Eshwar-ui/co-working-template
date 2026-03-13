@@ -7,31 +7,61 @@
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CoWork Hub - Premium Co-Working Spaces | Home</title>
+    <title>CoWork Hub - Creative Co-Working Spaces & Startup Community</title>
     <meta
       name="description"
-      content="Modern workspace solutions for the future of work. Discover premium co-working spaces."
+      content="Discover premium co-working spaces at CoWork Hub. Flexible hot desks, private offices, and meeting rooms designed for startups, freelancers, and innovators."
     />
     <meta property="og:title" content="Home - CoWork Hub" />
-    <meta
-      property="og:description"
-      content="Modern workspace solutions for the future of work. Discover premium co-working spaces."
-    />
+    <meta property="og:description" content="Discover premium co-working spaces at CoWork Hub. Flexible hot desks, private offices, and meeting rooms designed for startups, freelancers, and innovators." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Home - CoWork Hub" />
-    <meta
-      name="twitter:description"
-      content="Modern workspace solutions for the future of work. Discover premium co-working spaces."
-    />
+    <meta name="twitter:description" content="Discover premium co-working spaces at CoWork Hub. Flexible hot desks, private offices, and meeting rooms designed for startups, freelancers, and innovators." />
     <link rel="canonical" href="https://coworkhub.com/index.html" />
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": "CoworkingSpace",
         "name": "CoWork Hub",
-        "description": "Premium co-working spaces"
+        "image": "https://coworkhub.com/assets/images/hero-bg.webp",
+        "@id": "https://coworkhub.com",
+        "url": "https://coworkhub.com",
+        "telephone": "+1 (555) 123-4567",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Innovation Way",
+          "addressLocality": "San Francisco",
+          "addressRegion": "CA",
+          "postalCode": "94105",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 37.7873,
+          "longitude": -122.3992
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        },
+        "sameAs": [
+          "https://facebook.com/coworkhub",
+          "https://twitter.com/coworkhub",
+          "https://instagram.com/coworkhub",
+          "https://linkedin.com/company/coworkhub"
+        ]
       }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -41,6 +71,10 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
+      /**
+       * TODO: Customize your theme colors and fonts here.
+       * Tailwind CSS Configuration
+       */
       tailwind.config = {
         darkMode: "class",
         theme: {
@@ -113,7 +147,7 @@
                 >Home 1</a
               >
               <a
-                href="index-2.html"
+                href="utility/index-2.html"
                 class="block px-4 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-primary/5 rounded-lg"
                 >Home 2</a
               >
@@ -135,7 +169,7 @@
           </li>
           <li>
             <a
-              href="blog.html"
+              href="blog/index.html"
               class="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary rounded-lg transition dark:text-gray-300"
               >Blog</a
             >
@@ -157,12 +191,12 @@
               class="nav-dropdown absolute top-full left-0 min-w-[200px] bg-white border border-gray-100 dark:bg-earth-card dark:border-white/10 rounded-xl shadow-xl p-2 z-50"
             >
               <a
-                href="dashboard-user.html"
+                href="dashboard/user/index.html"
                 class="block px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg dark:text-gray-300"
                 >User Dashboard</a
               >
               <a
-                href="dashboard-admin.html"
+                href="dashboard/admin/index.html"
                 class="block px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg dark:text-gray-300"
                 >Admin Dashboard</a
               >
@@ -183,7 +217,7 @@
             <i class="fas fa-moon"></i>
           </button>
           <a
-            href="login.html"
+            href="auth/login.html"
             class="px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-full hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/30 transition-all hover:-translate-y-0.5"
             >Member Login</a
           >
@@ -205,17 +239,17 @@
           >Home 1</a
         >
         <a
-          href="index-2.html"
+          href="utility/index-2.html"
           class="block px-4 py-2.5 text-sm font-medium text-gray-600 rounded-lg"
           >Home 2</a
         >
         <a
-          href="spaces.html"
+          href="spaces/index.html"
           class="block px-4 py-2.5 text-sm font-medium text-gray-600 rounded-lg"
           >Spaces</a
         >
         <a
-          href="amenities.html"
+          href="spaces/amenities.html"
           class="block px-4 py-2.5 text-sm font-medium text-gray-600 rounded-lg"
           >Amenities</a
         >
@@ -231,18 +265,18 @@
             Dashboards
           </p>
           <a
-            href="dashboard/dashboard.html"
+            href="dashboard/user/index.html"
             class="block px-4 py-2 text-sm font-medium text-gray-600 rounded-lg"
             >Member Dashboard</a
           >
           <a
-            href="admin/admin-dashboard.html"
+            href="dashboard/admin/index.html"
             class="block px-4 py-2 text-sm font-medium text-gray-600 rounded-lg"
             >Admin Dashboard</a
           >
         </div>
         <a
-          href="blog.html"
+          href="blog/index.html"
           class="block px-4 py-2.5 text-sm font-medium text-gray-600 rounded-lg"
           >Blog</a
         >
@@ -257,7 +291,7 @@
           >Contact</a
         >
         <a
-          href="dashboard/dashboard.html"
+          href="auth/login.html"
           class="block px-4 py-2.5 bg-primary text-white text-sm font-semibold rounded-full text-center mt-2"
           >Member Login</a
         >
@@ -301,7 +335,7 @@
             </p>
             <div class="flex flex-wrap gap-4 mb-10">
               <a
-                href="spaces.html"
+                href="spaces/index.html"
                 class="px-8 py-3.5 bg-primary text-white font-semibold rounded-xl hover:bg-primary-dark hover:shadow-xl hover:shadow-primary/30 transition-all hover:-translate-y-0.5"
                 >Explore Spaces <i class="fas fa-arrow-right ml-2"></i
               ></a>
@@ -488,7 +522,7 @@
               </p>
               <h3 class="text-lg font-bold text-gray-900 mb-2">
                 <a
-                  href="space-details.html"
+                  href="spaces/details.html"
                   class="hover:text-primary transition"
                   >Flex Desk — Open Area</a
                 >
@@ -514,7 +548,7 @@
                   ></span
                 >
                 <a
-                  href="space-details.html"
+                  href="spaces/details.html"
                   class="px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/5 rounded-lg transition"
                   >Details →</a
                 >
@@ -648,7 +682,7 @@
         </div>
         <div class="text-center mt-12">
           <a
-            href="spaces.html"
+            href="spaces/index.html"
             class="px-8 py-3.5 border-2 border-gray-200 text-gray-700 font-semibold rounded-xl hover:border-primary hover:text-primary transition-all inline-flex items-center gap-2"
             >View All Spaces <i class="fas fa-arrow-right"></i
           ></a>
@@ -1098,14 +1132,14 @@
               </li>
               <li>
                 <a
-                  href="dashboard/dashboard.html"
+                  href="dashboard/user/index.html"
                   class="hover:text-primary transition"
                   >Member Dashboard</a
                 >
               </li>
               <li>
                 <a
-                  href="admin/admin-dashboard.html"
+                  href="dashboard/admin/index.html"
                   class="hover:text-primary transition"
                   >Admin Dashboard</a
                 >
@@ -1141,7 +1175,7 @@
                 >
               </li>
               <li>
-                <a href="coming-soon.html" class="hover:text-primary transition"
+                <a href="utility/coming-soon.html" class="hover:text-primary transition"
                   >Coming Soon</a
                 >
               </li>
