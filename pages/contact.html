@@ -65,6 +65,7 @@
         },
       };
     </script>
+    <link rel="icon" type="image/png" href="../favicon.ico" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -167,16 +168,18 @@
         <div class="hidden lg:flex items-center gap-3">
           <button
             id="rtlToggle"
-            class="px-3 py-1.5 text-[10px] font-bold border border-gray-200 text-gray-500 dark:text-gray-300 rounded-lg hover:border-primary hover:text-primary transition uppercase tracking-wider"
+            class="header-icon-btn text-[10px] font-bold uppercase tracking-wider"
           >
-            RTL</button
-          ><button
+            RTL
+          </button>
+          <button
             id="darkToggle"
-            class="w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 text-gray-500 dark:text-gray-300 hover:text-primary transition"
+            class="header-icon-btn"
           >
-            <i class="fas fa-moon"></i></button
-          ><a
-            href="dashboard/user/index.html"
+            <i class="fas fa-moon"></i>
+          </button>
+          <a
+            href="auth/login.html"
             class="px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-full hover:bg-primary-dark transition-all"
             >Member Login</a
           >
@@ -230,7 +233,7 @@
             class="text-center p-6 rounded-2xl border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all"
           >
             <div
-              class="w-14 h-14 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl"
+              class="w-14 h-14 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl"
             >
               <i class="fas fa-phone"></i>
             </div>
@@ -243,7 +246,7 @@
             class="text-center p-6 rounded-2xl border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all"
           >
             <div
-              class="w-14 h-14 bg-accent/10 text-accent rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl"
+              class="w-14 h-14 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl"
             >
               <i class="fas fa-envelope"></i>
             </div>
@@ -256,7 +259,7 @@
             class="text-center p-6 rounded-2xl border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all"
           >
             <div
-              class="w-14 h-14 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl"
+              class="w-14 h-14 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl"
             >
               <i class="fas fa-clock"></i>
             </div>
@@ -274,7 +277,7 @@
               Send Us a Message
             </h2>
             <form data-validate class="space-y-5">
-              <div class="grid sm:grid-cols-2 gap-5">
+              <div class="space-y-5">
                 <div>
                   <label
                     class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"

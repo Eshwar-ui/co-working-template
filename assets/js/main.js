@@ -56,6 +56,32 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /**
+   * Dashboard Sidebar Toggle
+   * Handles the sidebar visibility on mobile devices.
+   */
+  const sidebarToggle = document.querySelector("#sidebarToggle");
+  const sidebar = document.querySelector("#sidebar");
+  if (sidebarToggle && sidebar) {
+    sidebarToggle.addEventListener("click", () => {
+      sidebar.classList.toggle("-translate-x-full");
+      sidebar.classList.toggle("open"); // For custom CSS if needed
+    });
+  }
+
+  /**
+   * Active Navigation Link
+   * Highlights the current page in the navigation menu.
+   */
+  const currentPath = window.location.pathname;
+  const navLinks = document.querySelectorAll("nav a, .dashboard-sidebar a");
+  navLinks.forEach((link) => {
+    const linkPath = link.getAttribute("href");
+    if (linkPath && linkPath !== "#" && currentPath.endsWith(linkPath)) {
+      link.classList.add("nav-link-active");
+    }
+  });
+
+  /**
    * Dark Mode Engine
    * Handles theme switching between Light and Dark modes with localStorage persistence.
    */

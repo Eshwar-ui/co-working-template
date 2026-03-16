@@ -48,6 +48,7 @@
         },
       };
     </script>
+    <link rel="icon" type="image/png" href="../../favicon.ico" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -83,7 +84,7 @@
         </div>
 
         <form action="../dashboard/user/index.html" data-validate class="space-y-6">
-          <div class="grid grid-cols-2 gap-4">
+          <div class="space-y-6">
             <div>
               <label
                 class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
@@ -142,9 +143,9 @@
           </button>
         </form>
 
-        <div class="mt-8 pt-8 border-t border-gray-100 dark:border-white/10">
+        <div class="mt-8 pt-8 border-t border-gray-100 dark:border-white/10 space-y-3">
           <button
-            class="w-full py-3 border border-gray-200 dark:border-white/10 rounded-xl flex items-center justify-center gap-3 text-sm font-semibold text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/5 transition mb-6"
+            class="w-full py-3 border border-gray-200 dark:border-white/10 rounded-xl flex items-center justify-center gap-3 text-sm font-semibold text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/5 transition"
           >
             <img
               src="https://www.svgrepo.com/show/355037/google.svg"
@@ -153,6 +154,12 @@
               loading="lazy"
             />
             Sign up with Google
+          </button>
+          <button
+            class="w-full py-3 border border-gray-200 dark:border-white/10 rounded-xl flex items-center justify-center gap-3 text-sm font-semibold text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/5 transition"
+          >
+            <i class="fab fa-apple text-lg"></i>
+            Sign up with Apple
           </button>
           <p class="text-center text-sm text-gray-500 dark:text-gray-300">
             Already have an account?

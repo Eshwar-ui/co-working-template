@@ -182,3 +182,52 @@
   opacity: 1;
   visibility: visible;
 }
+/* ---------- Active States ---------- */
+.nav-link-active {
+  color: var(--primary) !important;
+  background-color: rgba(63, 78, 63, 0.1) !important;
+  font-weight: 600 !important;
+}
+.dark .nav-link-active {
+  color: var(--primary) !important;
+  background-color: rgba(63, 78, 63, 0.2) !important;
+}
+
+/* ---------- Header Icons ---------- */
+.header-icon-btn {
+  width: 40px;
+  height: 40px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem; /* rounded-xl */
+  border: 1px solid #e2e8f0;
+  color: #64748b;
+  transition: all 0.3s;
+}
+.dark .header-icon-btn {
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+}
+.header-icon-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* ---------- Blog Alignment ---------- */
+.blog-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  margin-top: auto;
+  border-top: 1px solid #f1f5f9;
+}
+.dark .blog-card-meta {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+.blog-card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
