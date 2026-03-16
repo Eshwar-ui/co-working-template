@@ -230,7 +230,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Counter animation
     gsap.utils.toArray(".gsap-counter").forEach((el) => {
-      const target = parseInt(el.getAttribute("data-count") || el.textContent);
+      const targetStr = el.getAttribute("data-count") || el.textContent;
+      const target = parseFloat(targetStr.replace(/[^0-9.]/g, ""));
+      if (isNaN(target)) return;
+
       gsap.from(el, {
         scrollTrigger: { trigger: el, start: "top 90%" },
         textContent: 0,
@@ -238,10 +241,13 @@ document.addEventListener("DOMContentLoaded", function () {
         snap: { textContent: 1 },
         ease: "power1.out",
         onUpdate: function () {
-          el.textContent = Math.floor(this.targets()[0].textContent);
-          if (el.dataset.suffix) el.textContent += el.dataset.suffix;
-          if (el.dataset.prefix)
-            el.textContent = el.dataset.prefix + el.textContent;
+          let val = Math.floor(parseFloat(this.targets()[0].textContent));
+          let formatted = val.toString();
+
+          if (el.dataset.suffix) formatted += el.dataset.suffix;
+          if (el.dataset.prefix) formatted = el.dataset.prefix + formatted;
+
+          el.textContent = formatted;
         },
       });
     });

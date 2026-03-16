@@ -129,6 +129,12 @@
   color: #e5e7eb !important;
 }
 
+/* Primary text contrast fix for badges/pills in dark mode */
+.dark span.text-primary,
+.dark a.text-primary {
+  color: #8da68d !important;
+}
+
 /* Tables */
 .dark table thead th {
   background-color: #2d332d !important;

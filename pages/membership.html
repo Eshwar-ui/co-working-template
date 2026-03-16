@@ -136,6 +136,7 @@
             <div
               class="nav-dropdown absolute top-full left-0 min-w-[200px] bg-white border border-gray-100 dark:bg-earth-card dark:border-white/10 rounded-xl shadow-xl p-2 z-50"
             >
+              <a
                 href="dashboard/user/index.html"
                 class="block px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg dark:text-gray-300"
                 >User Dashboard</a
@@ -160,7 +161,7 @@
           >
             <i class="fas fa-moon"></i></button
           ><a
-            href="dashboard-user.html"
+            href="auth/login.html"
             class="px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-full hover:bg-primary-dark transition-all"
             >Member Login</a
           >
@@ -170,6 +171,49 @@
           ><span class="w-6 h-0.5 bg-gray-700 rounded"></span
           ><span class="w-6 h-0.5 bg-gray-700 rounded"></span>
         </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden lg:hidden bg-white dark:bg-earth-dark border-t border-gray-100 dark:border-white/10 px-6 py-4 space-y-2"
+      >
+        <a
+          href="index.html"
+          class="block px-4 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary rounded-lg"
+          >Home 1</a
+        >
+        <a
+          href="utility/index-2.html"
+          class="block px-4 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary rounded-lg"
+          >Home 2</a
+        >
+        <a
+          href="spaces/index.html"
+          class="block px-4 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary rounded-lg"
+          >Spaces</a
+        >
+        <a
+          href="about.html"
+          class="block px-4 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary rounded-lg"
+          >About</a
+        >
+        <a
+          href="services.html"
+          class="block px-4 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary rounded-lg"
+          >Services</a
+        >
+        <a
+          href="contact.html"
+          class="block px-4 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary rounded-lg"
+          >Contact</a
+        >
+        <div class="pt-4 border-t border-gray-100 dark:border-white/10 mt-4">
+          <a
+            href="auth/login.html"
+            class="block w-full py-3 text-center bg-primary text-white font-bold rounded-xl"
+            >Member Login</a
+          >
+        </div>
       </div>
     </nav>
 
@@ -466,18 +510,22 @@
             <h4 class="text-white font-bold mb-5">Quick Links</h4>
             <ul class="space-y-3 text-sm">
               <li>
-                <a href="about.html" class="hover:text-primary transition"
-                  >About</a
+                <a
+                  href="dashboard/user/index.html"
+                  class="hover:text-primary transition"
+                  >Member Dashboard</a
+                >
+              </li>
+              <li>
+                <a
+                  href="dashboard/admin/index.html"
+                  class="hover:text-primary transition"
+                  >Admin Dashboard</a
                 >
               </li>
               <li>
                 <a href="spaces/index.html" class="hover:text-primary transition"
-                  >Spaces</a
-                >
-              </li>
-              <li>
-                <a href="pricing.html" class="hover:text-primary transition"
-                  >Pricing</a
+                  >Our Spaces</a
                 >
               </li>
             </ul>
