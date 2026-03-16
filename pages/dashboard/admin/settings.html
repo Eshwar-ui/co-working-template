@@ -40,9 +40,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="stylesheet" href="../assets/css/dark-mode.css" />
-    <link rel="stylesheet" href="../assets/css/rtl.css" />
+    <link rel="stylesheet" href="../../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../../assets/css/dark-mode.css" />
+    <link rel="stylesheet" href="../../../assets/css/rtl.css" />
   </head>
   <body
     class="font-sans bg-gray-50 dark:bg-earth-dark text-gray-700 dark:text-gray-300 antialiased"
@@ -51,7 +51,7 @@
       <!-- Admin Sidebar -->
       <aside
         id="sidebar"
-        class="w-64 bg-white dark:bg-earth-card border-r border-gray-100 dark:border-white/10 fixed h-full z-40 transition-transform -translate-x-full lg:translate-x-0"
+        class="w-64 bg-white dark:bg-earth-card border-r border-gray-100 dark:border-white/10 fixed h-full z-40 transition-transform -translate-x-full lg:translate-x-0 dashboard-sidebar"
       >
         <div class="p-6 border-b border-gray-100 dark:border-white/10">
           <a
@@ -69,32 +69,32 @@
         </div>
         <nav class="p-4 space-y-1">
           <a
-            href="dashboard-admin.html"
+            href="index.html"
             class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
             ><i class="fas fa-th-large w-5"></i> Dashboard</a
           >
           <a
-            href="manage-members.html"
+            href="users.html"
             class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
             ><i class="fas fa-users w-5"></i> Members</a
           >
           <a
-            href="manage-bookings.html"
+            href="bookings.html"
             class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
             ><i class="fas fa-calendar-alt w-5"></i> Bookings</a
           >
           <a
-            href="manage-spaces.html"
+            href="spaces.html"
             class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
             ><i class="fas fa-building w-5"></i> Spaces</a
           >
           <a
-             href="revenue-analytics.html"
+            href="analytics.html"
             class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-xl transition dark:text-gray-300"
             ><i class="fas fa-chart-line w-5"></i> Revenue</a
           >
           <a
-            href="admin-settings.html"
+            href="settings.html"
             class="flex items-center gap-3 px-4 py-2.5 text-sm font-semibold text-primary bg-primary/5 rounded-xl transition dark:text-gray-300"
             ><i class="fas fa-cog w-5"></i> Settings</a
           >
@@ -208,5 +208,6 @@
       class="hidden fixed inset-0 bg-primary-dark/50 z-30 lg:hidden"
     ></div>
     <script src="../assets/js/dashboard.js"></script>
+    <script src="../../../assets/js/dashboard.js"></script>
   </body>
 </html>
